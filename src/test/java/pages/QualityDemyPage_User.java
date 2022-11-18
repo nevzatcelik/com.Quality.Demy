@@ -1,5 +1,7 @@
 package pages;
 
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
@@ -7,8 +9,6 @@ public class QualityDemyPage_User {
     public QualityDemyPage_User() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
-
-
 
 
 
@@ -175,20 +175,20 @@ public class QualityDemyPage_User {
 
     //-------------------------176==325---------------LEVENT-------------------------------------------------------//
 
+    @FindBy(xpath = "//a[text()='Log in']")
+    public WebElement loginLink;
 
+    @FindBy(xpath = "//input[@id='login-email']")
+    public WebElement emailBox;
 
+    @FindBy(xpath = "//button[text()='Login']")
+    public WebElement loginButton;
 
+    @FindBy(xpath = "//*[text()='Accept']")
+    public WebElement acceptCookies;
 
-
-
-
-
-
-
-
-
-
-
+    @FindBy(xpath = "//input[@id='login-password']")
+    public WebElement passwordBox;
 
 
 
