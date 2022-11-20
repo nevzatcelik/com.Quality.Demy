@@ -201,9 +201,6 @@ public class QualityDemyPage_User {
     // Home Page > Login Link > Forgot Password Link
     @FindBy(xpath = "//a[@class='text-muted text-12px fw-500 float-end']")
     public WebElement forgotPasswordLink;
-    // Home Page > Login Link > Login Page > Sign Up Button
-    @FindBy(xpath = "//a[@class='text-15px fw-700']")
-    public WebElement signUpButton;
     // Home Page > Login Link > Login Page > Login Button > Welcome Message
     @FindBy(xpath = "(//script[@type='text/javascript'])[3]")
     public WebElement wellcomeMessage;
@@ -237,6 +234,9 @@ public class QualityDemyPage_User {
     // Home Page > Login Button > Forgot Password Page > Login Link (Under Send Request Button)
     @FindBy(xpath = "(//a[@href='https://qualitydemy.com/login'])[2]")
     public WebElement forgotPasswordLoginLink;
+
+
+
 
 
 
