@@ -22,129 +22,129 @@ public class QualityDemyPage_User {
 
 
     //---------------------------24==175------GURSEL--------------------------------------------------------//
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    //mainPage> Quality Demy logo *
+    @FindBy(xpath = "//*[@class='navbar-brand pt-2 mt-1']")
+    public WebElement logo;
+    //mainPage> Categories heading *
+    @FindBy(xpath = "//*[@class='fw-500']")
+    public WebElement categories;
+    //mainPage> Sign Up link at top right>***
+    @FindBy(xpath = "//*[@class='btn btn-sign-up']")
+    public  WebElement signUpLink;
+    //mainPage> Shopping cart icon at top right***
+    @FindBy(xpath = "//*[@class='fas fa-shopping-cart']")
+    public WebElement shoppingCartIcon;
+    //mainPage> Search button named as "Search" *
+    @FindBy(xpath = "(//button[@class='btn'])[5]")
+    public WebElement searchButton;
+    //mainPage> Search Icon next to Categories *
+    @FindBy(xpath = "(//button[@class='btn'])[1]")
+    public WebElement searchIcon;
+    //mainPage> 57 Online Courses Text inside the box *
+    @FindBy(xpath = "(//div[@class='home-fact-box mr-md-auto mr-auto'])[1]")
+    public WebElement onlineCoursesText;
+    //mainPage> Expert instruction text *
+    @FindBy(xpath = "//*[text()='Expert instruction']")
+    public WebElement expertInstructionText;
+    //mainPage> Lifetime access text *
+    @FindBy(xpath = "//*[text()='Lifetime access']")
+    public WebElement lifetimeAccessText;
+    //mainPage> Top categories text under Lifetime access text *
+    @FindBy(xpath = "(//span[@class='header-underline-2'])[1]")
+    public WebElement topCategoriesText;
+    //mainPage> Top courses text *
+    @FindBy(xpath = "(//span[@class='header-underline-2'])[2]")
+    public WebElement topCoursesText;
+    //mainPage> Top 10 Latest Courses text *
+    @FindBy(xpath = "(//span[@class='header-underline-2'])[3]")
+    public WebElement top10LatestCoursesText;
+    //mainPage> Featured instructor text *
+    @FindBy(xpath = "(//span[@class='header-underline-2'])[4]")
+    public WebElement featuredInstructorText;
+    //mainPage> Get started button *
+    @FindBy(xpath = "//*[@class='btn btn-primary px-4 py-2']")
+    public WebElement getStartedButton;
+    //mainPage> Join now button *
+    @FindBy(xpath = "//*[@class='btn btn-danger px-4 py-2']")
+    public WebElement joinNowButton;
+    //mainPage> About Us heading under "Help"*
+    @FindBy(xpath = "(//a[@class='link-secondary footer-hover-link'])[10]")
+    public WebElement aboutUs;
+    //mainPage> aboutUs> Course List Area *
+    @FindBy(xpath = "//*[@class='category-course-list-area']")
+    public WebElement courseListArea;
+    //mainPage> aboutUs> Quality Demy photo *
+    @FindBy(xpath = "//div[@class='col']")
+    public WebElement qualityDemy;
+    //mainPage> Web Design for Web Developers heading under Top Categories*
+    @FindBy(xpath = "(//a[@class='link-secondary footer-hover-link'])[1]")
+    public WebElement webDesignForWebDevelopers;
+    //mainPage> webDesignForWebDevelopers> Web Design for PHP Heading *
+    @FindBy(xpath = "(//a[@class='course-title'])[1]")
+    public WebElement webDesignForPHP;
+    //mainPage> English Speaking Course heading under Top Categories**
+    @FindBy(xpath = "(//a[@class='link-secondary footer-hover-link'])[2]")
+    public WebElement englishSpeakingCourse;
+    //mainPage> englishSpeakingCourse> Eng. Spe. Cou. heading*
+    @FindBy(xpath = "(//a[@class='course-title'])[1]")
+    public WebElement englishCourseLearnToSpeakTitle;
+    //mainPage> hTML5AndCSS heading under Top Categories*
+    @FindBy(xpath = "(//a[@class='link-secondary footer-hover-link'])[3]")
+    public WebElement hTML5AndCSS;
+    //mainPage> hTML5AndCSS> HTML5 and CSS heading *
+    @FindBy(xpath = "//*[@class='breadcrumb-item active text-light display-6 fw-bold']")
+    public WebElement hTML5AndCSSHeading;
+    //mainPage> piano heading under Top Categories *
+    @FindBy(xpath = "(//a[@class='link-secondary footer-hover-link'])[4]")
+    public WebElement piano;
+    //mainPage> piano> "Learn Piano in WEEKS not years" subtitle *
+    @FindBy(xpath = "(//div[@class='course-subtitle d-none d-md-block'])[1]")
+    public WebElement learnPianoInWeeksNotYearsHeading;
+    //mainPage> englishGrammar heading under Top Categories *
+    @FindBy(xpath = "(//a[@class='link-secondary footer-hover-link'])[5]")
+    public WebElement englishGrammar;
+    //mainPage> englishGrammar> "Learn English Grammar" subtitle *
+    @FindBy(xpath = "(//div[@class='course-subtitle d-none d-md-block'])[2]")
+    public WebElement learnEnglishGrammar;
+    //mainPage> aWSCertification heading under Top Categories *
+    @FindBy(xpath = "(//a[@class='link-secondary footer-hover-link'])[6]")
+    public WebElement aWSCertification;
+    //mainPage>aWSCertification> "AWS Certification" subtitle *
+    @FindBy(xpath = "//*[@class='breadcrumb-item active text-light display-6 fw-bold']")
+    public WebElement aWSCertificationHeading;
+    //mainPage> blog heading under Useful links*
+    @FindBy(xpath = "(//a[@class='link-secondary footer-hover-link'])[7]")
+    public WebElement blog;
+    //mainPage> blog> "Latest Blogs" heading *
+    @FindBy(xpath = " (//div[@class='col-12'])[1]")
+    public WebElement latestBlogHeading;
+    //mainPage> allCourses heading under Useful links *
+    @FindBy(xpath = "(//a[@class='link-secondary footer-hover-link'])[8]")
+    public WebElement allCourses;
+    //mainPage> signUp heading under Useful links *
+    @FindBy(xpath = "(//a[@class='link-secondary footer-hover-link'])[9]")
+    public WebElement signUpHeading;
+    //mainPage> signUp> "Sign Up" button *
+    @FindBy(xpath = "//*[@class='btn red radius-5 mt-4 w-100']")
+    public WebElement signUpButton;
+    //mainPage> privacyPolicy heading under Help *
+    @FindBy(xpath = "(//a[@class='link-secondary footer-hover-link'])[11]")
+    public WebElement privacyPolicy;
+    //mainPage> privacyPolicy> "Privacy Policy" top title *
+    @FindBy(xpath = "//*[@class='breadcrumb-item active text-light display-6 fw-bold']")
+    public WebElement privacyPolicyTopTitle;
+    //mainPage> termsandCondition heading under Help *
+    @FindBy(xpath = "(//a[@class='link-secondary footer-hover-link'])[12]")
+    public WebElement termsAndCondition;
+    //mainPage> termsandCondition> "Privacy Policy" top title *
+    @FindBy(xpath = "//*[@class='breadcrumb-item active text-light display-6 fw-bold']")
+    public WebElement termsAndConditionTopTitle;
+    //mainPage> refundPolicy heading under Help *
+    @FindBy(xpath = "(//a[@class='link-secondary footer-hover-link'])[13]")
+    public WebElement refundPolicy;
+    //mainPage> refundPolicy> "Refund Policy" top title *
+    @FindBy(xpath = "//*[@class='breadcrumb-item active text-light display-6 fw-bold']")
+    public WebElement refundPolicyTopTitle;
 
 
 
