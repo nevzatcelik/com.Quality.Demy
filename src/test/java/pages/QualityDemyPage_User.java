@@ -512,7 +512,7 @@ public WebElement homePage;
     // ---------------------------------------- US_12 --------------------------------------
     //Home Page > Categories
     @FindBy (xpath = "//i[@class='fas fa-bars text-16px']")
-    public WebElement categories;
+    public WebElement categoriess;
     //Home Page > Categories > Web Design Course
     @FindBy (xpath = "(//a[@class='py-2 text-wrap d-flex'])[1]")
     public WebElement categoriWebDesing;
