@@ -174,66 +174,66 @@ public class QualityDemyPage_User {
 
 
     //-------------------------176==325---------------LEVENT-------------------------------------------------------//
-
+    // Home Page > Login Link
     @FindBy(xpath = "//a[text()='Log in']")
     public WebElement loginLink;
-
+    // Home Page > Login Link > Email Box
     @FindBy(xpath = "//input[@id='login-email']")
     public WebElement emailBox;
-
+    // Home Page > Login Link > Login Button
     @FindBy(xpath = "//button[text()='Login']")
     public WebElement loginButton;
-
-    @FindBy(xpath = "//*[text()='Accept']")
+    // Home Page > Cookies Pop-Up
+    @FindBy(xpath = "//a[@onclick='cookieAccept();']")
     public WebElement acceptCookies;
-
+    // Home Page > Login Link > Password Box
     @FindBy(xpath = "//input[@id='login-password']")
     public WebElement passwordBox;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    // Home Page > Facebook Icon
+    @FindBy(xpath = "//i[@class='fab fa-facebook-f']")
+    public WebElement facebookIcon;
+    // Home Page > Twitter Icon
+    @FindBy(xpath = "//i[@class='fab fa-twitter']")
+    public WebElement twitterIcon;
+    // Home Page > LinkedIn Icon
+    @FindBy(xpath = "//i[@class='fab fa-linkedin']")
+    public WebElement linkedinIcon;
+    // Home Page > Login Link > Forgot Password Link
+    @FindBy(xpath = "//a[@class='text-muted text-12px fw-500 float-end']")
+    public WebElement forgotPasswordLink;
+    // Home Page > Login Link > Login Page > Login Button > Welcome Message
+    @FindBy(xpath = "(//script[@type='text/javascript'])[3]")
+    public WebElement wellcomeMessage;
+    // Home Page > Sign Up Button > First Name Box
+    @FindBy(xpath = "//input[@name='first_name']")
+    public WebElement firstNameBox;
+    // Home Page > Sign Up Button > Last Name Box
+    @FindBy(xpath = "//input[@name='last_name']")
+    public WebElement lastNameBox;
+    // Home Page > Sign Up Button > E-mail Box (at Sign Up Page)
+    @FindBy(xpath = "//input[@name='email']")
+    public WebElement emailBoxSignUpPage;
+    // Home Page > Sign Up Button > Password Box (at Sign Up Page)
+    @FindBy(xpath = "//input[@name='password']")
+    public WebElement passwordBoxSignUpPage;
+    // Home Page > Sign Up Button > Login Button > Verification Code Page
+    @FindBy(xpath = "//input[@id='verification_code']")
+    public WebElement verificationCodeBox;
+    // Home Page > Sign Up Button > Login Button > Verification Code Page
+    @FindBy(xpath = "(//script[@type='text/javascript'])[3]")
+    public WebElement verificationCodeWrongMessage;
+    // Home Page > Sign Up Button > Login Button > Verification Code Page > Continue Button
+    @FindBy(xpath = "(//button[@type='button'])[1]")
+    public WebElement continueButton;
+    // Home Page > Login Button > Forgot Password Page > Forgot Password Email Box
+    @FindBy(xpath = "//input[@id='forgot-password-email']")
+    public WebElement forgotPasswordEmailBox;
+    // Home Page > Login Button > Forgot Password Page > Send Request Button
+    @FindBy(xpath = "(//button[@type='submit'])[2]")
+    public WebElement sendRequestButton;
+    // Home Page > Login Button > Forgot Password Page > Login Link (Under Send Request Button)
+    @FindBy(xpath = "(//a[@href='https://qualitydemy.com/login'])[2]")
+    public WebElement forgotPasswordLoginLink;
 
 
 
