@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import utilities.ConfigReader;
 import utilities.Driver;
 
 public class QualityDemyPage_User {
@@ -324,7 +325,108 @@ public class QualityDemyPage_User {
 
 
     //----------------------------326==475------------MURAT-------------------------------------------------------//
+        @FindBy(xpath = "//a[text()='Log in']")
+        public WebElement loginLinki;
 
+        @FindBy(xpath = "//input[@id='login-email']")
+        public WebElement emailKutusu;
+
+        @FindBy(xpath = "//input[@id='login-password']")
+        public WebElement passwordKutusu;
+
+        @FindBy(xpath = "//button[text()='Login']")
+        public WebElement loginButonu;
+
+        @FindBy(xpath = "//div[text()=\"Welcome Test User\"]")
+        public WebElement welcomeMessage;
+
+        @FindBy(linkText = "My courses")
+        public WebElement coursesLinki;
+
+        @FindBy(linkText = "Instructor")
+        public WebElement instructorLinki;
+
+        @FindBy(xpath = "//*[text()='Course manager']")
+        public WebElement courseManagerLinki;
+
+        @FindBy(xpath = "//*[text()='Add new course']")
+        public WebElement addNewCourseButonu;
+
+        @FindBy(xpath = "//*[@id='course_title']")
+        public WebElement courseTitleKutusu;
+
+        @FindBy(xpath = "//button[@class='btn btn-buy-now']")
+        public WebElement addToCar150;
+
+        @FindBy(xpath = "//a[text()='Wordpress']")
+        public WebElement cours150;
+
+        @FindBy(xpath = "(//*[text()='Select a category'])[2]")
+        public WebElement categoriesMenu;
+
+        @FindBy(xpath = "//button[@onclick='applyCoupon()']")
+        public WebElement applyButton;
+
+        @FindBy(xpath = "//b[text()='Make payment']")
+        public WebElement payment;
+
+        @FindBy(xpath = "//span[text()='50% Coupon code applied']")
+        public WebElement couponCode50;
+
+        @FindBy(xpath = "//input[@id='coupon-code']")
+        public WebElement couponCode;
+
+        @FindBy(xpath = "(//i[@class='fas fa-shopping-cart'])[1]")
+        public WebElement sepet;
+
+        @FindBy(xpath = "//i[@class='fas fa-bars text-16px']")
+        public WebElement categoriesDropDown;
+
+        @FindBy(xpath = "(//*[text()='All courses'])[1]")
+        public WebElement catagoriesAll;
+
+        @FindBy(xpath = "(//*[text()='Web Design for Web Developers'])[2]")
+        public WebElement categorySecimi;
+
+        @FindBy(xpath = "//*[@class='mdi mdi-arrow-right-bold']")
+        public WebElement ilkNextButonu;
+
+        @FindBy(xpath = "//*[@placeholder='Enter course course price']")
+        public WebElement coursePrice;
+
+        @FindBy(xpath = "//*[@name='discounted_price']")
+        public WebElement discountKutusu;
+
+        @FindBy(xpath = "(//*[@placeholder='Write a keyword and then press enter button'])[2]")
+        public WebElement metaKeywordsKutusu;
+
+        @FindBy(xpath = "//*[text()='Submit']")
+        public WebElement submitButonu;
+
+        @FindBy(xpath = "//i[@class='fas fa-shopping-cart']")
+        public WebElement shoppingCart;
+
+        @FindBy(linkText = "payment")
+        public WebElement paymentLinki;
+        @FindBy(xpath = "//button[text()='Checkout']")
+        public WebElement checkout;
+
+        @FindBy(xpath = "(//a[text()='Sign Up'])[1]")
+        public WebElement signUpButonu;
+
+        @FindBy(xpath = "//span[@class='fw-500']")
+        public WebElement dropDown;
+
+        @FindBy(xpath = "//*[text()=' Back to course list']")
+        public WebElement backToCourseListButonu;
+        public void loginMethodu(){
+            acceptCookies.click();
+            loginLinki.click();
+            emailKutusu.sendKeys( ConfigReader.getProperty("myRichtigEmail"));
+            passwordKutusu.sendKeys(ConfigReader.getProperty("myRichtigPassword"));
+            loginButonu.click();
+        }
+    }
 
 
 
@@ -1823,4 +1925,3 @@ public class QualityDemyPage_User {
 
 
 
-}
