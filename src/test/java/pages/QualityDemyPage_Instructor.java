@@ -1374,21 +1374,20 @@ public class QualityDemyPage_Instructor {
 
 
 //---------------------1376==1525-------------------TALHA------------------------------------------------------//
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@FindBy (xpath = "//a[text () = 'Instructor']")
+public WebElement Instructor;
+@FindBy (xpath = "//span[text ()= 'Course manager']")
+public WebElement c_manager;
+@FindBy (xpath = "//a[@class='btn btn-outline-primary btn-rounded alignToTitle']")
+public WebElement add_newcourse;
+@FindBy (xpath = "//span[text()='Requirements']")
+public WebElement requirements;
+@FindBy (xpath = "//Input[@name='requirements[]']")
+public WebElement requirementsbox;
+@FindBy (xpath = "//button[@onclick='appendRequirement()']")
+public WebElement addbutton;
+@FindBy (xpath = "//i[@class='mdi mdi-camera-control']")
+public WebElement outcomes;
 
 
 
