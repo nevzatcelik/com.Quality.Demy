@@ -1387,11 +1387,11 @@ public WebElement requirementsbox;
 @FindBy (xpath = "//button[@onclick='appendRequirement()']")
 public WebElement addbutton;
 @FindBy (xpath = "//i[@class='mdi mdi-camera-control']")
-public WebElement outcomes;
-
-
-
-
+public WebElement outcomesection;
+@FindBy (xpath = "(//input[@name='outcomes[]'])[1]")
+public WebElement outcomestextbox;
+@FindBy (xpath = "//button[@onclick='appendOutcome()']")
+public WebElement addoutcomebutton;
 
 
 

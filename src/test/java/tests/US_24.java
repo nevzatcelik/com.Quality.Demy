@@ -33,7 +33,20 @@ public class US_24 {
         //Click Add new course
         qdp.add_newcourse.click();
         ReusableMethods.bekle(2);
-        //Click Requirements Section
+        //Click Outcomes Section
+        qdp.outcomesection.click();
+        //Click textbox from outcomes section
+        qdp.outcomestextbox.click();
+        //Fill textbox to Outcomes section
+        qdp.outcomestextbox.sendKeys("Improve you knowledge");
+        ReusableMethods.bekle(2);
+        //Click add button
+        qdp.addoutcomebutton.click();
+
+        ReusableMethods.bekle(2);
+        Driver.closeDriver();
+
+
 
 
 
