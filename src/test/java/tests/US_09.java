@@ -18,8 +18,7 @@ public class US_09 {
     QualityDemyPage_User murat=new QualityDemyPage_User ();
     @BeforeClass
     public void setUp(){
-          Driver.getDriver().get( ConfigReader.getProperty("myUrl"  ) );
-        // login yapilir
+        Driver.getDriver().get( ConfigReader.getProperty("myUrl"  ) );
         murat.loginMethodu();
         //acceptCookies.click();
         //myQualityDemyPage.signUpButonu.click();
@@ -53,15 +52,17 @@ public class US_09 {
                 .sendKeys( Keys.ARROW_DOWN )
                 .sendKeys( Keys.ARROW_DOWN ).perform();
         murat.cours150.click();
+        ReusableMethods.bekle( 1 );
         murat.addToCar150.click();
-        ReusableMethods.bekle( 2 );
+        ReusableMethods.bekle( 1 );
         murat.sepet.click();
         murat.couponCode.sendKeys( "PERCENT50" );
         murat.applyButton.click();
         Assert.assertTrue(murat.couponCode50.isDisplayed());
+        ReusableMethods.bekle( 1 );
         murat.checkout.click();
         Assert.assertTrue( murat.payment.isDisplayed() );
-
+        ReusableMethods.bekle( 1 );
 
 
         //Driver.getDriver().navigate().back();

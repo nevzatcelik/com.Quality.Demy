@@ -328,14 +328,19 @@ public class QualityDemyPage_User {
         @FindBy(xpath = "//a[text()='Log in']")
         public WebElement loginLinki;
 
-        @FindBy(xpath = "//input[@id='login-email']")
+        @FindBy(xpath = "//input[@id='registration-email']")
         public WebElement emailKutusu;
 
-        @FindBy(xpath = "//input[@id='login-password']")
+        @FindBy(xpath = "//input[@name='password']")
         public WebElement passwordKutusu;
 
         @FindBy(xpath = "//button[text()='Login']")
         public WebElement loginButonu;
+
+        @FindBy(xpath = "//input[@id='last_name']")
+        public WebElement lastName;
+        @FindBy(xpath = "//input[@name='first_name']")
+        public WebElement firstName;
 
         @FindBy(xpath = "//div[text()=\"Welcome Test User\"]")
         public WebElement welcomeMessage;
@@ -419,6 +424,10 @@ public class QualityDemyPage_User {
 
         @FindBy(xpath = "//*[text()=' Back to course list']")
         public WebElement backToCourseListButonu;
+
+        @FindBy(xpath = "//div[text()=\"Welcome Test User\"]")
+        public WebElement welcomeTestUser;
+
         public void loginMethodu(){
             acceptCookies.click();
             loginLinki.click();
