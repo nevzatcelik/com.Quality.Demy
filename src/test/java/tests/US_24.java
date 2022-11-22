@@ -8,12 +8,13 @@ import utilities.ReusableMethods;
 
 public class US_24 {
 
+    QualityDemyPage_Instructor qdp = new QualityDemyPage_Instructor();
+
     @Test
     public void testus23() {
         //go to qualitydemy web page
         Driver.getDriver().get(ConfigReader.getProperty("myUrl"));
         //click login link
-        QualityDemyPage_Instructor qdp = new QualityDemyPage_Instructor();
         qdp.loginLink.click();
         //Acept Cookies
         qdp.acceptCookies.click();
