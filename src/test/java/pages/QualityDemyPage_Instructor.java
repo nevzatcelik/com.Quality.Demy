@@ -924,72 +924,72 @@ public WebElement instructorLink;
 
 
 //-----------------------926==1075------------------MERYEM------------------------------------------------------//
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@FindBy(xpath = "//a[text()='Log in']")
+public WebElement loginLinki;
+    @FindBy(xpath = "//input[@id='login-email']")
+    public WebElement emailKutusu;
+    @FindBy(xpath = "//input[@id='login-password']")
+    public WebElement passwordKutusu;
+    @FindBy(xpath = "//a[@onclick=\"cookieAccept();\"]")
+    public WebElement cookies;
+    @FindBy(xpath = "(//button[@type='submit'])[2]")
+    public WebElement loginButonu;
+    /* ------------------------ US_16 ---------------------------------*/
+    //HomePage => İnstructor
+    @FindBy( xpath = "(//div[@class='icon'])[1]")
+    public WebElement instructor;
+    //HomePage => İnstructor => Manage Profile
+    @FindBy ( xpath = "//i[@class='dripicons-user']")
+    public  WebElement myManager;
+    //HomePage => İnstructor => Manage Profile => Account
+    @FindBy( xpath = "(//li[@class=' mb-3'])[1]")
+    public WebElement account;
+    //HomePage => İnstructor => Manage Profile => Account => Current Password
+    @FindBy ( xpath = "(//input[@type='password'])[1]")
+    public WebElement currentPossword ;
+    //HomePage => İnstructor => Manage Profile => Account => New Password
+    @FindBy ( xpath = "(//input[@type='password'])[2]")
+    public WebElement newPossword ;
+    //HomePage => İnstructor => Manage Profile => Account => Confirm Password
+    @FindBy ( id= "confirm_password")
+    public WebElement ConfirmPossword ;
+    //HomePage => İnstructor => Manage Profile => Account => Save Change
+    @FindBy( xpath = "//*[text()='Save changes']")
+    public WebElement saveChanges;
+    @FindBy(xpath = "//div[@class='toast-message']")
+    public  WebElement mesaj;
+    /* ------------------------ US_17 ---------------------------------*/
+    //HomePage => İnstructor => Manage Profile => Profile
+    @FindBy(xpath = "(//*[@class=' mb-3'])[2]")
+    public  WebElement photoButon;
+    //HomePage => İnstructor => Manage Profile => Profile => Profile Photo
+    @FindBy(xpath = "//div[@class='input-group']")
+    public  WebElement uploadİmage;
+    //HomePage => İnstructor => Manage Profile => Profile => Profile Photo
+    @FindBy ( xpath = "//button[@class='btn red px-5 py-2 radius-8']")
+    public WebElement uploadButonu;
+    /* ------------------------ US_25 ---------------------------------*/
+    //HomePage => İnstructor => Course Manage
+    @FindBy ( xpath = "//*[text()='Course manager']")
+    public WebElement courseManager;
+    //HomePage => İnstructor => Course Manage => Add New Course
+    @FindBy(xpath = "//*[text()='Add new course']")
+    public WebElement addNewCourse;
+    //HomePage => İnstructor => Course Manage => Add New Course => Pricing
+    @FindBy(xpath = "//*[@class='mdi mdi-currency-cny']")
+    public WebElement pricing;
+    //HomePage => İnstructor => Course Manage => Add New Course => Pricing => Course Price
+    @FindBy(xpath = "(//input[@type='number'])[1]")
+    public WebElement courseprice;
+    //HomePage => İnstructor => Course Manage => Add New Course => Pricing => Course Price => Check Discount
+    @FindBy(xpath = "//label[@for='discount_flag']")
+    public WebElement Checkdiscount;
+    //HomePage => İnstructor => Course Manage => Add New Course => Pricing => Course Price => Discounted price
+    @FindBy(xpath = "(//input[@type='number'])[2]")
+    public WebElement discountedprice;
+    @FindBy(xpath = "(//small[@class='text-muted'])[3]")
+    public WebElement indirimliFıyat;
+    /* ------------------------ US_26 ---------------------------------*/
 
 
 
