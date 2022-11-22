@@ -35,7 +35,7 @@ public class QualityDemyPage_User {
     @FindBy(xpath = "//*[@class='fas fa-shopping-cart']")
     public WebElement shoppingCartIcon;
     //mainPage> Search button named as "Search" *
-    @FindBy(xpath = "(//button[@class='btn'])[5]")
+    @FindBy(xpath = "(//button[@class='btn'])[2]")
     public WebElement searchButton;
     //mainPage> Search Icon next to Categories *
     @FindBy(xpath = "(//button[@class='btn'])[1]")
