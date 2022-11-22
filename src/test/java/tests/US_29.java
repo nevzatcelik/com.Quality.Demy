@@ -1,10 +1,19 @@
 package tests;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.QualityDemyPage_Instructor;
+import pages.QualityDemyPage_User;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+
+import java.util.List;
+import java.util.Random;
 
 public class US_29 {
     QualityDemyPage_Instructor qdp = new QualityDemyPage_Instructor();
@@ -33,5 +42,17 @@ public class US_29 {
         //Click Add new course
         qdp.add_newcourse.click();
         ReusableMethods.bekle(2);
+
+        qdp.category.click();
     }
-}
+
+
+
+
+
+
+
+
+
+    }
+

@@ -1392,13 +1392,14 @@ public WebElement outcomesection;
 public WebElement outcomestextbox;
 @FindBy (xpath = "//button[@onclick='appendOutcome()']")
 public WebElement addoutcomebutton;
-
-
-
-
-
-
-
+@FindBy (xpath = "//input[@placeholder='Enter course title']")
+public WebElement entercoursetitle;
+@FindBy (xpath = "//textarea[@id='short_description']")
+public WebElement shortdescription;
+@FindBy (xpath = "//div[@class='note-editable card-block']")
+public WebElement description;
+@FindBy (xpath = "(//span[@class='select2-selection__rendered'])[1]")
+public WebElement category;
 
 
 
