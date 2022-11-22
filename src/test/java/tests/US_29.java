@@ -1,25 +1,18 @@
 package tests;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
+
 import org.testng.annotations.Test;
 import pages.QualityDemyPage_Instructor;
-import pages.QualityDemyPage_User;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
-import java.util.List;
-import java.util.Random;
-
 public class US_29 {
-    QualityDemyPage_Instructor qdp = new QualityDemyPage_Instructor();
 
+
+    QualityDemyPage_Instructor qdp = new QualityDemyPage_Instructor();
     @Test
-    public void testus29() {
+    public void category(){
         //go to qualitydemy web page
         Driver.getDriver().get(ConfigReader.getProperty("myUrl"));
         //click login link
@@ -42,17 +35,22 @@ public class US_29 {
         //Click Add new course
         qdp.add_newcourse.click();
         ReusableMethods.bekle(2);
+        //Click Requirements Section
 
+
+    }
+    @Test (dependsOnMethods = "category")
+    public void category2() {
+        QualityDemyPage_Instructor qdp = new QualityDemyPage_Instructor();
         qdp.category.click();
+
+    }
+    @Test
+    public void category3 () {
+
+        Driver.closeDriver();
+
     }
 
 
-
-
-
-
-
-
-
-    }
-
+}
