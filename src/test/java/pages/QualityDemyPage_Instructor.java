@@ -1079,12 +1079,7 @@ public WebElement loginLinki;
      //HomePage->Login->HomePage -->Instructor
     @FindBy(xpath = "//a[text()='Instructor']")
     public WebElement instructorButton;
-    //Instructor --> course Maneger
-    @FindBy(xpath = "//*[text()='Course manager']")
-    public WebElement courseManegerButton;
-    //NAVIGATION -> Course Maneger --> Add new course
-    @FindBy(xpath = "//a[@class='btn btn-outline-primary btn-rounded alignToTitle']")
-    public WebElement addNewCourseButton;
+
     // NAVIGATION -> Course Maneger --> demo
     @FindBy(xpath = "//a[text()='demo']")
     public WebElement chooseDemoCourse;
@@ -1093,7 +1088,7 @@ public WebElement loginLinki;
     public WebElement backtoList;
     //Back to course list --> Course manager
     @FindBy(xpath = "//*[@class='side-nav-link active']")
-    public WebElement courseManager;
+    public WebElement courseManeger;
     // course manager -> course List -> Choose one course from course list -->View on fronted
     @FindBy(xpath = "//*[@class='alignToTitle btn btn-outline-secondary btn-rounded btn-sm ml-1 my-1']")
     public WebElement  viewonFrontendButton;
@@ -1223,7 +1218,12 @@ public WebElement loginLinki;
 
 
 
-//----------------------1226==1375------------------YAKUP------------------------------------------------------//
+
+
+
+
+
+//----------------------1226==1375------------------YAKUP-----------------------------------------------------
 
 
 

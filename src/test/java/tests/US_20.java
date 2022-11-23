@@ -35,7 +35,7 @@ public class US_20 {
         qualityDemyPage_instructor.instructorButton.click();
 
         // Click "Course manager"
-        qualityDemyPage_instructor.courseManegerButton.click();
+        qualityDemyPage_instructor.courseManeger.click();
 
         // Check if there is a course on the course list.  If not, add new course
         // Click "add new course"
@@ -48,7 +48,7 @@ public class US_20 {
         qualityDemyPage_instructor.backtoList.click();
 
         // Verify that course manager page is visible successfully;
-        Assert.assertTrue(qualityDemyPage_instructor.courseManegerButton.isDisplayed());
+        Assert.assertTrue(qualityDemyPage_instructor.courseManeger.isDisplayed());
 
         // Click on any course name on the course list
         qualityDemyPage_instructor.chooseDemoCourse.click();

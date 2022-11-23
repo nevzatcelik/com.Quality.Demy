@@ -27,7 +27,7 @@ public class US_32 {
         // Click 'Instructor' button
         qualityDemyPage_instructor.instructorButton.click();
         // Click "Course manager"
-        qualityDemyPage_instructor.courseManegerButton.click();
+        qualityDemyPage_instructor.courseManeger.click();
         // Check if there is a course on the course list.  If not, add new course
         // Click "add new course"
         // Fill all the required fields

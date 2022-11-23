@@ -41,7 +41,7 @@ public class US_22 {
         // Fill all the required fields
         // Click submit button
         // Click course manager button
-        qualityDemyPage_instructor.courseManegerButton.click();
+        qualityDemyPage_instructor.courseManeger.click();
 
         //- Click on any course name on the course list
         qualityDemyPage_instructor.chooseDemoCourse.click();
