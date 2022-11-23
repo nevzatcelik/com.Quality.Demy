@@ -991,13 +991,29 @@ public WebElement loginLinki;
     public WebElement indirimliFıyat;
     /* ------------------------ US_26 ---------------------------------*/
 
+    @FindBy(xpath = "(//span[@class='d-none d-sm-inline'])[5]")
+    public WebElement media;
 
+    @FindBy(xpath = "//span[@id='select2-course_overview_provider-container']")
+    public WebElement courseOverviewProvider;
 
+    @FindBy(xpath = "//*[text()='Basic']")
+    public WebElement basicButonu;
 
+    @FindBy(xpath = "//input[@id='course_title']")
+    public WebElement courseTitle;
 
+    @FindBy(xpath = "(//span[@class='select2-selection__rendered'])[1]")
+    public WebElement categoryDropDown;
 
+    @FindBy(xpath = "(//*[text()='Web Design for Web Developers'])[3]")
+    public WebElement webDesing;
 
+    @FindBy(xpath = "//input[@name='course_overview_url']")
+    public WebElement courseOverviewUrl;
 
+    @FindBy(xpath = "//div[@class='js--image-preview']")
+    public WebElement uploadCoursePicture;
 
 
 
@@ -1057,23 +1073,7 @@ public WebElement loginLinki;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//-------------------------1076==1225---------------NESE------------------------------------------------------//
+    //-------------------------1076==1225---------------NESE------------------------------------------------------//
         // ++++++++ US20 Baslangic ++++++++++++
 
      //HomePage->Login->HomePage -->Instructor
@@ -1223,7 +1223,7 @@ public WebElement loginLinki;
 
 
 
-//----------------------1226==1375------------------YAKUP-----------------------------------------------------
+    //----------------------1226==1375------------------YAKUP-----------------------------------------------------
 
 
 
