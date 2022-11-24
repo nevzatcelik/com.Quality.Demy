@@ -28,7 +28,7 @@ public class US_25 {
         qualitydemyPage.instructor.click();
 
         //- Click on Course Manager
-        qualitydemyPage.courseManeger.click();
+        qualitydemyPage.courseManager.click();
         //- Click Add New Course
         qualitydemyPage.addNewCourse.click();
         //- Click on pricing
