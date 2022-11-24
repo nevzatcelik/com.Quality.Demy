@@ -1406,14 +1406,15 @@ public WebElement Level;
 public WebElement Enable_Drip;
 @FindBy (xpath = "(//label[@class='custom-control-label'] )[1]")
 public WebElement checkbox;
-@FindBy (xpath = "(//a[@href='https://qualitydemy.com/home/my_courses'])[1]")
-public WebElement my_courses;
-@FindBy (xpath = "//img[@src='https://qualitydemy.com/uploads/thumbnails/course_thumbnails/optimized/course_thumbnail_default_1801669231118.jpg']")
-public WebElement coursedetail;
-@FindBy (xpath = "(//div[@class='lecture-group-title clearfix'])[1]")
-public WebElement contextmenuopen;
-@FindBy (xpath = "(//div[@class='lecture-group-title clearfix collapsed'])[1]")
-public WebElement contextmenuclose;
+
+
+
+
+
+
+
+
+
 
 
 

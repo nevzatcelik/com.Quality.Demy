@@ -1374,20 +1374,20 @@ public WebElement homePage;
 
 
 //---------------------1376==1525-------------------TALHA------------------------------------------------------//
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    @FindBy (xpath = "(//a[@href='https://qualitydemy.com/home/my_courses'])[1]")
+    public WebElement my_courses;
+    @FindBy (xpath = "//a[@href='https://qualitydemy.com/home/course/java/180']")
+    public WebElement coursedetaill;
+    @FindBy (xpath = "(//div[@class='lecture-group-title clearfix'])[1]")
+    public WebElement contextmenuopen;
+    @FindBy (xpath = "(//div[@class='lecture-group-title clearfix collapsed'])[1]")
+    public WebElement contextmenuclose;
+    @FindBy (xpath = "(//a[@class='btn red radius-5 w-100'])[3]")
+    public WebElement javastartbutton;
+    @FindBy (xpath = "(//i[@class='fa fa-plus'])[1]")
+    public WebElement clickplusbutton;
+    @FindBy (xpath = "//label[@for='94']")
+    public WebElement checkbox;
 
 
 
