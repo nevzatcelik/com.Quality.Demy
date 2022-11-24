@@ -22,7 +22,21 @@ public class QualityDemyPage_Instructor {
 
 
     //---------------------------24==175------GURSEL--------------------------------------------------------//
-
+    //mainPage> loginLinki> emailBox> password> loginButton> instructorLink> salesReportLink
+    @FindBy(xpath = "//span[text()='Sales report']")
+    public WebElement salesReportLink;
+    //mainPage> loginLinki> emailBox> password> loginButton> instructorLink> salesReportLink> salesReportSearchBox
+    @FindBy(xpath = "//input[@type='search']")
+    public WebElement salesReportSearchBox;
+    //mainPage> loginLinki> emailBox> password> loginButton> instructorLink> salesReportLink> filterDropbox
+    @FindBy(xpath = "//div[@id='reportrange']")
+    public WebElement filterDropBox;
+    //mainPage> loginLinki> emailBox> password> loginButton> instructorLink> salesReportLink> filterDropbox> lastMonthButton
+    @FindBy(xpath = "//li[text()='Last Month']")
+    public WebElement lastMonthButton;
+    //mainPage> loginLinki> emailBox> password> loginButton> instructorLink> salesReportLink> noDataAvailableInTableHeading
+    @FindBy(xpath = "//*[@class='dataTables_empty']")
+    public WebElement noDataAvailableInTheTable;
 
 
 
