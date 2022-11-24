@@ -991,13 +991,29 @@ public WebElement loginLinki;
     public WebElement indirimliFıyat;
     /* ------------------------ US_26 ---------------------------------*/
 
+    @FindBy(xpath = "(//span[@class='d-none d-sm-inline'])[5]")
+    public WebElement media;
 
+    @FindBy(xpath = "//span[@id='select2-course_overview_provider-container']")
+    public WebElement courseOverviewProvider;
 
+    @FindBy(xpath = "//*[text()='Basic']")
+    public WebElement basicButonu;
 
+    @FindBy(xpath = "//input[@id='course_title']")
+    public WebElement courseTitle;
 
+    @FindBy(xpath = "(//span[@class='select2-selection__rendered'])[1]")
+    public WebElement categoryDropDown;
 
+    @FindBy(xpath = "(//*[text()='Web Design for Web Developers'])[3]")
+    public WebElement webDesing;
 
+    @FindBy(xpath = "//input[@name='course_overview_url']")
+    public WebElement courseOverviewUrl;
 
+    @FindBy(xpath = "//div[@class='js--image-preview']")
+    public WebElement uploadCoursePicture;
 
 
 
@@ -1057,11 +1073,79 @@ public WebElement loginLinki;
 
 
 
+    //-------------------------1076==1225---------------NESE------------------------------------------------------//
+        // ++++++++ US20 Baslangic ++++++++++++
 
+     //HomePage->Login->HomePage -->Instructor
+    @FindBy(xpath = "//a[text()='Instructor']")
+    public WebElement instructorButton;
 
+    // NAVIGATION -> Course Maneger --> demo
+    @FindBy(xpath = "//a[text()='demo']")
+    public WebElement chooseDemoCourse;
+    // NAVIGATION -> Add new course -> ...-> Finish/Submit --> Back to course list
+    @FindBy(xpath = "//a[@class='alignToTitle btn btn-outline-secondary btn-rounded btn-sm my-1']")
+    public WebElement backtoList;
+    //Back to course list --> Course manager
+    @FindBy(xpath = "//*[@class='side-nav-link active']")
+    public WebElement courseManeger;
+    // course manager -> course List -> Choose one course from course list -->View on fronted
+    @FindBy(xpath = "//*[@class='alignToTitle btn btn-outline-secondary btn-rounded btn-sm ml-1 my-1']")
+    public WebElement  viewonFrontendButton;
+    //Close the newly opened tab -> Course manager --> right Arrow
+    @FindBy(xpath = "//*[@class='mdi mdi-arrow-right-bold']")
+    public WebElement rightArrow;
+    //Close the newly opened tab -> Course manager --> left Arrow
+    @FindBy(xpath = "//*[@class='mdi mdi-arrow-left-bold']")
+    public  WebElement leftArrow;
+    // ++++++++++ US20 Sonu +++++++++
 
+    // ++++++++ US22 Baslangic +++++++++
+    // NAVIGATION -> course manager -> Basic --> Add new instructor
+    @FindBy(xpath = "//*[text()='Basic']")
+    public WebElement basicButton;
+    // NAVIGATION -> course manager -> Basic --> Add new instructor
+    @FindBy(xpath = "//input[@class='select2-search__field']")
+    public WebElement addNewInstructorTextBox;
+    // NAVIGATION -> course manager -> Basic --> Course title
+    @FindBy(xpath = "//input[@id='course_title']")
+    public WebElement coursetitleTextBox;
+    // NAVIGATION -> course manager -> Basic --> Short description
+    @FindBy(xpath = "//textarea[@id='short_description']")
+    public WebElement sortDescriptionTextarea;
+    // NAVIGATION -> course manager -> Basic --> Description
+    @FindBy(xpath = "//div[@class='note-editable card-block']")
+    public WebElement descriptionTextarea;
+    // NAVIGATION -> course manager -> Basic --> Category
+    @FindBy(xpath = "//span[@id='select2-sub_category_id-container']")
+    public WebElement categorytextBox;
+    @FindBy(xpath = "(//input[@class='select2-search__field'])[2]")
+    public WebElement categoryTextEnter;
+    // NAVIGATION -> course manager -> Basic --> Level
+    @FindBy(xpath = "//span[@id='select2-level-container']")
+    public WebElement levelTextbox;
+    //NAVIGATION -> course manager -> Basic --> Enable drip content
+    @FindBy(xpath = "(//label[@for='enable_drip_content'])[1]")
+    public WebElement enableDripContentButton;
+    // NAVIGATION -> course manager -> Basic --> Check if this course is top course
+    @FindBy(xpath = "//label[@for='is_top_course']")
+    public WebElement ifThisCourseisTopCourse;
+    // +++++++++++++++++++US22 Sonu +++++++++++++++++++
 
 
+    // ++++++++++++++++++US32 Baslangic+++++++++++++++++
+    // NAVIGATION -> course manager --> Pricing
+    @FindBy(linkText = "//a[@class='nav-link rounded-0 pt-2 pb-2 active']")
+    public WebElement pricingButton;
+    // NAVIGATION -> course manager -> Pricing --> Course Price Box
+    @FindBy(xpath = "(//input[@class='form-control'])[6]")
+    public WebElement coursePriceBox;
+    // NAVIGATION -> course manager -> Pricing --> Discounted Price Box
+    @FindBy(xpath = "//input[@id='discounted_price']")
+    public WebElement discountedPriceBox;
+    // NAVIGATION -> course manager -> Pricing --> Discount Check Box
+    @FindBy(xpath = "//label[@for='discount_flag']")
+    public WebElement discountCheckBox;
 
 
 
@@ -1073,7 +1157,6 @@ public WebElement loginLinki;
 
 
 
-//-------------------------1076==1225---------------NESE------------------------------------------------------//
 
 
 
@@ -1140,90 +1223,7 @@ public WebElement loginLinki;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------1226==1375------------------YAKUP------------------------------------------------------//
+    //----------------------1226==1375------------------YAKUP-----------------------------------------------------
 
 
 
