@@ -34,14 +34,16 @@ public class US_37 {
         //Click Course detail
         qdp.coursedetaill.click();
         ReusableMethods.bekle(2);
-        //Context menu should open and close when clicking on section headers
+        //Scroll Down
         Actions at = new Actions(Driver.getDriver());
         at.sendKeys(Keys.PAGE_DOWN).build().perform();
         ReusableMethods.bekle(2);
+        //Context menu should open and close when clicking on section headers
         qdp.contextmenuopen.click();
         ReusableMethods.bekle(2);
         qdp.contextmenuclose.click();
         ReusableMethods.bekle(2);
+        //Scroll Upp
         at.sendKeys(Keys.PAGE_UP).build().perform();
         ReusableMethods.bekle(2);
         //The topics in the sections should be selectable as checked or unchecked

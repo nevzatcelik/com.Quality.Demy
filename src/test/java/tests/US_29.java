@@ -64,14 +64,15 @@ public class US_29 {
         ReusableMethods.bekle(2);
         //Select one of category from list
         WebElement searchbox = Driver.getDriver().findElement(By.xpath("//input[@class='select2-search__field']"));
-        searchbox.sendKeys("Web Design for Web Developers"+ Keys.ENTER);
+        searchbox.sendKeys("Web Design for Web Developers" + Keys.ENTER);
         Assert.assertTrue(qdp.category.isEnabled());
-
+        //Scroll Down
+        Actions at = new Actions(Driver.getDriver());
+        at.sendKeys(Keys.PAGE_DOWN).build().perform();
         //Click Level Section
         qdp.Level.click();
-
         WebElement searchbox2 = Driver.getDriver().findElement(By.xpath("//input[@class='select2-search__field']"));
-        searchbox2.sendKeys("Advanced"+Keys.ENTER);
+        searchbox2.sendKeys("Advanced" + Keys.ENTER);
         Assert.assertTrue(qdp.Level.isEnabled());
         ReusableMethods.bekle(2);
         //Enable drip content button
@@ -82,11 +83,12 @@ public class US_29 {
         Driver.closeDriver();
 
 
+    }
+    @Test
+    public void us_029 () {
 
-
-
-
-        }
+        Driver.closeDriver();
+    }
 
 
 
