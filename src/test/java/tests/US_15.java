@@ -57,6 +57,7 @@ public class US_15 {
 
         ReusableMethods.bekle(5);
         Driver.closeDriver();
+
     }
     @Test
     public void TC1502() throws InterruptedException {
@@ -78,7 +79,7 @@ public class US_15 {
         //Select the user profile opened under the user box icon
         Actions actions=new Actions(Driver.getDriver());
         actions.moveToElement(qualityDemyPageInstructor.userBoxIcon).perform();
-        //Thread.sleep(3000);
+        ReusableMethods.bekle(3);
         qualityDemyPageInstructor.userProfilePage.click();
 
         //Change any profile information and click save button
