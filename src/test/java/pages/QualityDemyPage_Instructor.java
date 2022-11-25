@@ -22,7 +22,21 @@ public class QualityDemyPage_Instructor {
 
 
     //---------------------------24==175------GURSEL--------------------------------------------------------//
-
+    //mainPage> loginLinki> emailBox> password> loginButton> instructorLink> salesReportLink
+    @FindBy(xpath = "//span[text()='Sales report']")
+    public WebElement salesReportLink;
+    //mainPage> loginLinki> emailBox> password> loginButton> instructorLink> salesReportLink> salesReportSearchBox
+    @FindBy(xpath = "//input[@type='search']")
+    public WebElement salesReportSearchBox;
+    //mainPage> loginLinki> emailBox> password> loginButton> instructorLink> salesReportLink> filterDropbox
+    @FindBy(xpath = "//div[@id='reportrange']")
+    public WebElement filterDropBox;
+    //mainPage> loginLinki> emailBox> password> loginButton> instructorLink> salesReportLink> filterDropbox> lastMonthButton
+    @FindBy(xpath = "//li[text()='Last Month']")
+    public WebElement lastMonthButton;
+    //mainPage> loginLinki> emailBox> password> loginButton> instructorLink> salesReportLink> noDataAvailableInTableHeading
+    @FindBy(xpath = "//*[@class='dataTables_empty']")
+    public WebElement noDataAvailableInTheTable;
 
 
 
@@ -924,14 +938,96 @@ public WebElement instructorLink;
 
 
 //-----------------------926==1075------------------MERYEM------------------------------------------------------//
+@FindBy(xpath = "//a[text()='Log in']")
+public WebElement loginLinki;
+    @FindBy(xpath = "//input[@id='login-email']")
+    public WebElement emailKutusu;
+    @FindBy(xpath = "//input[@id='login-password']")
+    public WebElement passwordKutusu;
+    @FindBy(xpath = "//a[@onclick=\"cookieAccept();\"]")
+    public WebElement cookies;
+    @FindBy(xpath = "(//button[@type='submit'])[2]")
+    public WebElement loginButonu;
+    /* ------------------------ US_16 ---------------------------------*/
+    //HomePage => İnstructor
+    @FindBy( xpath = "(//div[@class='icon'])[1]")
+    public WebElement instructor;
+    //HomePage => İnstructor => Manage Profile
+    @FindBy ( xpath = "//i[@class='dripicons-user']")
+    public  WebElement myManager;
+    //HomePage => İnstructor => Manage Profile => Account
+    @FindBy( xpath = "(//li[@class=' mb-3'])[1]")
+    public WebElement account;
+    //HomePage => İnstructor => Manage Profile => Account => Current Password
+    @FindBy ( xpath = "(//input[@type='password'])[1]")
+    public WebElement currentPossword ;
+    //HomePage => İnstructor => Manage Profile => Account => New Password
+    @FindBy ( xpath = "(//input[@type='password'])[2]")
+    public WebElement newPossword ;
+    //HomePage => İnstructor => Manage Profile => Account => Confirm Password
+    @FindBy ( id= "confirm_password")
+    public WebElement ConfirmPossword ;
+    //HomePage => İnstructor => Manage Profile => Account => Save Change
+    @FindBy( xpath = "//*[text()='Save changes']")
+    public WebElement saveChanges;
+    @FindBy(xpath = "//div[@class='toast-message']")
+    public  WebElement mesaj;
+    /* ------------------------ US_17 ---------------------------------*/
+    //HomePage => İnstructor => Manage Profile => Profile
+    @FindBy(xpath = "(//*[@class=' mb-3'])[2]")
+    public  WebElement photoButon;
+    //HomePage => İnstructor => Manage Profile => Profile => Profile Photo
+    @FindBy(xpath = "//div[@class='input-group']")
+    public  WebElement uploadİmage;
+    //HomePage => İnstructor => Manage Profile => Profile => Profile Photo
+    @FindBy ( xpath = "//button[@class='btn red px-5 py-2 radius-8']")
+    public WebElement uploadButonu;
+    /* ------------------------ US_25 ---------------------------------*/
+    //HomePage => İnstructor => Course Manage
+    @FindBy ( xpath = "//*[text()='Course manager']")
+    public WebElement courseManager;
+    //HomePage => İnstructor => Course Manage => Add New Course
+    @FindBy(xpath = "//*[text()='Add new course']")
+    public WebElement addNewCourse;
+    //HomePage => İnstructor => Course Manage => Add New Course => Pricing
+    @FindBy(xpath = "//*[@class='mdi mdi-currency-cny']")
+    public WebElement pricing;
+    //HomePage => İnstructor => Course Manage => Add New Course => Pricing => Course Price
+    @FindBy(xpath = "(//input[@type='number'])[1]")
+    public WebElement courseprice;
+    //HomePage => İnstructor => Course Manage => Add New Course => Pricing => Course Price => Check Discount
+    @FindBy(xpath = "//label[@for='discount_flag']")
+    public WebElement Checkdiscount;
+    //HomePage => İnstructor => Course Manage => Add New Course => Pricing => Course Price => Discounted price
+    @FindBy(xpath = "(//input[@type='number'])[2]")
+    public WebElement discountedprice;
+    @FindBy(xpath = "(//small[@class='text-muted'])[3]")
+    public WebElement indirimliFıyat;
+    /* ------------------------ US_26 ---------------------------------*/
 
+    @FindBy(xpath = "(//span[@class='d-none d-sm-inline'])[5]")
+    public WebElement media;
 
+    @FindBy(xpath = "//span[@id='select2-course_overview_provider-container']")
+    public WebElement courseOverviewProvider;
 
+    @FindBy(xpath = "//*[text()='Basic']")
+    public WebElement basicButonu;
 
+    @FindBy(xpath = "//input[@id='course_title']")
+    public WebElement courseTitle;
 
+    @FindBy(xpath = "(//span[@class='select2-selection__rendered'])[1]")
+    public WebElement categoryDropDown;
 
+    @FindBy(xpath = "(//*[text()='Web Design for Web Developers'])[3]")
+    public WebElement webDesing;
 
+    @FindBy(xpath = "//input[@name='course_overview_url']")
+    public WebElement courseOverviewUrl;
 
+    @FindBy(xpath = "//div[@class='js--image-preview']")
+    public WebElement uploadCoursePicture;
 
 
 
@@ -991,11 +1087,79 @@ public WebElement instructorLink;
 
 
 
+    //-------------------------1076==1225---------------NESE------------------------------------------------------//
+        // ++++++++ US20 Baslangic ++++++++++++
 
+     //HomePage->Login->HomePage -->Instructor
+    @FindBy(xpath = "//a[text()='Instructor']")
+    public WebElement instructorButton;
 
+    // NAVIGATION -> Course Maneger --> demo
+    @FindBy(xpath = "//a[text()='demo']")
+    public WebElement chooseDemoCourse;
+    // NAVIGATION -> Add new course -> ...-> Finish/Submit --> Back to course list
+    @FindBy(xpath = "//a[@class='alignToTitle btn btn-outline-secondary btn-rounded btn-sm my-1']")
+    public WebElement backtoList;
+    //Back to course list --> Course manager
+    @FindBy(xpath = "//*[@class='side-nav-link active']")
+    public WebElement courseManeger;
+    // course manager -> course List -> Choose one course from course list -->View on fronted
+    @FindBy(xpath = "//*[@class='alignToTitle btn btn-outline-secondary btn-rounded btn-sm ml-1 my-1']")
+    public WebElement  viewonFrontendButton;
+    //Close the newly opened tab -> Course manager --> right Arrow
+    @FindBy(xpath = "//*[@class='mdi mdi-arrow-right-bold']")
+    public WebElement rightArrow;
+    //Close the newly opened tab -> Course manager --> left Arrow
+    @FindBy(xpath = "//*[@class='mdi mdi-arrow-left-bold']")
+    public  WebElement leftArrow;
+    // ++++++++++ US20 Sonu +++++++++
 
+    // ++++++++ US22 Baslangic +++++++++
+    // NAVIGATION -> course manager -> Basic --> Add new instructor
+    @FindBy(xpath = "//*[text()='Basic']")
+    public WebElement basicButton;
+    // NAVIGATION -> course manager -> Basic --> Add new instructor
+    @FindBy(xpath = "//input[@class='select2-search__field']")
+    public WebElement addNewInstructorTextBox;
+    // NAVIGATION -> course manager -> Basic --> Course title
+    @FindBy(xpath = "//input[@id='course_title']")
+    public WebElement coursetitleTextBox;
+    // NAVIGATION -> course manager -> Basic --> Short description
+    @FindBy(xpath = "//textarea[@id='short_description']")
+    public WebElement sortDescriptionTextarea;
+    // NAVIGATION -> course manager -> Basic --> Description
+    @FindBy(xpath = "//div[@class='note-editable card-block']")
+    public WebElement descriptionTextarea;
+    // NAVIGATION -> course manager -> Basic --> Category
+    @FindBy(xpath = "//span[@id='select2-sub_category_id-container']")
+    public WebElement categorytextBox;
+    @FindBy(xpath = "(//input[@class='select2-search__field'])[2]")
+    public WebElement categoryTextEnter;
+    // NAVIGATION -> course manager -> Basic --> Level
+    @FindBy(xpath = "//span[@id='select2-level-container']")
+    public WebElement levelTextbox;
+    //NAVIGATION -> course manager -> Basic --> Enable drip content
+    @FindBy(xpath = "(//label[@for='enable_drip_content'])[1]")
+    public WebElement enableDripContentButton;
+    // NAVIGATION -> course manager -> Basic --> Check if this course is top course
+    @FindBy(xpath = "//label[@for='is_top_course']")
+    public WebElement ifThisCourseisTopCourse;
+    // +++++++++++++++++++US22 Sonu +++++++++++++++++++
 
 
+    // ++++++++++++++++++US32 Baslangic+++++++++++++++++
+    // NAVIGATION -> course manager --> Pricing
+    @FindBy(linkText = "//a[@class='nav-link rounded-0 pt-2 pb-2 active']")
+    public WebElement pricingButton;
+    // NAVIGATION -> course manager -> Pricing --> Course Price Box
+    @FindBy(xpath = "(//input[@class='form-control'])[6]")
+    public WebElement coursePriceBox;
+    // NAVIGATION -> course manager -> Pricing --> Discounted Price Box
+    @FindBy(xpath = "//input[@id='discounted_price']")
+    public WebElement discountedPriceBox;
+    // NAVIGATION -> course manager -> Pricing --> Discount Check Box
+    @FindBy(xpath = "//label[@for='discount_flag']")
+    public WebElement discountCheckBox;
 
 
 
@@ -1073,157 +1237,7 @@ public WebElement instructorLink;
 
 
 
-//-------------------------1076==1225---------------NESE------------------------------------------------------//
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------1226==1375------------------YAKUP------------------------------------------------------//
+    //----------------------1226==1375------------------YAKUP-----------------------------------------------------
 
 
 
@@ -1374,38 +1388,38 @@ public WebElement instructorLink;
 
 
 //---------------------1376==1525-------------------TALHA------------------------------------------------------//
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@FindBy (xpath = "//a[text () = 'Instructor']")
+public WebElement Instructor;
+@FindBy (xpath = "//span[text ()= 'Course manager']")
+public WebElement c_manager;
+@FindBy (xpath = "//a[@class='btn btn-outline-primary btn-rounded alignToTitle']")
+public WebElement add_newcourse;
+@FindBy (xpath = "//span[text()='Requirements']")
+public WebElement requirements;
+@FindBy (xpath = "//Input[@name='requirements[]']")
+public WebElement requirementsbox;
+@FindBy (xpath = "//button[@onclick='appendRequirement()']")
+public WebElement addbutton;
+@FindBy (xpath = "//i[@class='mdi mdi-camera-control']")
+public WebElement outcomesection;
+@FindBy (xpath = "(//input[@name='outcomes[]'])[1]")
+public WebElement outcomestextbox;
+@FindBy (xpath = "//button[@onclick='appendOutcome()']")
+public WebElement addoutcomebutton;
+@FindBy (xpath = "//input[@placeholder='Enter course title']")
+public WebElement entercoursetitle;
+@FindBy (xpath = "//textarea[@id='short_description']")
+public WebElement shortdescription;
+@FindBy (xpath = "//div[@class='note-editable card-block']")
+public WebElement description;
+@FindBy (xpath = "(//span[@class='select2-selection__rendered'])[1]")
+public WebElement category;
+@FindBy (xpath = "//span[@id='select2-level-container']")
+public WebElement Level;
+@FindBy (xpath = "(//label[@for='enable_drip_content'] )[2]")
+public WebElement Enable_Drip;
+@FindBy (xpath = "(//label[@class='custom-control-label'] )[1]")
+public WebElement checkbox;
 
 
 
