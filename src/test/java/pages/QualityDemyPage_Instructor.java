@@ -923,12 +923,6 @@ public WebElement instructorLink;
 
 
 
-
-
-
-
-
-
     //-----------------------926==1075------------------MERYEM------------------------------------------------------//
 @FindBy(xpath = "//a[text()='Log in']")
 public WebElement loginLinki;
