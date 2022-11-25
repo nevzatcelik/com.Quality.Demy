@@ -48,7 +48,7 @@ public class US_19 {
 
         Assert.assertTrue(qualityDemyPage_instructor.categoryChoosingTC1.isDisplayed());
 
-        qualityDemyPage_instructor.account.click();
+        qualityDemyPage_instructor.accountFatih.click();
         qualityDemyPage_instructor.logout.click();
 
         // Driver.getDriver().close();
@@ -93,7 +93,7 @@ public class US_19 {
 
         Assert.assertTrue(qualityDemyPage_instructor.categoryChoosingTC2.isDisplayed());
 
-        qualityDemyPage_instructor.account.click();
+        qualityDemyPage_instructor.accountFatih.click();
         qualityDemyPage_instructor.logout.click();
 
         // Driver.getDriver().close();
@@ -150,7 +150,7 @@ public class US_19 {
 
         Driver.getDriver().switchTo().window(firstPageWindowHandleValue);
 
-        qualityDemyPage_instructor.account.click();
+        qualityDemyPage_instructor.accountFatih.click();
         qualityDemyPage_instructor.logout.click();
 
         // Driver.getDriver().quit();
@@ -207,7 +207,7 @@ public class US_19 {
 
         Driver.getDriver().switchTo().window(firstPageWindowHandleValue);
 
-        qualityDemyPage_instructor.account.click();
+        qualityDemyPage_instructor.accountFatih.click();
         qualityDemyPage_instructor.logout.click();
 
         // Driver.getDriver().quit();
@@ -247,7 +247,7 @@ public class US_19 {
 
         Assert.assertTrue(qualityDemyPage_instructor.updateEditCourse.isDisplayed());
 
-        qualityDemyPage_instructor.account.click();
+        qualityDemyPage_instructor.accountFatih.click();
         qualityDemyPage_instructor.logout.click();
 
         // Driver.getDriver().close();
@@ -293,7 +293,7 @@ public class US_19 {
 
         Assert.assertTrue(qualityDemyPage_instructor.draft.isDisplayed());
 
-        qualityDemyPage_instructor.account.click();
+        qualityDemyPage_instructor.accountFatih.click();
         qualityDemyPage_instructor.logout.click();
 
         // Driver.getDriver().close();
@@ -339,7 +339,7 @@ public class US_19 {
 
         Assert.assertTrue(qualityDemyPage_instructor.pending1.isDisplayed());
 
-        qualityDemyPage_instructor.account.click();
+        qualityDemyPage_instructor.accountFatih.click();
         qualityDemyPage_instructor.logout.click();
 
         // Driver.getDriver().close();
@@ -392,7 +392,7 @@ public class US_19 {
 
         Assert.assertTrue(flag);
 
-        qualityDemyPage_instructor.account.click();
+        qualityDemyPage_instructor.accountFatih.click();
         qualityDemyPage_instructor.logout.click();
 
         // Driver.getDriver().close();
@@ -429,7 +429,7 @@ public class US_19 {
 
         Assert.assertTrue(qualityDemyPage_instructor.courseAddingForm.isDisplayed());
 
-        qualityDemyPage_instructor.account.click();
+        qualityDemyPage_instructor.accountFatih.click();
         qualityDemyPage_instructor.logout.click();
 
         // Driver.getDriver().close();
@@ -468,7 +468,7 @@ public class US_19 {
 
         Assert.assertTrue(qualityDemyPage_instructor.updateEditCourse.getText().contains("Web Design for Developers"));
 
-        qualityDemyPage_instructor.account.click();
+        qualityDemyPage_instructor.accountFatih.click();
         qualityDemyPage_instructor.logout.click();
 
         Driver.getDriver().quit();
