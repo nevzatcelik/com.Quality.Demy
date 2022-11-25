@@ -154,7 +154,7 @@ public class US_38 {
 
         ReusableMethods.bekle(2);
         // Home/my_courses
-        pageUser.myCoursesButton.click();
+        pageUser.myCoursesButton2.click();
         // Home/my_wishlist
         pageUser.wishlistsButton.click();
         softAssert.assertTrue(pageUser.englishCourseMyWishlist.isDisplayed(), "English Course My_wishlist te Gorunmuyor");

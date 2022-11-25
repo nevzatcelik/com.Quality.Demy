@@ -14,7 +14,7 @@ public class US_36 {
     public void becomeAndInstructorPageTest(){
 
         Driver.getDriver().get(ConfigReader.getProperty("myUrl"));
-        qualityDemyPage_user.acceptCookies.click();
+        qualityDemyPage_user.acceptCookies();
 
         qualityDemyPage_user.loginLink.click();
         qualityDemyPage_user.emailBox.sendKeys(ConfigReader.getProperty("validEmailNevzatUs"));
@@ -36,13 +36,14 @@ public class US_36 {
         String actualEmail=qualityDemyPage_user.emailAdressBox.getAttribute("value");
 
         Assert.assertEquals(actualEmail,expectedEmail);
-
+       qualityDemyPage_user.testUser.click();
+       qualityDemyPage_user.logoutButton.click();
     }
 
     @Test
     public void adressPhoneandMessageTest(){
         Driver.getDriver().get(ConfigReader.getProperty("myUrl"));
-        qualityDemyPage_user.acceptCookies.click();
+        qualityDemyPage_user.acceptCookies();
 
         qualityDemyPage_user.loginLink.click();
         qualityDemyPage_user.emailBox.sendKeys(ConfigReader.getProperty("validEmailNevzatUs"));
@@ -53,14 +54,15 @@ public class US_36 {
         qualityDemyPage_user.phoneNumberBox.sendKeys("phoneNevzat");
         qualityDemyPage_user.anyMessageBox.sendKeys(ConfigReader.getProperty("anyMessageNevzat"));
         qualityDemyPage_user.document.sendKeys(ConfigReader.getProperty("dosyaYoluNevzat"));
-
+        qualityDemyPage_user.testUser.click();
+        qualityDemyPage_user.logoutButton.click();
     }
 
 
     @Test
     public void applyTest(){
         Driver.getDriver().get(ConfigReader.getProperty("myUrl"));
-        qualityDemyPage_user.acceptCookies.click();
+        qualityDemyPage_user.acceptCookies();
 
         qualityDemyPage_user.loginLink.click();
         qualityDemyPage_user.emailBox.sendKeys(ConfigReader.getProperty("validEmailNevzatUs"));
@@ -73,7 +75,8 @@ public class US_36 {
         qualityDemyPage_user.document.sendKeys(ConfigReader.getProperty("dosyaYoluNevzat"));
         //  qualityDemyPage_user.applyButton.click();
         //  Assert.assertTrue(qualityDemyPage_user.applyCongrastMessage.isDisplayed());
-
+        qualityDemyPage_user.testUser.click();
+        qualityDemyPage_user.logoutButton.click();
     }
 
 }
