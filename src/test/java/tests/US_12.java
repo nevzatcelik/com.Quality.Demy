@@ -12,6 +12,7 @@ import utilities.Driver;
 import utilities.ReusableMethods;
 
 public class US_12 {
+
      /*
     US_012 Course compare page functions should work correctly
 
@@ -29,19 +30,19 @@ public class US_12 {
         Driver.getDriver().get(ConfigReader.getProperty("myUrl"));
         qualityDemyPage_User.acceptCookies.click();
         qualityDemyPage_User.loginLink.click();
-        qualityDemyPage_User.emailBox.sendKeys(ConfigReader.getProperty("myStudentEmail1"));
-        qualityDemyPage_User.passwordBox.sendKeys(ConfigReader.getProperty("myStudentPassword1"));
+        qualityDemyPage_User.emailBox.sendKeys(ConfigReader.getProperty("myStudentEmailEmine"));
+        qualityDemyPage_User.passwordBox.sendKeys(ConfigReader.getProperty("myStudentPasswordEmine"));
         qualityDemyPage_User.loginButton.click();
     }
 
     @Test
-    public void dropboxCourseTest(){
+    public void US12_TC01(){
 
         //  -Courses should be searchable from dropboxes
 
         ReusableMethods.bekle(5);
 
-        actions.moveToElement(qualityDemyPage_User.categories).perform();
+        actions.moveToElement(qualityDemyPage_User.categoriesE).perform();
         actions.moveToElement(qualityDemyPage_User.categoriWebDesing).perform();
         actions.moveToElement(qualityDemyPage_User.webDevelopers).click().perform();
 
@@ -63,10 +64,10 @@ public class US_12 {
 
     }
     @Test
-    public void learnMoreTest(){
+    public void US12_TC02(){
         // -When to learn more link is clicked, it should redirect to the page of the relevant course
 
-        actions.moveToElement(qualityDemyPage_User.categories).perform();
+        actions.moveToElement(qualityDemyPage_User.categoriesE).perform();
         actions.moveToElement(qualityDemyPage_User.categoriWebDesing).perform();
         actions.moveToElement(qualityDemyPage_User.webDevelopers).click().perform();
 
@@ -88,11 +89,11 @@ public class US_12 {
         Assert.assertTrue(actualCourseName.contains(expectedCourseName));
     }
     @Test
-    public void buyNowTest(){
+    public void US12_TC03(){
 
         // -When the buy now button is clicked, it should redirect to the shopping_cart page
 
-        actions.moveToElement(qualityDemyPage_User.categories).perform();
+        actions.moveToElement(qualityDemyPage_User.categoriesE).perform();
         actions.moveToElement(qualityDemyPage_User.categoriWebDesing).perform();
         actions.moveToElement(qualityDemyPage_User.webDevelopers).click().perform();
 

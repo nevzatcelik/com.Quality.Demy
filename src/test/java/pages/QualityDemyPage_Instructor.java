@@ -22,7 +22,21 @@ public class QualityDemyPage_Instructor {
 
 
     //---------------------------24==175------GURSEL--------------------------------------------------------//
-
+    //mainPage> loginLinki> emailBox> password> loginButton> instructorLink> salesReportLink
+    @FindBy(xpath = "//span[text()='Sales report']")
+    public WebElement salesReportLink;
+    //mainPage> loginLinki> emailBox> password> loginButton> instructorLink> salesReportLink> salesReportSearchBox
+    @FindBy(xpath = "//input[@type='search']")
+    public WebElement salesReportSearchBox;
+    //mainPage> loginLinki> emailBox> password> loginButton> instructorLink> salesReportLink> filterDropbox
+    @FindBy(xpath = "//div[@id='reportrange']")
+    public WebElement filterDropBox;
+    //mainPage> loginLinki> emailBox> password> loginButton> instructorLink> salesReportLink> filterDropbox> lastMonthButton
+    @FindBy(xpath = "//li[text()='Last Month']")
+    public WebElement lastMonthButton;
+    //mainPage> loginLinki> emailBox> password> loginButton> instructorLink> salesReportLink> noDataAvailableInTableHeading
+    @FindBy(xpath = "//*[@class='dataTables_empty']")
+    public WebElement noDataAvailableInTheTable;
 
 
 
@@ -1374,38 +1388,38 @@ public WebElement loginLinki;
 
 
 //---------------------1376==1525-------------------TALHA------------------------------------------------------//
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@FindBy (xpath = "//a[text () = 'Instructor']")
+public WebElement Instructor;
+@FindBy (xpath = "//span[text ()= 'Course manager']")
+public WebElement c_manager;
+@FindBy (xpath = "//a[@class='btn btn-outline-primary btn-rounded alignToTitle']")
+public WebElement add_newcourse;
+@FindBy (xpath = "//span[text()='Requirements']")
+public WebElement requirements;
+@FindBy (xpath = "//Input[@name='requirements[]']")
+public WebElement requirementsbox;
+@FindBy (xpath = "//button[@onclick='appendRequirement()']")
+public WebElement addbutton;
+@FindBy (xpath = "//i[@class='mdi mdi-camera-control']")
+public WebElement outcomesection;
+@FindBy (xpath = "(//input[@name='outcomes[]'])[1]")
+public WebElement outcomestextbox;
+@FindBy (xpath = "//button[@onclick='appendOutcome()']")
+public WebElement addoutcomebutton;
+@FindBy (xpath = "//input[@placeholder='Enter course title']")
+public WebElement entercoursetitle;
+@FindBy (xpath = "//textarea[@id='short_description']")
+public WebElement shortdescription;
+@FindBy (xpath = "//div[@class='note-editable card-block']")
+public WebElement description;
+@FindBy (xpath = "(//span[@class='select2-selection__rendered'])[1]")
+public WebElement category;
+@FindBy (xpath = "//span[@id='select2-level-container']")
+public WebElement Level;
+@FindBy (xpath = "(//label[@for='enable_drip_content'] )[2]")
+public WebElement Enable_Drip;
+@FindBy (xpath = "(//label[@class='custom-control-label'] )[1]")
+public WebElement checkbox;
 
 
 

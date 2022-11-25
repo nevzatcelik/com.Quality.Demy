@@ -7,7 +7,7 @@ import utilities.Driver;
 
 public class QualityDemyPage_User {
     public QualityDemyPage_User() {
-        PageFactory.initElements(Driver.getDriver(), this);
+        PageFactory.initElements( Driver.getDriver(), this );
     }
 
 
@@ -30,7 +30,7 @@ public class QualityDemyPage_User {
     public WebElement categories;
     //mainPage> Sign Up link at top right>***
     @FindBy(xpath = "//*[@class='btn btn-sign-up']")
-    public  WebElement signUpLink;
+    public WebElement signUpLink;
     //mainPage> Shopping cart icon at top right***
     @FindBy(xpath = "//*[@class='fas fa-shopping-cart']")
     public WebElement shoppingCartIcon;
@@ -184,7 +184,7 @@ public class QualityDemyPage_User {
     @FindBy(xpath = "//button[text()='Login']")
     public WebElement loginButton;
     // Home Page > Cookies Pop-Up
-    @FindBy(xpath = "//a[@onclick='cookieAccept();']")
+    @FindBy(xpath = "//*[text()='Accept']")
     public WebElement acceptCookies;
     // Home Page > Login Link > Password Box
     @FindBy(xpath = "//input[@id='login-password']")
@@ -203,7 +203,7 @@ public class QualityDemyPage_User {
     public WebElement forgotPasswordLink;
     // Home Page > Login Link > Login Page > Login Button > Welcome Message
     @FindBy(xpath = "(//script[@type='text/javascript'])[3]")
-    public WebElement wellcomeMessage;
+    public WebElement welcomeMessage;
     // Home Page > Sign Up Button > First Name Box
     @FindBy(xpath = "//input[@name='first_name']")
     public WebElement firstNameBox;
@@ -234,45 +234,45 @@ public class QualityDemyPage_User {
     // Home Page > Login Button > Forgot Password Page > Login Link (Under Send Request Button)
     @FindBy(xpath = "(//a[@href='https://qualitydemy.com/login'])[2]")
     public WebElement forgotPasswordLoginLink;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    // Home Page > Login Link > Login Page > Login Button (Login Page)
+    @FindBy(xpath = "(//button[@type='submit'])[2]")
+    public WebElement loginButtonLoginPage;
+    // Home Page > Login Link > Login Page > Login Button (Login Page)
+    @FindBy(xpath = "(//script[@type='text/javascript'])[2]")
+    public WebElement invalidLoginCridentialsPopup;
+    // Home Page > Login Link > Login Page > Login Button (Login Page) > Test User Drop Down Menu
+    @FindBy(xpath = "//img[@class='img-fluid']")
+    public WebElement testUserDropDownMenu;
+    // Home Page > Login Link > Login Page > Login Button (Login Page) > Test User Drop Down Menu > Log Out Button
+    @FindBy(xpath = "//i[@class='fas fa-sign-out-alt']")
+    public WebElement logOutButton;
+    // Home Page > Sign Up Button > Login Button > Verification Code Page > Login Link
+    @FindBy(xpath = "//a[@class='text-15px fw-700']")
+    public WebElement verificationPageLoginLink;
+    // Home Page > Login Button > Forgot Password Page > Forgot Password > Send Request Button (user e-mail)
+    @FindBy(xpath = "(//script[@type='text/javascript'])[2]")
+    public WebElement forgotPasswordCheckYourInboxForTheRequestPopup;
+    // Home Page > Login Button > Forgot Password Page > Forgot Password > Send Request Button (unregistered e-mail)
+    @FindBy(xpath = "(//script[@type='text/javascript'])[2]")
+    public WebElement forgotPasswordUserNotFoundPopup;
+    // https://tempmail.dev/tr > Mail Address
+    @FindBy(xpath = "//div[@id='current-mail']")
+    public WebElement tempMailEmailAddress;
+    // https://tempmail.dev/tr > Message Preview
+    @FindBy(xpath = "//div[@class='mail-details']")
+    public WebElement tempMailMessageFirstClick;
+    // https://tempmail.dev/tr > Verification Code in Mail
+    @FindBy(xpath = "//u")
+    public WebElement tempMailVerificationCode;
+    // https://tempmail.dev/tr > Verification Text in Mail
+    @FindBy(xpath = "//a[@title='QualityDemy']")
+    public WebElement tempMailVerificationText;
+    // Home Page > Login Link > Login Button
+    @FindBy(xpath = "//a[@href='https://qualitydemy.com/login']")
+    public WebElement loginButtonLev;
+    // Home Page > Cookies Pop-Up
+    @FindBy(xpath = "//a[@onclick='cookieAccept();']")
+    public WebElement acceptCookiesLev;
 
 
 
@@ -324,156 +324,156 @@ public class QualityDemyPage_User {
 
 
     //----------------------------326==475------------MURAT-------------------------------------------------------//
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//---------------------------476==625-------------EMINE------------------------------------------------------//
+    @FindBy(xpath = "//input[@id='last_name']")
+    public WebElement lastName;
+    @FindBy(xpath = "//input[@name='first_name']")
+    public WebElement firstName;
+    @FindBy(xpath = "//div[text()=\"Welcome Test User\"]")
+    public WebElement welcomeMessage1;
+    @FindBy(linkText = "//div[@id='course_info_view_6']")
+    public WebElement wordPressTitle;
+    @FindBy(linkText = "(//div[text()='Wordpress'])[2]")
+    public WebElement wordPress;
+    @FindBy(xpath = "//*[@id=\"4\"]")
+    public WebElement addToCart250;
+    @FindBy(xpath = "/html/body/section[3]/div/div/div[2]/div/div/div[3]/button[1]")
+    public WebElement addToCart450;
+    @FindBy(xpath = "//button[@class='btn btn-buy-now']")
+    public WebElement addToCart150;
+    @FindBy(xpath = "//a[text()='English Course Learn To Speak']")
+    public WebElement cours250;
+    @FindBy(xpath = "(//a[text()='Disney Magic English'])[2]")
+    public WebElement cours450;
+    @FindBy(xpath = "//a[text()='Wordpress']")
+    public WebElement cours150;
+    @FindBy(xpath = "//*[@id='4']")
+    public WebElement removeButton250;
+    @FindBy(xpath = "//a[text()='Reset']")
+    public WebElement resetButton;
+    @FindBy(xpath = "//button[@onclick='applyCoupon()']")
+    public WebElement applyButton;
+    @FindBy(xpath = "//b[text()='Make payment']")
+    public WebElement payment;
+    @FindBy(xpath = "//*[@id=\"sign_up\"]/div[5]/button")
+    public WebElement passwordRBox;
+    @FindBy(xpath = "//*[@id=\"registration-email\"]")
+    public WebElement emailRBox;
+    @FindBy(xpath = "//span[text()='50% Coupon code applied']")
+    public WebElement couponCode50;
+    @FindBy(xpath = "//input[@id='coupon-code']")
+    public WebElement couponCode;
+    @FindBy(xpath = "(//i[@class='fas fa-shopping-cart'])[1]")
+    public WebElement shoppingCart;
+    @FindBy(xpath = "//i[@class='fas fa-bars text-16px']")
+    public WebElement categoriesDropDown;
+    @FindBy(xpath = "(//*[text()='All courses'])[1]")
+    public WebElement catagoriesAll;
+    @FindBy(xpath = "//*[@class='mdi mdi-arrow-right-bold']")
+    public WebElement NextButton;
+    @FindBy(xpath = "//*[@placeholder='Enter course course price']")
+    public WebElement coursePrice;
+    @FindBy(linkText = "payment")
+    public WebElement paymentLink;
+    @FindBy(xpath = "//button[text()='Checkout']")
+    public WebElement checkOut;
+    @FindBy(xpath = "//span[@class='fw-500']")
+    public WebElement dropDown;
+    @FindBy(xpath = "//*[text()=' Back to course list']")
+    public WebElement backToCourseListButton;
+    @FindBy(xpath = "//div[text()=\"Welcome Test User\"]")
+    public WebElement welcomeTestUser;
+    @FindBy(xpath = "/html/body/section[3]/div/div[1]/div/div[2]/form/div/input")
+    public WebElement mySearchBox;
+    @FindBy(xpath = "/html/body/section[1]/div/nav/div[3]/div/a")
+    public WebElement myCoursesButton;
+    @FindBy(xpath = "//*[text()=' Purchase history']")
+    public WebElement buttonPurchaseHistory;
+    @FindBy(xpath = "//a[text()='Invoice']")
+    public WebElement buttonInvoice;
+    @FindBy(xpath = "//a[contains(text(), 'Res')]") //
+    public WebElement buttonReset;
+    @FindBy(xpath = "//a[@id='edit_rating_btn_6']")
+    public WebElement editRating6;
+    @FindBy(xpath = "//*[@id=\"star_rating_of_course_6\"]")
+    public WebElement puan1out5;
+    @FindBy(xpath = "//*[@id=\"star_rating_of_course_6\"]")
+    public WebElement editRatingDropDown;
+    @FindBy(xpath = "//*[@id=\"edit_rating_btn_3\"]")
+    public WebElement editRating;
+    @FindBy(xpath = "//*[@id=\"star_rating_of_course_3\"]")
+    public WebElement scoringScreen;
+    @FindBy(xpath = "//*[@id=\"course_rating_view_6\"]/form/a")
+    public WebElement cancelButtonEditRating;
+    @FindBy(xpath = "//*[@id=\"course_info_view_6\"]/div[2]/div/a")
+    public WebElement startLesson;
+    @FindBy(xpath = "/html/body/div[1]/div[1]/div[1]/h5")
+    public WebElement wordpressKurs;
+    @FindBy(xpath = "//*[@id=\"course_rating_view_6\"]/form/button")
+    public WebElement publishRating;
+    @FindBy(xpath = "//*[@id=\"review_of_a_course_6\"]")
+    public WebElement msgTextBox;
+    @FindBy(xpath = "//input[@placeholder='First Name']")
+    public WebElement fieldFirstName;
+    @FindBy(xpath = "//input[@placeholder='Last name']")
+    public WebElement fieldLastName;
+    @FindBy(xpath = "//input[@placeholder='Email']")
+    public WebElement fieldEmail;
+    @FindBy(xpath = "//input[@placeholder='Password']")
+    public WebElement fieldPassword;
+    @FindBy(xpath = "//button[text()='Sign Up']")
+    public WebElement buttonNewSignUp;
+    @FindBy(xpath = "//p[text()='Sign up and start learning']")
+    public WebElement textSignUpAndStartLearning;
+    @FindBy(xpath = "//label[text()='Verification code']")
+    public WebElement verificationPage;
+    @FindBy(className = "toast-message")
+    public WebElement toastMessage;
+    @FindBy(xpath = "//div[text()='You have already registered. Please verify your email address']")
+    public WebElement alreadyRegistered;
+    @FindBy(xpath = " //div[text()='Your registration has been successfully done. Please check your mail inbox to verify your email address.']")
+    public WebElement firstRegisteredMessage;
+    @FindBy(xpath = "//p[text()='The First Name field must be at least 2 characters in length.']")
+    public WebElement warningFirstNameWrong;
+    @FindBy(xpath = " //p[text()='The Last name field must be at least 2 characters in length.']")
+    public WebElement warningLastNameWrong;
+    @FindBy(xpath = "//a[text()='Log in']")
+    public WebElement buttonLogin;
+    @FindBy(xpath = "//img[@height='35']")
+    public WebElement logo99;
+    @FindBy(xpath = "//span[text()='Categories']")
+    public WebElement dropDownCategories;
+    @FindBy(name = "query")
+    public WebElement fieldSearchBox;
+    @FindBy(xpath = "//i[@class='fas fa-shopping-cart']")
+    public WebElement buttonCart;
+    @FindBy(xpath = "(//a[text()='Sign Up'])[1]")
+    public WebElement buttonSignUp;
+    @FindBy(xpath = "//a[text()='Instructor']")
+    public WebElement buttonInstructor;
+    @FindBy(xpath = "//div/a[text()='My courses']")
+    public WebElement buttonMyCourses;
+    @FindBy(xpath = "//div[@id='wishlist_items']/div[@class='icon']/a")
+    public WebElement buttonWishList;
+    @FindBy(xpath = "//a[text()='Purchase history']")
+    public WebElement optionPurchaseHistory;
+    @FindBy(xpath = "//div[@class='user-box menu-icon-box']/div/a")
+    public WebElement dropDownUserIcon;
+    @FindBy(xpath = "//a[text()='User profile']")
+    public WebElement optionUserProfile;
+    @FindBy(xpath = "//a[text()=' Log out']")
+    public WebElement optionLogout;
+    @FindBy(xpath = "//div[@class='wishlist-box menu-icon-box']")
+    public WebElement iconWishList;
+    @FindBy(xpath = "//a[text()='Go to wishlist']")
+    public WebElement dropDownGoToWishList;
+    @FindBy(xpath = "(//button[@class='btn'])[1]")
+    public WebElement buttonSearchBox;
+
+
+
+
+
+   //---------------------------476==625-------------EMINE------------------------------------------------------//
 @FindBy (xpath = "//img[@src='https://qualitydemy.com/uploads/system/393645bf994114c23be28028a47a77a0.png']")
 public WebElement homePage;
     //Home Page >> Heart
@@ -501,7 +501,7 @@ public WebElement homePage;
     @FindBy (xpath = "//a[@class='text-14px fw-600 text-decoration-none']")
     public WebElement ReactandTypescriptinstrocturIcon;
     //Home Page > Heart > Go to MywishList > React and Typescriptins >  38:45:16 Hours On demand videos
-    @FindBy (xpath = "//i[@class='far fa-file-video']")
+    @FindBy (xpath = "(//span[@class='total-time'])[1]")
     public WebElement durationCourse;
     //Home Page > Heart > Go to MywishList > React and Typescriptins > 12 Lessons
     @FindBy (xpath = "//*[text()='12 Lessons']")
@@ -512,7 +512,7 @@ public WebElement homePage;
     // ---------------------------------------- US_12 --------------------------------------
     //Home Page > Categories
     @FindBy (xpath = "//i[@class='fas fa-bars text-16px']")
-    public WebElement categoriess;
+    public WebElement categoriesE;
     //Home Page > Categories > Web Design Course
     @FindBy (xpath = "(//a[@class='py-2 text-wrap d-flex'])[1]")
     public WebElement categoriWebDesing;
@@ -1374,20 +1374,20 @@ public WebElement homePage;
 
 
 //---------------------1376==1525-------------------TALHA------------------------------------------------------//
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    @FindBy (xpath = "(//a[@href='https://qualitydemy.com/home/my_courses'])[1]")
+    public WebElement my_courses;
+    @FindBy (xpath = "//a[@href='https://qualitydemy.com/home/course/java/180']")
+    public WebElement coursedetaill;
+    @FindBy (xpath = "(//div[@class='lecture-group-title clearfix'])[1]")
+    public WebElement contextmenuopen;
+    @FindBy (xpath = "(//div[@class='lecture-group-title clearfix collapsed'])[1]")
+    public WebElement contextmenuclose;
+    @FindBy (xpath = "(//a[@class='btn red radius-5 w-100'])[3]")
+    public WebElement javastartbutton;
+    @FindBy (xpath = "(//i[@class='fa fa-plus'])[1]")
+    public WebElement clickplusbutton;
+    @FindBy (xpath = "//label[@for='94']")
+    public WebElement checkbox;
 
 
 
