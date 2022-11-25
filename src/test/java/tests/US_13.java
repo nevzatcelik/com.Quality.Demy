@@ -37,28 +37,32 @@ public class US_13 {
     qualityDemyPageInstructor.categoriesWebDesign.click();
     actions.moveToElement(qualityDemyPageInstructor.categories).perform();
     ReusableMethods.bekle(2);
-    //String expectedPage1="Web Design Course";
-    //String actualPage1=qualityDemyPageInstructor.categoriesWebDesign.getText();
-    //Assert.assertTrue(actualPage1.equals(expectedPage1));
+    Assert.assertTrue(qualityDemyPageInstructor.webDesignPage.isDisplayed());
 
     qualityDemyPageInstructor.categoriesEnglish.click();
     actions.moveToElement(qualityDemyPageInstructor.categories).perform();
     ReusableMethods.bekle(2);
+    Assert.assertTrue(qualityDemyPageInstructor.englishCoursePage.isDisplayed());
 
     qualityDemyPageInstructor.categoriesIt.click();
     actions.moveToElement(qualityDemyPageInstructor.categories).perform();
     ReusableMethods.bekle(2);
+    Assert.assertTrue(qualityDemyPageInstructor.itCoursePage.isDisplayed());
 
     qualityDemyPageInstructor.categoriesMusic.click();
     actions.moveToElement(qualityDemyPageInstructor.categories).perform();
     ReusableMethods.bekle(2);
+    Assert.assertTrue(qualityDemyPageInstructor.musicCoursePage.isDisplayed());
 
     qualityDemyPageInstructor.categoriesPersonelDevelopments.click();
     actions.moveToElement(qualityDemyPageInstructor.categories).perform();
     ReusableMethods.bekle(2);
+    Assert.assertTrue(qualityDemyPageInstructor.personelDevelopmentPage.isDisplayed());
 
     qualityDemyPageInstructor.categoriesAllCourses.click();
     actions.moveToElement(qualityDemyPageInstructor.categories).perform();
+    ReusableMethods.bekle(2);
+    Assert.assertTrue(qualityDemyPageInstructor.allCoursesPage.isDisplayed());
 
     ReusableMethods.bekle(5);
     Driver.closeDriver();

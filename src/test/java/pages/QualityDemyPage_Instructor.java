@@ -630,21 +630,39 @@ public WebElement categories;
     //Homepage => categories => Web Design Course
     @FindBy (xpath ="//span[text()='Web Design Course']")
     public WebElement categoriesWebDesign;
+    //Homepage => categories => Web Design Course => Web Desing Course Page
+    @FindBy(xpath="//li[@class='breadcrumb-item active text-light display-6 fw-bold']")
+    public WebElement webDesignPage;
     //Homepage => Categories => English Course
     @FindBy (xpath = "//span[text()='English Course']")
     public WebElement categoriesEnglish;
+    //Homepage => categories => English Course => English Course Page
+    @FindBy(xpath="//li[@class='breadcrumb-item active text-light display-6 fw-bold']")
+    public WebElement englishCoursePage;
     //Homepage => Categories => IT & SoftWare
     @FindBy (xpath="//span[text()='IT & Software']")
     public WebElement categoriesIt;
+    //Homepage => categories => IT Course => IT Course Page
+    @FindBy(xpath="//li[@class='breadcrumb-item active text-light display-6 fw-bold']")
+    public WebElement itCoursePage;
     //Homepage => Categories => Music
     @FindBy (xpath= "//span[text()='Music']")
     public WebElement categoriesMusic;
+    //Homepage => categories => Music Course => Music Course Page
+    @FindBy(xpath="//li[@class='breadcrumb-item active text-light display-6 fw-bold']")
+    public WebElement musicCoursePage;
     //Homepage => categories => Personel Developments
     @FindBy (xpath= "//span[text()='Personal Developments']")
     public WebElement categoriesPersonelDevelopments;
+    //Homepage => Categories => Personel Development Course => Personel Development Course Page
+    @FindBy (xpath = "//li[@class='breadcrumb-item active text-light display-6 fw-bold']")
+    public WebElement personelDevelopmentPage;
     //Homepage => Categories => All courses
     @FindBy (xpath= "//span[text()='All courses']")
     public WebElement categoriesAllCourses;
+    //Homepage => Categories => All Courses => All Courses Page
+    @FindBy(xpath="//li[@class='breadcrumb-item active text-light display-6 fw-bold']")
+    public WebElement allCoursesPage;
     //Homepage => User box icon
     @FindBy (xpath= "//div[@class='user-box menu-icon-box']")
     public WebElement userBoxIcon;
@@ -737,24 +755,6 @@ public WebElement categories;
     //Homepage => Instructor section => Requested withdrawal amount
     @FindBy (xpath = "//p[text()='Requested withdrawal amount']")
     public WebElement requestedWithdrawalAmount;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -923,7 +923,7 @@ public WebElement instructorLink;
 
 
 
-//-----------------------926==1075------------------MERYEM------------------------------------------------------//
+    //-----------------------926==1075------------------MERYEM------------------------------------------------------//
 @FindBy(xpath = "//a[text()='Log in']")
 public WebElement loginLinki;
     @FindBy(xpath = "//input[@id='login-email']")
@@ -1525,82 +1525,82 @@ public WebElement checkbox;
 
 //-------------------------1526==1675---------------BORA------------------------------------------------------//
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    //Home Page
+    @FindBy (xpath = "//img[@src='https://qualitydemy.com/uploads/system/393645bf994114c23be28028a47a77a0.png']")
+    public WebElement homePage;
+    //Home Page > Categories > Web Design Course   //i[@class='fas fa-bars text-16px']
+    @FindBy (xpath = "(//a[@class='py-2 text-wrap d-flex'])[1]")
+    public WebElement categoriWebDesing;
+    //Home Page > Categories > Web Design Course > Web Design for Web Developers
+    @FindBy (xpath = "//*[text()='Web Design for Web Developers']")
+    public WebElement webDevelopers;
+    //Home Page > Categories > Web Design Course > Web Design for Web Developers > Wordpress
+    @FindBy(xpath = "(//div[@class='course-image'])[3]")
+    public WebElement wordpresslink;
+    //Home Page > Categories > Web Design Course > Wordpress > Buy now
+    @FindBy (xpath = "//*[text()='Buy now']")
+    public WebElement wordpressBuyNow;
+    //Home Page > Shopping
+    @FindBy(xpath = "(//a[@href='https://qualitydemy.com/home/shopping_cart'])[1]")
+    public WebElement shoppingButton;
+    //Home Page > Shopping > checkout
+    @FindBy (xpath = "//button[@class='btn red w-100 radius-10 mb-3']")
+    public WebElement checkoutButton;
+    //Home Page > Shopping >  'Wordpress' course > checkout > stripe
+    @FindBy (xpath = "//img[@class='payment-gateway-icon']")
+    public WebElement stripeButoon;
+    //Home Page > Shopping >  'Wordpress' course > checkout > stripe > payWithStripe
+    @FindBy (xpath = "//button[@class='stripe-button payment-button float-end']")
+    public WebElement payWithStripe;
+    //Home Page > Shopping >  'Wordpress' course > checkout > close button
+    @FindBy (xpath = "//i[@class='fa fa-times']")
+    public WebElement closeButton;
+    //Home Page > Shopping Card Page
+    @FindBy (xpath = "//li[@class='breadcrumb-item active text-light display-6 fw-bold']")
+    public WebElement shoppingCardPage;
+    //Home Page > Shopping Card Page > Checkout sprite Page
+    @FindBy (xpath = "(//input[@class='CheckoutInput Input Input--empty'])[1]")
+    public WebElement checkoutEmail;
+    //Home Page > Shopping Card Page > Checkout sprite Page
+    @FindBy (xpath = "//input[@autocomplete='cc-number']")
+    public WebElement cardNummer;
+    //Home Page > Shopping Card Page > Checkout sprite Page
+    @FindBy (xpath = "//input[@autocomplete='cc-exp']")
+    public WebElement expDatum;
+    //Home Page > Shopping Card Page > Checkout sprite Page
+    @FindBy(xpath = "//input[@autocomplete='cc-csc']")
+    public WebElement cardCVC;
+    //Home Page > Shopping Card Page > Checkout sprite Page
+    @FindBy (xpath = "//input[@autocomplete='ccname']")
+    public WebElement nameOnCard;
+    //Home Page > Shopping Card Page > Checkout sprite Page
+    @FindBy (xpath = "//select[@autocomplete='billing country']")
+    public WebElement countryName;
+    //Home Page > Shopping Card Page > Checkout sprite Page
+    @FindBy(xpath = "//*[text()='Sweden']")
+    public WebElement countrySweden;
+
+    // Home Page > MyCourses
+    @FindBy(xpath = "(//*[text()='My courses'])[1]")
+    public WebElement myCourses;
+    // Home Page > MyCourses > Wordpress
+    @FindBy (xpath = "//img[@src='https://qualitydemy.com/uploads/thumbnails/course_thumbnails/optimized/course_thumbnail_default_31666766582.jpg']")
+    public WebElement myCoursePageWordpres;
+    //
+    @FindBy(xpath = "//div[@class='SubmitButton-IconContainer']")
+    public WebElement payButton;
+
+    //=======================================================================
+
+    //Home Page > Categories > Web Design Course > HTML5 and CSS
+    @FindBy (xpath = "(//*[text()='HTML5 and CSS'])[1]")
+    public WebElement HTMLandCSS;
+    //Home Page > Categories > Web Design Course > Web Design for Web Developers > Build Responsive Real-World Websites with HTML and CSS
+    @FindBy(xpath = "//img[@src='https://qualitydemy.com/uploads/thumbnails/course_thumbnails/optimized/course_thumbnail_default_12.jpg']")
+    public WebElement buildResponsiRealWorldHTMLandCSSlink;
+    //Home Page > Categories > Web Design Course > Build Responsive Real-World Websites with HTML and CSS > Buy now
+    @FindBy (xpath = "//*[text()='Buy now']")
+    public WebElement courseBuyNow;
 
 
 
