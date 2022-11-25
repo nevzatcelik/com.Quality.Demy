@@ -855,6 +855,12 @@ public WebElement instructorLink;
     @FindBy (xpath = "//a[@href='https://qualitydemy.com/user/course_form/add_course']")
     public WebElement addNewCourseButton;
 
+    @FindBy (id = "topbar-userdrop")
+    public WebElement account;
+
+    @FindBy (xpath = "//a[@href='https://qualitydemy.com/login/logout']")
+    public WebElement logout;
+
     // Homepage ==> Login Page ==> Instructor Page ==> Dashboard Page ==> Course manager (Courses) Page ==> Relevant course Page
     @FindBy (xpath = "//h1[text()='Web Design for Developers']")
     public WebElement pageRelevantCourseTC3; // Web Design for Developers
