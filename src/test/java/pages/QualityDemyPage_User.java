@@ -501,7 +501,7 @@ public WebElement homePage;
     @FindBy (xpath = "//a[@class='text-14px fw-600 text-decoration-none']")
     public WebElement ReactandTypescriptinstrocturIcon;
     //Home Page > Heart > Go to MywishList > React and Typescriptins >  38:45:16 Hours On demand videos
-    @FindBy (xpath = "//i[@class='far fa-file-video']")
+    @FindBy (xpath = "(//span[@class='total-time'])[1]")
     public WebElement durationCourse;
     //Home Page > Heart > Go to MywishList > React and Typescriptins > 12 Lessons
     @FindBy (xpath = "//*[text()='12 Lessons']")
@@ -512,7 +512,7 @@ public WebElement homePage;
     // ---------------------------------------- US_12 --------------------------------------
     //Home Page > Categories
     @FindBy (xpath = "//i[@class='fas fa-bars text-16px']")
-    public WebElement categoriess;
+    public WebElement categoriesE;
     //Home Page > Categories > Web Design Course
     @FindBy (xpath = "(//a[@class='py-2 text-wrap d-flex'])[1]")
     public WebElement categoriWebDesing;

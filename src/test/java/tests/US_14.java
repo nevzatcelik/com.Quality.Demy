@@ -12,11 +12,11 @@ import utilities.ReusableMethods;
 
 public class US_14 {
     /*
-    US_014 The functions of the purchase_history page should work correctly
+      US_014 The functions of the purchase_history page should work correctly
 
-    -When the invoice button is clicked, it should redirect to the invoice page.
-    -When the course name is clicked, it should redirect to the page of the relevant course.
-    */
+      -When the invoice button is clicked, it should redirect to the invoice page.
+      -When the course name is clicked, it should redirect to the page of the relevant course.
+      */
     QualityDemyPage_User qualityDemyPage_User=new QualityDemyPage_User();
     Actions actions=new Actions(Driver.getDriver());
 
@@ -26,12 +26,12 @@ public class US_14 {
         Driver.getDriver().get(ConfigReader.getProperty("myUrl"));
         qualityDemyPage_User.acceptCookies.click();
         qualityDemyPage_User.loginLink.click();
-        qualityDemyPage_User.emailBox.sendKeys(ConfigReader.getProperty("myStudentEmail1"));
-        qualityDemyPage_User.passwordBox.sendKeys(ConfigReader.getProperty("myStudentPassword1"));
+        qualityDemyPage_User.emailBox.sendKeys(ConfigReader.getProperty("myStudentEmailEmine"));
+        qualityDemyPage_User.passwordBox.sendKeys(ConfigReader.getProperty("myStudentPasswordEmine"));
         qualityDemyPage_User.loginButton.click();
     }
     @Test
-    public void invoiceTest(){
+    public void US14_TC01(){
 
         // -When the invoice button is clicked, it should redirect to the invoice page.
 
@@ -49,7 +49,7 @@ public class US_14 {
 
     }
     @Test
-    public void courseNameTest(){
+    public void US14_TC02(){
 
         // -When the course name is clicked, it should redirect to the page of the relevant course.
 
