@@ -671,15 +671,22 @@ public WebElement categories;
     //Homepage => User box icon => My messages => Send
     @FindBy (xpath = "(//button[@type='submit'])[2]")
     public WebElement messageSendButton;
+    //Homepage => User box icon => My messages => Send => Toast Message
+    @FindBy(xpath = "//div[text()='Message sent']")
+    public WebElement toastMessage;
     //Homepage => User box icon => My messages => Cancel
-    @FindBy (xpath = "(//button[@type='submit'])[2]")
+    @FindBy (xpath = "//button[text()='Cancel']")
     public WebElement messageCancelButton;
     //Homepage => User box icon => My messages => Compose
     @FindBy (xpath = "//button[@id='NewMessage']")
     public WebElement messageComposeButton;
+    //Homepage => User box icon => My messages => New Message Section
+    @FindBy (xpath = "//span[text()='New message']")
+    public WebElement newMessageSection;
     //Homepage => User box icon => My messages => correspondence
     @FindBy (xpath = "(//div[@class='message-sender-wrap'])[1]")
     public  WebElement correspondence;
+    //Homepage => User box icon => My messages => Corresponded
     @FindBy (xpath="//div[@class='message-content']")
     public WebElement messageContent;
     //===============================US_15=================
@@ -716,6 +723,9 @@ public WebElement categories;
     //Homepage => User box icon => User profile => Profile
     @FindBy (xpath = "//i[@class='far fa-user-circle']")
     public WebElement userProfilProfilButton;
+    //Homepage => User box icon => User profile => Profile Page Title
+    @FindBy (xpath = "//h1[text()='User profile']") //yeni eklendi
+    public WebElement userProfilePageTitle;
     //===========================US_18================================
     //Homepage => Instructor section
     @FindBy (xpath="//a[text()='Instructor']")
@@ -729,6 +739,9 @@ public WebElement categories;
     //Homepage => Instructor section => Number of Enrolment
     @FindBy (xpath = "//p[text()='Number of enrolment']")
     public WebElement numberOfEnrolment;
+    //Homepage=> Instructor section => Sales report Page
+    @FindBy (xpath ="//h4[text()='page-title']")
+    public WebElement salesReportPage;
     //Homepage => Instructor section => Pending Balance
     @FindBy (xpath = "//p[text()='Pending balance']")
     public WebElement pendingBalance;
@@ -737,7 +750,7 @@ public WebElement categories;
     public WebElement payOutReport;
     //Homepage => Instructor section => Requested withdrawal amount
     @FindBy (xpath = "//p[text()='Requested withdrawal amount']")
-    public WebElement requestedWithdrawelAmount;
+    public WebElement requestedWithdrawalAmount;
 
 
 
@@ -774,20 +787,7 @@ public WebElement categories;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-//---------------------------776==925-------------FATIH------------------------------------------------------//
+    //---------------------------776==925-------------FATIH------------------------------------------------------//
 // Homepage ==> Login Page ==> Instructor Page
 @FindBy (linkText = "Instructor")
 public WebElement instructorLink;
