@@ -1,9 +1,11 @@
 package pages;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
+import utilities.ReusableMethods;
 
 public class QualityDemyPage_User {
     public QualityDemyPage_User() {
@@ -1564,7 +1566,7 @@ public WebElement homePage;
 
     //Home / Shopping Cart
     @FindBy(xpath = " (//div[@class='cart-course-wrapper box-shadow-5'])[2] ")
-    public WebElement shoppingCart;
+    public WebElement shoppingCart2;
 
 
     //Home / English Course Learn To Speak--> Add/Added yakalama
@@ -1586,7 +1588,7 @@ public WebElement homePage;
 
     //Home ==> /home/course/english-course-learn-to-speak / My courses //div[@id='wishlist_items']
     @FindBy(xpath = "(//a[text()='My courses'])[1]")
-    public WebElement myCoursesButton;
+    public WebElement myCoursesButton2;
 
     //Home ==> /home/my_course/ Wishlist //div[@id='wishlist_items']
     @FindBy(xpath = "(//a[@href='https://www.qualitydemy.com/home/my_wishlist'])[3]")
@@ -1702,6 +1704,35 @@ public WebElement homePage;
 
     @FindBy(xpath = "//div[@class='jq-toast-single jq-has-icon jq-icon-success']")
     public WebElement applyCongrastMessage;
+
+    @FindBy(xpath = "//a[@onclick='cookieAccept();']")
+    public WebElement buttonCookiesAccept;
+
+    @FindBy(id = "cookieConsentContainer")
+    public WebElement cookiesContainer;
+    @FindBy(xpath = "//a[@id='topbar-userdrop']")
+    public WebElement testUser;
+
+    @FindBy(xpath = "//*[text()='Logout']")
+    public WebElement logoutButton;
+
+    public void CookiesComp() {
+        PageFactory.initElements(Driver.getDriver(), this);
+    }
+
+    public void acceptCookies() {
+        if (buttonCookiesAccept.isDisplayed()){
+            ReusableMethods.waitForClickablility(buttonCookiesAccept,5);
+            buttonCookiesAccept.click();
+            hideCookies();
+        }
+    }
+
+    public void hideCookies() {
+        JavascriptExecutor driver = (JavascriptExecutor) Driver.getDriver();
+        driver.executeScript("arguments[0].style.visibility='hidden'", cookiesContainer);
+
+    }
 
 
 
