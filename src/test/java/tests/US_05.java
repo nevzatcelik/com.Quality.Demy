@@ -100,7 +100,7 @@ public class US_05 extends ReusableMethods {
         Assert.assertTrue(actualSignUpUrl.contains(expectedSignUpUrl));
 
         //- Test if a welcoming message is visible
-        Assert.assertTrue(pageUser.welcomeMessage.isEnabled());
+        Assert.assertTrue(pageUser.welcomeMessage1.isEnabled());
         bekle(5);
 
         //- Log out for a new test

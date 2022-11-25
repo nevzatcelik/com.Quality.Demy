@@ -329,7 +329,7 @@ public class QualityDemyPage_User {
     @FindBy(xpath = "//input[@name='first_name']")
     public WebElement firstName;
     @FindBy(xpath = "//div[text()=\"Welcome Test User\"]")
-    public WebElement welcomeMessage;
+    public WebElement welcomeMessage1;
     @FindBy(linkText = "//div[@id='course_info_view_6']")
     public WebElement wordPressTitle;
     @FindBy(linkText = "(//div[text()='Wordpress'])[2]")
