@@ -163,4 +163,22 @@ public class ReusableMethods {
         });
         return element;
     }
+
+    public static void webElementScreenShot(WebElement target) {
+
+        LocalDateTime ldt=LocalDateTime.now();
+        DateTimeFormatter dtf= DateTimeFormatter.ofPattern("YY-MM-dd_HH.mm.ss");
+
+        File locateElementSShot = new File("target/Screenshot/SeleniumSShot"+ ldt.format(dtf) +".jpeg");
+
+        File geciciResim = target.getScreenshotAs(OutputType.FILE);
+
+        try {
+            FileUtils.copyFile(geciciResim, locateElementSShot);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+
+    }
 }
