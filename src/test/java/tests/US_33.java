@@ -37,7 +37,7 @@ public class US_33 {
         actions.moveToElement(qualityDemyPage_instructor.courseOverviewProviderDropDown).
                 click(qualityDemyPage_instructor.courseOverviewProviderDropDown).sendKeys(Keys.ARROW_DOWN).
                 sendKeys(Keys.ENTER).perform();
-        ReusableMethods.bekle(3);
+        ReusableMethods.bekle(5);
         String expectedCourseOverview2="Vimeo";
         String actualCourseOverview2=qualityDemyPage_instructor.courseOverviewProviderBox.getText();
 
@@ -46,6 +46,7 @@ public class US_33 {
         actions.moveToElement(qualityDemyPage_instructor.courseOverviewProviderDropDown).
                 click(qualityDemyPage_instructor.courseOverviewProviderDropDown).
                 sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
+        ReusableMethods.bekle(3);
 
         String expectedCourseOverview3="Html5";
         String actualCourseOverview=qualityDemyPage_instructor.courseOverviewProviderBox.getText();
