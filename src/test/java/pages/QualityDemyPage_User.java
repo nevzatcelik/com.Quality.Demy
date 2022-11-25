@@ -1674,49 +1674,34 @@ public WebElement homePage;
 
 
 //---------------------1676==1825----------------NEVZAT------------------------------------------------------//
+    //Login>>HomePage==Instructor
+    @FindBy(xpath = "//a[text()='Instructor']")
+    public WebElement instructorButton;
+
+    @FindBy (xpath = "(//input[@type='text'])[1]")
+    public WebElement nameBox;
+
+    @FindBy (xpath = "//input[@type='email']")
+    public WebElement emailAdressBox;
+
+    @FindBy (xpath = "//textarea[@name='address']")
+    public WebElement adressBox;
+
+    @FindBy(xpath = "//input[@name='phone']")
+    public WebElement phoneNumberBox;
+
+    @FindBy(xpath = "//textarea[@name='message']")
+    public WebElement anyMessageBox;
+
+    @FindBy(xpath = "//input[@onchange='changeTitleOfImageUploader(this)']")
+    public WebElement document;
+
+    @FindBy(xpath ="//button[text()='Apply']")
+    public WebElement applyButton1;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    @FindBy(xpath = "//div[@class='jq-toast-single jq-has-icon jq-icon-success']")
+    public WebElement applyCongrastMessage;
 
 
 

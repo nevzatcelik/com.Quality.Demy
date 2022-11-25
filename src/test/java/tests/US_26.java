@@ -66,12 +66,12 @@ public class US_26 {
 
         qualityDemyPage_instructor.basicButonu.click();
         qualityDemyPage_instructor.courseTitle.sendKeys("Course Title");
-        qualityDemyPage_instructor.categoryDropDown.click();
+        qualityDemyPage_instructor.categoryDropDown1.click();
         qualityDemyPage_instructor.media.click();
-        qualityDemyPage_instructor.courseOverviewUrl.sendKeys(ConfigReader.getProperty("meryemcourseUrl"));
+        qualityDemyPage_instructor.courseOverviewUrl1.sendKeys(ConfigReader.getProperty("meryemcourseUrl"));
 
         String expectedUrl= ConfigReader.getProperty("meryemcourseUrl");
-        String actualUrl = qualityDemyPage_instructor.courseOverviewUrl.getAttribute("value");
+        String actualUrl = qualityDemyPage_instructor.courseOverviewUrl1.getAttribute("value");
 
         Assert.assertEquals(actualUrl,expectedUrl);
     }
