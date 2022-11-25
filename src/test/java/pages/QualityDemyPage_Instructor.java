@@ -1,19 +1,19 @@
 package pages;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.asserts.SoftAssert;
+import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
 
 public class QualityDemyPage_Instructor {
     public QualityDemyPage_Instructor() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
-
-
-
-
-
 
 
 
@@ -1223,111 +1223,111 @@ public WebElement loginLinki;
 
 
 
-    //----------------------1226==1375------------------YAKUP-----------------------------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//----------------------1226==1375------------------YAKUP------------------------------------------------------//
+@FindBy(xpath = "//a[text()=\"Log in\"]") public WebElement lejonLoginLink;
+    @FindBy(xpath = "//a[@onclick=\"cookieAccept();\"]") public WebElement lejonCookies;
+    @FindBy(xpath = "//div[text()=\"Welcome Test User\"]") public WebElement welcomeMessage;
+    @FindBy(linkText = "Instructor") public WebElement instructorButtonLejon;
+    @FindBy(xpath = "//*[text()=\"Course manager\"]") public WebElement courseManagerLinkLejon;
+    @FindBy(xpath = "(//div[@class=\"dropright dropright\"])[1]") public WebElement threeDotsIcon;
+    @FindBy(xpath = "(//div[@class=\"card-body\"])[1]") public WebElement updateJavaWindow;
+    @FindBy(xpath = "(//a[text()=\"Edit this course\"])[1]") public WebElement editThisCourseLejon;
+    @FindBy(xpath = "(//a[text()=\" Add section\"])[1]") public WebElement addSectionButton;
+    @FindBy(xpath = "(//input[@class=\"form-control\"])[9]") public WebElement addNewSectionBox;
+    @FindBy(xpath = "(//button[text()=\"Submit\"])[2]") public WebElement addNewSectionsubmitButton;
+    @FindBy(xpath = "//*[text()=\"Section has been added successfully\"]") public WebElement sectionHasBeenSuccesMessage;
+    @FindBy(xpath = "(//h5[@class=\"card-title\"])[1]") public WebElement newlyAddedSection;
+    @FindBy(xpath = "//button[text()=\"Close\"]") public WebElement addNewSectoinCloseButton;
+    @FindBy(xpath = "//h5[text()=\"Add new section\"]") public WebElement addNewSectoinWindow;
+    @FindBy(xpath = "(//a[@href=\"javascript:void(0)\"])[2]") public WebElement addLessonButton;
+    @FindBy(xpath = "//input[@id=\"youtube\"]") public WebElement selectLessonTypeYoutube;
+    @FindBy(xpath = "//label[@for=\"vimeo\"]") public WebElement selectLessonTypeVimeo;
+    @FindBy(xpath = "//label[@for=\"video_file\"]") public WebElement selectLessonTypeVideofile;
+    @FindBy(xpath = "//label[@for=\"html5\"]") public WebElement selectLessonTypeVideourl;
+    @FindBy(xpath = "//label[@for=\"google_drive_video\"]") public WebElement selectLessonTypeGoogleVideo;
+    @FindBy(xpath = "//label[@for=\"document\"]") public WebElement selectLessonTypeDocument;
+    @FindBy(xpath = "//label[@for=\"text\"]") public WebElement selectLessonTypeText;
+    @FindBy(xpath = "//label[@for=\"image\"]") public WebElement selectLessonTypeImage;
+    @FindBy(xpath = "//label[@for=\"iframe\"]") public WebElement selectLessonTypeIframe;
+    @FindBy(xpath = "(//span[@aria-hidden=\"true\"])[6]") public WebElement newLessonCloseButton;
+    @FindBy(xpath = "//h5[text()=\"Add new lesson\"]") public WebElement addNewLessonWindow;
+    @FindBy(xpath = "//a[@href=\"javascript::void(0)\"]") public WebElement lessonTypeNextButton;
+    @FindBy(xpath = "//div[@class=\"alert alert-info\"]") public WebElement lessonTypeSelectedText;
+    @FindBy(xpath = "(//input[@class=\"form-control\"])[9]") public WebElement addnewLessonTextBox;
+    @FindBy(xpath = "//input[@placeholder=\"This video will be shown on web application\"]") public WebElement addnewLessonVideoURLBox;
+    @FindBy(xpath = "//label[@id=\"invalid_url\"]") public WebElement addnewInvalidVideoURLText;
+    @FindBy(xpath = "//input[@name=\"duration\"]") public WebElement addnewLessonDurationBox;
+    @FindBy(xpath = "(//div[@class=\"note-editable card-block\"])[2]") public WebElement addnewLessonSummaryBox;
+    @FindBy(xpath = "//input[@name=\"free_lesson\"]") public WebElement markFreeLessonCheckBox;
+    @FindBy(xpath = "(//button[text()=\"Add lesson\"])") public WebElement greenAddLessonButton;
+    @FindBy(xpath = "//div[text()=\"Lesson has been added successfully\"]") public WebElement lessonHasAddedSuccesMessage;
+    @FindBy(xpath = "(//a[@href=\"javascript:void(0)\"])[3]") public WebElement sortSectionButton;
+    @FindBy(xpath = "(//h5[@class=\"mb-1 mt-0\"])[1]") public WebElement sortSectionDrag;
+    @FindBy(xpath = "(//div[@class=\"card mb-0 mt-2 draggable-item\"])[3]") public WebElement sortSectionDrop1;
+    @FindBy(xpath = "(//button[@aria-hidden=\"true\"])[5]") public WebElement sortSectionCloseButton;
+    @FindBy(xpath = "//button[text()=\"Update sorting\"]") public WebElement updateSectionButton;
+    @FindBy(xpath = "/html/body/div[11]/div") public WebElement updateSectionSortedMessage; //*[@id="large-modal"]/div/div/div[2]/script[2]/text()
+    @FindBy(xpath = "(//div[@class=\"card-body\"])[3]") public WebElement cardBodySectionTable1;
+    @FindBy(xpath = "(//button[@class=\"btn btn-outline-secondary btn-rounded btn-sm\"])[1]") public WebElement section1SortLessonButton;
+    @FindBy(xpath = "(//button[@class=\"btn btn-outline-secondary btn-rounded btn-sm ml-1\"])[1]") public WebElement editSection1Button;
+    @FindBy(xpath = "(//button[@class=\"btn btn-outline-secondary btn-rounded btn-sm ml-1\"])[2]") public WebElement deleteSection1Button;
+    @FindBy(xpath = "//h5[@class=\"mt-0\"]") public WebElement sortLessons1Window;
+    @FindBy(xpath = "(//div[@class=\"card mb-0 mt-2 draggable-item\"])[1]") public WebElement sortLessons1ArrayBinaryDrag;
+    @FindBy(xpath = "(//div[@class=\"card mb-0 mt-2 draggable-item\"])[3]") public WebElement sortLessons1OCASoruListsDrop;
+    @FindBy(xpath = "(//button[@class=\"close\"])[5]") public WebElement sortLessonsCloseButton;
+    @FindBy(xpath = "//button[@id=\"lesson-sort-btn\"]") public WebElement sortLessonsUpdateButton;
+    @FindBy(xpath = "/html/body/div[11]/div") public WebElement lessonUpdateSortedMessage;
+    @FindBy(xpath = "(//input[@class=\"form-control\"])[9]") public WebElement updateSectionEditTitleBox;
+    @FindBy(xpath = "(//button[text()=\"Submit\"])[2]") public WebElement updateOchEditSectionSubmitButton;
+    @FindBy(xpath = "//*[text()=\"Section has been updated successfully\"]") public WebElement sectionHasBeenUpdatedSuccesMessage;
+    @FindBy(xpath = "(//h5[@class=\"card-title\"])[1]") public WebElement section1HeadTitle;
+    @FindBy(xpath = "//span[text()=\"Section 3\"]") public WebElement cardBodySectionTable3;
+    @FindBy(xpath = "(//button[@class=\"btn btn-outline-secondary btn-rounded btn-sm ml-1\"])[1]") public WebElement editSection3Button;
+    @FindBy(xpath = "(//button[@class=\"btn btn-secondary\"])[1]") public WebElement editAndUpdateSection3CloseButton;
+    @FindBy(xpath = "(//div[@class=\"modal-content\"])[6]") public WebElement editAndUpdateSection3Window;
+    @FindBy(xpath = "//span[text()=\"Section 6\"]") public WebElement cardBodySectionTable6;
+    @FindBy(xpath = "(//button[@class=\"btn btn-outline-secondary btn-rounded btn-sm ml-1\"])[12]") public WebElement section6TableDeleteButton;
+    @FindBy(xpath = "//a[@id=\"update_link\"]") public WebElement sectionDeleteAlertContinueButton;
+    @FindBy(xpath = "//*[text()=\"Section has been deleted successfully\"]") public WebElement sectionHasBeenDeletedSuccessMessage;
+    @FindBy(xpath = "(//div[@class=\"col-xl-12\"])[5]") public WebElement section2Lesson2ListFrame;
+    @FindBy(xpath = "(//div[@class=\"card text-secondary on-hover-action mb-2\"])[6]") public WebElement section2Lesson2CardFrame;
+    @FindBy(xpath = "(//i[@class=\"mdi mdi-pencil-outline\"])[8]") public WebElement section2Lesson2EditIcon;
+    @FindBy(xpath = "(//i[@class=\"mdi mdi-window-close\"])[8]") public WebElement section2Lesson2DeleteIcon;
+    @FindBy(xpath = "//h5[@class=\"modal-title\"]") public WebElement updateLessonWindowTitle;
+    @FindBy(xpath = "(//span[@aria-hidden=\"true\"])[6]") public WebElement updateLessonCloseButton;
+    @FindBy(xpath = "//span[@id=\"select2-section_id-container\"]") public WebElement section2UpdateLessonSectionSelelect;
+    @FindBy(xpath = "(//div[@class=\"col-md-12\"])[13]") public WebElement section7Lesson1ListFrame;
+    @FindBy(xpath = "(//a[@data-original-title=\"Delete\"])[13]") public WebElement section7Lesson1DeleteIcon;
+    @FindBy(xpath = "(//div[@class=\"text-center\"])[2]") public WebElement lessonDeleteAlertWindow;
+    @FindBy(xpath = "//*[text()=\"Lesson has been deleted successfully\"]") public WebElement lessonBeenDeletedSuccessMessage;
+    public void loginMethodLejon(){
+
+        lejonCookies.click();
+        ReusableMethods.bekle(2);
+        lejonLoginLink.click();
+        emailBox.sendKeys(ConfigReader.getProperty("lejonEmailIns"));
+        passwordBox.sendKeys(ConfigReader.getProperty("lejonPasswordIns"));
+        loginButton.click();
+
+        SoftAssert softAssert = new SoftAssert();
+        softAssert.assertTrue(welcomeMessage.isDisplayed(), "The Welcome Message does not appear on the screen");
+        instructorButtonLejon.click();
+        courseManagerLinkLejon.click();
+
+        JavascriptExecutor javaScript = (JavascriptExecutor) Driver.getDriver();
+        javaScript.executeScript("arguments[0].scrollIntoView();", threeDotsIcon);
+        threeDotsIcon.click();
+        editThisCourseLejon.click();
+    }
+    public void addLessonMethodLejon(){
+        addLessonButton.click();
+        selectLessonTypeVimeo.click();
+
+        Actions actions = new Actions(Driver.getDriver());
+        actions.click(selectLessonTypeYoutube).perform();
+
+        lessonTypeNextButton.click();
+    }
 
 
 
