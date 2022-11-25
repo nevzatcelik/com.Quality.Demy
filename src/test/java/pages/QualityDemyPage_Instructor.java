@@ -630,21 +630,39 @@ public WebElement categories;
     //Homepage => categories => Web Design Course
     @FindBy (xpath ="//span[text()='Web Design Course']")
     public WebElement categoriesWebDesign;
+    //Homepage => categories => Web Design Course => Web Desing Course Page
+    @FindBy(xpath="//li[@class='breadcrumb-item active text-light display-6 fw-bold']")
+    public WebElement webDesignPage;
     //Homepage => Categories => English Course
     @FindBy (xpath = "//span[text()='English Course']")
     public WebElement categoriesEnglish;
+    //Homepage => categories => English Course => English Course Page
+    @FindBy(xpath="//li[@class='breadcrumb-item active text-light display-6 fw-bold']")
+    public WebElement englishCoursePage;
     //Homepage => Categories => IT & SoftWare
     @FindBy (xpath="//span[text()='IT & Software']")
     public WebElement categoriesIt;
+    //Homepage => categories => IT Course => IT Course Page
+    @FindBy(xpath="//li[@class='breadcrumb-item active text-light display-6 fw-bold']")
+    public WebElement itCoursePage;
     //Homepage => Categories => Music
     @FindBy (xpath= "//span[text()='Music']")
     public WebElement categoriesMusic;
+    //Homepage => categories => Music Course => Music Course Page
+    @FindBy(xpath="//li[@class='breadcrumb-item active text-light display-6 fw-bold']")
+    public WebElement musicCoursePage;
     //Homepage => categories => Personel Developments
     @FindBy (xpath= "//span[text()='Personal Developments']")
     public WebElement categoriesPersonelDevelopments;
+    //Homepage => Categories => Personel Development Course => Personel Development Course Page
+    @FindBy (xpath = "//li[@class='breadcrumb-item active text-light display-6 fw-bold']")
+    public WebElement personelDevelopmentPage;
     //Homepage => Categories => All courses
     @FindBy (xpath= "//span[text()='All courses']")
     public WebElement categoriesAllCourses;
+    //Homepage => Categories => All Courses => All Courses Page
+    @FindBy(xpath="//li[@class='breadcrumb-item active text-light display-6 fw-bold']")
+    public WebElement allCoursesPage;
     //Homepage => User box icon
     @FindBy (xpath= "//div[@class='user-box menu-icon-box']")
     public WebElement userBoxIcon;
@@ -737,24 +755,6 @@ public WebElement categories;
     //Homepage => Instructor section => Requested withdrawal amount
     @FindBy (xpath = "//p[text()='Requested withdrawal amount']")
     public WebElement requestedWithdrawalAmount;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -923,7 +923,7 @@ public WebElement instructorLink;
 
 
 
-//-----------------------926==1075------------------MERYEM------------------------------------------------------//
+    //-----------------------926==1075------------------MERYEM------------------------------------------------------//
 @FindBy(xpath = "//a[text()='Log in']")
 public WebElement loginLinki;
     @FindBy(xpath = "//input[@id='login-email']")
