@@ -14,10 +14,11 @@ public class US_20 {
         // Launch browser
         // Go to url 'https://qualitydemy.com/home'
         QualityDemyPage_Instructor qualityDemyPage_instructor=new QualityDemyPage_Instructor();
-        Driver.getDriver().get(ConfigReader.getProperty("myURL"));
+        Driver.getDriver().get(ConfigReader.getProperty("myUrl"));
 
         // Click "accept cookies" button.
-        qualityDemyPage_instructor.acceptCookies.click();
+      //  qualityDemyPage_instructor.acceptCookies.click();
+        qualityDemyPage_instructor.acceptCookies();
 
         // Click on 'Login' button
         qualityDemyPage_instructor.loginLink.click();
@@ -35,7 +36,7 @@ public class US_20 {
         qualityDemyPage_instructor.instructorButton.click();
 
         // Click "Course manager"
-        qualityDemyPage_instructor.courseManeger.click();
+        qualityDemyPage_instructor.courseManagerButton.click();
 
         // Check if there is a course on the course list.  If not, add new course
         // Click "add new course"
@@ -90,8 +91,10 @@ public class US_20 {
 
         Assert.assertTrue(qualityDemyPage_instructor.leftArrow.isEnabled());
         Assert.assertTrue(qualityDemyPage_instructor.rightArrow.isEnabled());
+        qualityDemyPage_instructor.testUser.click();
+        qualityDemyPage_instructor.logoutButton.click();
 
-        Driver.closeDriver();
+      //  Driver.closeDriver();
 
     }
 }

@@ -34,7 +34,7 @@ public class US_35 {
         qualityDemyPage_instructor.submitFinish.click();
 
         Assert.assertTrue(qualityDemyPage_instructor.congratulationsMessage.isDisplayed());
-        ReusableMethods.bekle(3);
+        ReusableMethods.bekle(5);
         qualityDemyPage_instructor.testUser.click();
         qualityDemyPage_instructor.logoutButton.click();
 
