@@ -1,6 +1,7 @@
 package tests;
 
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.QualityDemyPage_Instructor;
@@ -11,6 +12,7 @@ import utilities.ReusableMethods;
 import java.util.Set;
 
 public class US_19 {
+    Actions actions=new Actions(Driver.getDriver());
 
     @Test
     public void US19_TestCase1901() { // Course Manager - Filter Button Test
@@ -130,8 +132,12 @@ public class US_19 {
         // clicking the View course on frontend link should redirect to the page of the relevant course
         String firstPageWindowHandleValue= Driver.getDriver().getWindowHandle();
 
+
         qualityDemyPage_instructor.threeDots2.click();
-        qualityDemyPage_instructor.viewCourseOnFrontend.click();
+        actions.sendKeys(Keys.PAGE_DOWN).sendKeys(Keys.PAGE_DOWN).sendKeys(Keys.PAGE_DOWN).sendKeys(Keys.PAGE_DOWN).
+               sendKeys(Keys.PAGE_DOWN).perform();
+
+         qualityDemyPage_instructor.viewCourseOnFrontend.click();
 
         Set<String> windowHandlesSet= Driver.getDriver().getWindowHandles();
 
@@ -285,6 +291,8 @@ public class US_19 {
         // a confirmation message should come
         // and after approval, the status section of the course should change to draft
         qualityDemyPage_instructor.threeDots4.click();
+        actions.sendKeys(Keys.PAGE_DOWN).sendKeys(Keys.PAGE_DOWN).sendKeys(Keys.PAGE_DOWN).sendKeys(Keys.PAGE_DOWN).
+                sendKeys(Keys.PAGE_DOWN).perform();
         qualityDemyPage_instructor.markAsDraft.click();
 
         Assert.assertTrue(qualityDemyPage_instructor.continueButton.isEnabled());
