@@ -822,7 +822,7 @@ public WebElement instructorLink;
     @FindBy (xpath = "(//button[@class='btn btn-sm btn-outline-primary btn-rounded btn-icon'])[1]")
     public WebElement threeDots1; // English
 
-    @FindBy (xpath = "//a[@href='https://qualitydemy.com/home/course/web-design-for-developers/53']")
+    @FindBy (xpath = "(//a[text()='View course on frontend'])[2]")
     public WebElement viewCourseOnFrontend;
 
     @FindBy (xpath = "(//*[text()='Go to course playing page'])[3]")
@@ -831,7 +831,7 @@ public WebElement instructorLink;
     @FindBy (xpath = "(//*[text()='Edit this course'])[3]")
     public WebElement editThisCourse; // Bass Guitar
 
-    @FindBy (xpath = "(//*[text()='Mark as drafted'])[4]")
+    @FindBy (xpath = "(//*[text()='Mark as drafted'])[3]")
     public WebElement markAsDraft; // Piano
 
     @FindBy (xpath = "(//*[text()='Continue'])[1]")
@@ -846,7 +846,7 @@ public WebElement instructorLink;
     @FindBy (xpath = "(//span[text()='Pending'])[1]")
     public WebElement pending1;
 
-    @FindBy (xpath = "(//a[text()='Delete'])[2]")
+    @FindBy (xpath = "(//a[text()='Delete'])[4]")
     public WebElement delete;
 
     @FindBy (xpath = "//span[text()='Piano']")
