@@ -775,7 +775,7 @@ public WebElement categories;
 
     //---------------------------776==925-------------FATIH------------------------------------------------------//
 // Homepage ==> Login Page ==> Instructor Page
-@FindBy (linkText = "Instructor")
+@FindBy (xpath = "//a[text()='Instructor']")
 public WebElement instructorLink;
 
     // Homepage ==> Login Page ==> Instructor Page ==> Dashboard Page
