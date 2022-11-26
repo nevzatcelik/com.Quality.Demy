@@ -2,10 +2,12 @@
 <suite name="testcalistirma">
     <test name="test1">
         <classes>
-            <class name="tests.US_01"></class>
-            <class name="tests.US_02"></class>
-            <class name="tests.US_06"></class>
-            <class name="tests.US_11"></class>
+
+            <class name="tests.US_03"></class>
+            <class name="tests.US_05"></class>
+            <class name="tests.US_07"></class>
+            <class name="tests.US_08"></class>
+
 
         </classes>
     </test>
