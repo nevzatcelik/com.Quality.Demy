@@ -2,6 +2,7 @@
 <suite name="class calistirma">
     <test name="class test1">
         <classes>
+
             <class name="tests.US_01"></class>
             <class name="tests.US_02"></class>
             <class name="tests.US_27"></class>
@@ -10,7 +11,7 @@
             <class name="tests.US_30"></class>
             <class name="tests.US_31"></class>
             <class name="tests.US_34"></class>
-            <class name="tests.US_37"></class>
+            <class name="tests.US_19"></class>
         </classes>
     </test>
 </suite>
