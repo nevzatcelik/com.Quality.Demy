@@ -5,6 +5,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
+import pages.QualityDemyPage_Instructor;
 import pages.QualityDemyPage_User;
 import utilities.ConfigReader;
 import utilities.Driver;
@@ -13,7 +14,6 @@ import utilities.ReusableMethods;
 public class US_03 extends ReusableMethods {
 
     QualityDemyPage_User pageUser= new QualityDemyPage_User();
-
     @Test
     public void testTC0301(){
 
@@ -22,11 +22,12 @@ public class US_03 extends ReusableMethods {
         Driver.getDriver().get(ConfigReader.getProperty("myUrl"));
 
         //- Click “cookies” pop-up message
-        try {
+       try {
             pageUser.acceptCookiesLev.click();
         } catch (Exception e) {
             bekle(1);
         }
+
 
         //- Test if Facebook, Twitter, LinkedIn icons are visable
         Assert.assertTrue(pageUser.facebookIcon.isDisplayed());
@@ -40,7 +41,7 @@ public class US_03 extends ReusableMethods {
         //- Launch browser
         //- Go to Quality Demy home page
         Driver.getDriver().get(ConfigReader.getProperty("myUrl"));
-
+        bekle(2);
         //- Click “cookies” pop-up message
         try {
             pageUser.acceptCookiesLev.click();
@@ -117,11 +118,13 @@ public class US_03 extends ReusableMethods {
         String actualTitleLinkedIn=Driver.getDriver().getTitle();
         Assert.assertTrue(actualTitleLinkedIn.contains(expectedTitleLinkedIn));
     }
-
+/*
     @AfterClass
     public void teardown(){
         Driver.closeDriver();
     }
 
+
+ */
 
 }

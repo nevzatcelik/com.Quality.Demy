@@ -15,7 +15,7 @@ public class US_30 {
     public void requirementsAddTest(){
         QualityDemyPage_Instructor qualityDemyPage_instructor=new QualityDemyPage_Instructor();
         Driver.getDriver().get(ConfigReader.getProperty("myUrl"));
-        qualityDemyPage_instructor.acceptCookies.click();
+        qualityDemyPage_instructor.acceptCookies();
 
         qualityDemyPage_instructor.loginLink.click();
         qualityDemyPage_instructor.emailBox.sendKeys(ConfigReader.getProperty("validEmailNevzatIns"));
