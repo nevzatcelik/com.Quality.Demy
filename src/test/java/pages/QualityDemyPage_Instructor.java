@@ -775,7 +775,7 @@ public WebElement categories;
 
     //---------------------------776==925-------------FATIH------------------------------------------------------//
 // Homepage ==> Login Page ==> Instructor Page
-@FindBy (linkText = "Instructor")
+@FindBy (xpath = "//a[text()='Instructor']")
 public WebElement instructorLink;
 
     // Homepage ==> Login Page ==> Instructor Page ==> Dashboard Page
@@ -878,12 +878,6 @@ public WebElement instructorLink;
     // Homepage ==> Login Page ==> Instructor Page ==> Dashboard Page ==> Course manager (Courses) Page ==> Add New Course
     @FindBy (xpath = "//*[text()='Course adding form']")
     public WebElement courseAddingForm;
-
-
-
-
-
-
 
 
 
