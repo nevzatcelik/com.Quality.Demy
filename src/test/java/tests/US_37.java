@@ -18,18 +18,19 @@ public class US_37 {
         //go to qualitydemy web page
         Driver.getDriver().get(ConfigReader.getProperty("myUrl"));
         //click login link
+        qdp.acceptCookies();
         qdp.loginLink.click();
         //Accept Cookies
-        qdp.acceptCookies.click();
+       // qdp.acceptCookies.click();
         ReusableMethods.bekle(2);
         //fill login email address and password
         qdp.emailBox.sendKeys(ConfigReader.getProperty("u_Email"));
         qdp.passwordBox.sendKeys(ConfigReader.getProperty("u_Password"));
         //click login button
         qdp.loginButton.click();
-        ReusableMethods.bekle(2);
+        ReusableMethods.bekle(5);
         //Click My Courses
-        qdp.my_courses.click();
+        qdp.myCoursesButton2.click();
         ReusableMethods.bekle(2);
         //Click Course detail
         qdp.coursedetaill.click();
@@ -48,6 +49,7 @@ public class US_37 {
         ReusableMethods.bekle(2);
         //The topics in the sections should be selectable as checked or unchecked
         qdp.my_courses.click();
+        at.sendKeys(Keys.PAGE_DOWN).sendKeys(Keys.PAGE_DOWN).build().perform();
         qdp.javastartbutton.click();
         ReusableMethods.bekle(2);
         //Open section 1
@@ -56,14 +58,11 @@ public class US_37 {
         ReusableMethods.bekle(2);
         qdp.checkbox.click();
         ReusableMethods.bekle(2);
+        Driver.getDriver().navigate().back();
+        at.sendKeys(Keys.PAGE_UP).sendKeys(Keys.UP).sendKeys(Keys.UP).build().perform();
 
-        Driver.closeDriver();
+
+        //Driver.closeDriver();
 
     }
-    @Test
-    public void my_courses () {
-
-        Driver.closeDriver();
-    }
-
 }

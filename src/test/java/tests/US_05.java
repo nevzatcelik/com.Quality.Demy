@@ -26,6 +26,8 @@ public class US_05 extends ReusableMethods {
             bekle(1);
         }
 
+
+
         //- Click ""Log in"" button
         //- Reach login page
         pageUser.loginButtonLev.click();
@@ -260,5 +262,7 @@ public class US_05 extends ReusableMethods {
     public void teardown(){
         Driver.closeDriver();
     }
+
+
 
 }

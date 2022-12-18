@@ -1,6 +1,7 @@
 package tests;
 
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.QualityDemyPage_Instructor;
@@ -11,21 +12,24 @@ import utilities.ReusableMethods;
 import java.util.Set;
 
 public class US_19 {
+    Actions actions=new Actions(Driver.getDriver());
+
     @Test
     public void US19_TestCase1901() { // Course Manager - Filter Button Test
-        // go to the MyCourseDemy web page
+        // go to the QualityDemy web page
         Driver.getDriver().get(ConfigReader.getProperty("myUrl"));
 
         // With a valid username and password, login to the system
         QualityDemyPage_Instructor qualityDemyPage_instructor = new QualityDemyPage_Instructor();
+
+        qualityDemyPage_instructor.acceptCookies();
+
         qualityDemyPage_instructor.loginLink.click();
 
         qualityDemyPage_instructor.emailBox.sendKeys(ConfigReader.getProperty("validEmailFatihIns2"));
         qualityDemyPage_instructor.passwordBox.sendKeys(ConfigReader.getProperty("validPasswordFatihIns2"));
 
-        ReusableMethods.bekle(2);
-        qualityDemyPage_instructor.acceptCookies.click();
-        ReusableMethods.bekle(2);
+
         qualityDemyPage_instructor.loginButton.click();
 
         // Click to the Instructor link
@@ -47,25 +51,30 @@ public class US_19 {
 
         Assert.assertTrue(qualityDemyPage_instructor.categoryChoosingTC1.isDisplayed());
 
-        Driver.getDriver().close();
+        qualityDemyPage_instructor.accountFatih.click();
+        qualityDemyPage_instructor.logout.click();
+
+        // Driver.getDriver().close();
 
     }
 
     @Test
     public void US19_TestCase1902() { // Course Manager - Search Box Test
-        // go to the MyCourseDemy web page
+        // go to the QualityDemy web page
         Driver.getDriver().get(ConfigReader.getProperty("myUrl"));
 
         // With a valid username and password, login to the system
         QualityDemyPage_Instructor qualityDemyPage_instructor = new QualityDemyPage_Instructor();
+
+        qualityDemyPage_instructor.acceptCookies();
+
         qualityDemyPage_instructor.loginLink.click();
 
         qualityDemyPage_instructor.emailBox.sendKeys(ConfigReader.getProperty("validEmailFatihIns2"));
         qualityDemyPage_instructor.passwordBox.sendKeys(ConfigReader.getProperty("validPasswordFatihIns2"));
 
-        ReusableMethods.bekle(2);
-        qualityDemyPage_instructor.acceptCookies.click();
-        ReusableMethods.bekle(2);
+
+
         qualityDemyPage_instructor.loginButton.click();
 
         // Click to the Instructor link
@@ -86,25 +95,30 @@ public class US_19 {
 
         Assert.assertTrue(qualityDemyPage_instructor.categoryChoosingTC2.isDisplayed());
 
-        Driver.getDriver().close();
+        qualityDemyPage_instructor.accountFatih.click();
+        qualityDemyPage_instructor.logout.click();
+
+        // Driver.getDriver().close();
 
     }
 
     @Test
     public void US19_TestCase1903() { // Course Manager - View course on frontend link Test
-        // go to the MyCourseDemy web page
+        // go to the QualityDemy web page
         Driver.getDriver().get(ConfigReader.getProperty("myUrl"));
 
         // With a valid username and password, login to the system
         QualityDemyPage_Instructor qualityDemyPage_instructor = new QualityDemyPage_Instructor();
+
+        qualityDemyPage_instructor.acceptCookies();
+
         qualityDemyPage_instructor.loginLink.click();
 
         qualityDemyPage_instructor.emailBox.sendKeys(ConfigReader.getProperty("validEmailFatihIns2"));
         qualityDemyPage_instructor.passwordBox.sendKeys(ConfigReader.getProperty("validPasswordFatihIns2"));
 
-        ReusableMethods.bekle(2);
-        qualityDemyPage_instructor.acceptCookies.click();
-        ReusableMethods.bekle(2);
+
+
         qualityDemyPage_instructor.loginButton.click();
 
         // Click to the Instructor link
@@ -117,7 +131,10 @@ public class US_19 {
         // clicking the View course on frontend link should redirect to the page of the relevant course
         String firstPageWindowHandleValue= Driver.getDriver().getWindowHandle();
 
+
         qualityDemyPage_instructor.threeDots2.click();
+
+
         qualityDemyPage_instructor.viewCourseOnFrontend.click();
 
         Set<String> windowHandlesSet= Driver.getDriver().getWindowHandles();
@@ -135,26 +152,32 @@ public class US_19 {
 
         Assert.assertTrue(qualityDemyPage_instructor.pageRelevantCourseTC3.isDisplayed());
 
-        Driver.getDriver().close();
+        Driver.getDriver().switchTo().window(firstPageWindowHandleValue);
+
+        qualityDemyPage_instructor.accountFatih.click();
+        qualityDemyPage_instructor.logout.click();
+
+        // Driver.getDriver().quit();
 
     }
 
-
     @Test
     public void US19_TestCase1904() { // Course Manager - Go to course playing page link Test
-        // go to the MyCourseDemy web page
+        // go to the QualityDemy web page
         Driver.getDriver().get(ConfigReader.getProperty("myUrl"));
 
         // With a valid username and password, login to the system
         QualityDemyPage_Instructor qualityDemyPage_instructor = new QualityDemyPage_Instructor();
+
+        qualityDemyPage_instructor.acceptCookies();
+
         qualityDemyPage_instructor.loginLink.click();
 
         qualityDemyPage_instructor.emailBox.sendKeys(ConfigReader.getProperty("validEmailFatihIns2"));
         qualityDemyPage_instructor.passwordBox.sendKeys(ConfigReader.getProperty("validPasswordFatihIns2"));
 
-        ReusableMethods.bekle(2);
-        qualityDemyPage_instructor.acceptCookies.click();
-        ReusableMethods.bekle(2);
+
+
         qualityDemyPage_instructor.loginButton.click();
 
         // Click to the Instructor link
@@ -185,25 +208,32 @@ public class US_19 {
 
         Assert.assertTrue(qualityDemyPage_instructor.pageRelevantCourseTC4.isDisplayed());
 
-        Driver.getDriver().close();
+        Driver.getDriver().switchTo().window(firstPageWindowHandleValue);
+
+        qualityDemyPage_instructor.accountFatih.click();
+        qualityDemyPage_instructor.logout.click();
+
+        // Driver.getDriver().quit();
 
     }
 
     @Test
     public void US19_TestCase1905() { // Course Manager - Edit this course link Test
-        // go to the MyCourseDemy web page
+        // go to the QualityDemy web page
         Driver.getDriver().get(ConfigReader.getProperty("myUrl"));
 
         // With a valid username and password, login to the system
         QualityDemyPage_Instructor qualityDemyPage_instructor = new QualityDemyPage_Instructor();
+
+        qualityDemyPage_instructor.acceptCookies();
+
         qualityDemyPage_instructor.loginLink.click();
 
         qualityDemyPage_instructor.emailBox.sendKeys(ConfigReader.getProperty("validEmailFatihIns2"));
         qualityDemyPage_instructor.passwordBox.sendKeys(ConfigReader.getProperty("validPasswordFatihIns2"));
 
-        ReusableMethods.bekle(2);
-        qualityDemyPage_instructor.acceptCookies.click();
-        ReusableMethods.bekle(2);
+
+
         qualityDemyPage_instructor.loginButton.click();
 
         // Click to the Instructor link
@@ -219,25 +249,29 @@ public class US_19 {
 
         Assert.assertTrue(qualityDemyPage_instructor.updateEditCourse.isDisplayed());
 
-        Driver.getDriver().close();
+        qualityDemyPage_instructor.accountFatih.click();
+        qualityDemyPage_instructor.logout.click();
+
+        // Driver.getDriver().close();
 
     }
 
     @Test
     public void US19_TestCase1906() { // Course Manager - Mark as drafted link Test
-        // go to the MyCourseDemy web page
+        // go to the QualityDemy web page
         Driver.getDriver().get(ConfigReader.getProperty("myUrl"));
 
         // With a valid username and password, login to the system
         QualityDemyPage_Instructor qualityDemyPage_instructor = new QualityDemyPage_Instructor();
+
+        qualityDemyPage_instructor.acceptCookies();
+
         qualityDemyPage_instructor.loginLink.click();
 
         qualityDemyPage_instructor.emailBox.sendKeys(ConfigReader.getProperty("validEmailFatihIns2"));
         qualityDemyPage_instructor.passwordBox.sendKeys(ConfigReader.getProperty("validPasswordFatihIns2"));
 
-        ReusableMethods.bekle(2);
-        qualityDemyPage_instructor.acceptCookies.click();
-        ReusableMethods.bekle(2);
+
         qualityDemyPage_instructor.loginButton.click();
 
         // Click to the Instructor link
@@ -251,6 +285,7 @@ public class US_19 {
         // a confirmation message should come
         // and after approval, the status section of the course should change to draft
         qualityDemyPage_instructor.threeDots4.click();
+
         qualityDemyPage_instructor.markAsDraft.click();
 
         Assert.assertTrue(qualityDemyPage_instructor.continueButton.isEnabled());
@@ -259,25 +294,30 @@ public class US_19 {
 
         Assert.assertTrue(qualityDemyPage_instructor.draft.isDisplayed());
 
-        Driver.getDriver().close();
+        qualityDemyPage_instructor.accountFatih.click();
+        qualityDemyPage_instructor.logout.click();
+
+        // Driver.getDriver().close();
 
     }
 
     @Test
     public void US19_TestCase1907() { // Course Manager - Publish this course link Test
-        // go to the MyCourseDemy web page
+        // go to the QualityDemy web page
         Driver.getDriver().get(ConfigReader.getProperty("myUrl"));
 
         // With a valid username and password, login to the system
         QualityDemyPage_Instructor qualityDemyPage_instructor = new QualityDemyPage_Instructor();
+
+        qualityDemyPage_instructor.acceptCookies();
+
         qualityDemyPage_instructor.loginLink.click();
 
         qualityDemyPage_instructor.emailBox.sendKeys(ConfigReader.getProperty("validEmailFatihIns2"));
         qualityDemyPage_instructor.passwordBox.sendKeys(ConfigReader.getProperty("validPasswordFatihIns2"));
 
-        ReusableMethods.bekle(2);
-        qualityDemyPage_instructor.acceptCookies.click();
-        ReusableMethods.bekle(2);
+
+
         qualityDemyPage_instructor.loginButton.click();
 
         // Click to the Instructor link
@@ -299,25 +339,30 @@ public class US_19 {
 
         Assert.assertTrue(qualityDemyPage_instructor.pending1.isDisplayed());
 
-        Driver.getDriver().close();
+        qualityDemyPage_instructor.accountFatih.click();
+        qualityDemyPage_instructor.logout.click();
+
+        // Driver.getDriver().close();
 
     }
 
     @Test
     public void US19_testCase1908() { // Course Manager - Delete course link Test
-        // go to the MyCourseDemy web page
+        // go to the QualityDemy web page
         Driver.getDriver().get(ConfigReader.getProperty("myUrl"));
 
         // With a valid username and password, login to the system
         QualityDemyPage_Instructor qualityDemyPage_instructor = new QualityDemyPage_Instructor();
+
+        qualityDemyPage_instructor.acceptCookies();
+
         qualityDemyPage_instructor.loginLink.click();
 
         qualityDemyPage_instructor.emailBox.sendKeys(ConfigReader.getProperty("validEmailFatihIns2"));
         qualityDemyPage_instructor.passwordBox.sendKeys(ConfigReader.getProperty("validPasswordFatihIns2"));
 
-        ReusableMethods.bekle(2);
-        qualityDemyPage_instructor.acceptCookies.click();
-        ReusableMethods.bekle(2);
+
+
         qualityDemyPage_instructor.loginButton.click();
 
         // Click to the Instructor link
@@ -330,7 +375,8 @@ public class US_19 {
         // and click on the delete link from here,
         // a confirmation message should come
         // and the course should be deleted from the list after approval
-        qualityDemyPage_instructor.threeDots3.click();
+        qualityDemyPage_instructor.threeDots4.click();
+
         qualityDemyPage_instructor.delete.click();
 
         Assert.assertTrue(qualityDemyPage_instructor.continueButton.isEnabled());
@@ -346,24 +392,30 @@ public class US_19 {
 
         Assert.assertTrue(flag);
 
-        Driver.getDriver().close();
+        qualityDemyPage_instructor.accountFatih.click();
+        qualityDemyPage_instructor.logout.click();
+
+        // Driver.getDriver().close();
     }
 
     @Test
     public void US19_testCase1909() { // Course Manager - Add New Course Button Test
-        // go to the MyCourseDemy web page
+        // go to the QualityDemy web page
         Driver.getDriver().get(ConfigReader.getProperty("myUrl"));
 
         // With a valid username and password, login to the system
         QualityDemyPage_Instructor qualityDemyPage_instructor = new QualityDemyPage_Instructor();
+
+        qualityDemyPage_instructor.acceptCookies();
+
         qualityDemyPage_instructor.loginLink.click();
 
         qualityDemyPage_instructor.emailBox.sendKeys(ConfigReader.getProperty("validEmailFatihIns2"));
         qualityDemyPage_instructor.passwordBox.sendKeys(ConfigReader.getProperty("validPasswordFatihIns2"));
 
-        ReusableMethods.bekle(2);
-        qualityDemyPage_instructor.acceptCookies.click();
-        ReusableMethods.bekle(2);
+
+
+
         qualityDemyPage_instructor.loginButton.click();
 
         // Click to the Instructor link
@@ -377,25 +429,31 @@ public class US_19 {
 
         Assert.assertTrue(qualityDemyPage_instructor.courseAddingForm.isDisplayed());
 
-        Driver.getDriver().close();
+        qualityDemyPage_instructor.accountFatih.click();
+        qualityDemyPage_instructor.logout.click();
+
+        // Driver.getDriver().close();
 
     }
 
     @Test
     public void US19_testCase1910() { // Course Manager - Course Name link Test
-        // go to the MyCourseDemy web page
+        // go to the QualityDemy web page
         Driver.getDriver().get(ConfigReader.getProperty("myUrl"));
 
         // With a valid username and password, login to the system
         QualityDemyPage_Instructor qualityDemyPage_instructor = new QualityDemyPage_Instructor();
+
+        qualityDemyPage_instructor.acceptCookies();
+
         qualityDemyPage_instructor.loginLink.click();
 
         qualityDemyPage_instructor.emailBox.sendKeys(ConfigReader.getProperty("validEmailFatihIns2"));
         qualityDemyPage_instructor.passwordBox.sendKeys(ConfigReader.getProperty("validPasswordFatihIns2"));
 
-        ReusableMethods.bekle(2);
-        qualityDemyPage_instructor.acceptCookies.click();
-        ReusableMethods.bekle(2);
+
+
+
         qualityDemyPage_instructor.loginButton.click();
 
         // Click to the Instructor link
@@ -410,7 +468,11 @@ public class US_19 {
 
         Assert.assertTrue(qualityDemyPage_instructor.updateEditCourse.getText().contains("Web Design for Developers"));
 
-        Driver.getDriver().close();
+        qualityDemyPage_instructor.accountFatih.click();
+        qualityDemyPage_instructor.logout.click();
+
+       // Driver.getDriver().quit();
 
     }
+
 }

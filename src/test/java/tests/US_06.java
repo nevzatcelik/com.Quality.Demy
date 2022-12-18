@@ -181,4 +181,5 @@ public class US_06 {
     public void beforeMethod() {
         Driver.getDriver().get(ConfigReader.getProperty("myUrl"));
     }
+
 }
