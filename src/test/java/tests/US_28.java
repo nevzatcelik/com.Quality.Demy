@@ -13,6 +13,7 @@ public class US_28 {
 
     @Test
     public void finishSectionTest(){
+
         QualityDemyPage_Instructor qualityDemyPage_instructor=new QualityDemyPage_Instructor();
 
         Driver.getDriver().get(ConfigReader.getProperty("myUrl"));
