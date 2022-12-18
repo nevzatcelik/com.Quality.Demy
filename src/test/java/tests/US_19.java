@@ -21,14 +21,15 @@ public class US_19 {
 
         // With a valid username and password, login to the system
         QualityDemyPage_Instructor qualityDemyPage_instructor = new QualityDemyPage_Instructor();
+
+        qualityDemyPage_instructor.acceptCookies();
+
         qualityDemyPage_instructor.loginLink.click();
 
         qualityDemyPage_instructor.emailBox.sendKeys(ConfigReader.getProperty("validEmailFatihIns2"));
         qualityDemyPage_instructor.passwordBox.sendKeys(ConfigReader.getProperty("validPasswordFatihIns2"));
 
-        ReusableMethods.bekle(2);
-        qualityDemyPage_instructor.acceptCookies.click();
-        ReusableMethods.bekle(2);
+
         qualityDemyPage_instructor.loginButton.click();
 
         // Click to the Instructor link
@@ -64,17 +65,16 @@ public class US_19 {
 
         // With a valid username and password, login to the system
         QualityDemyPage_Instructor qualityDemyPage_instructor = new QualityDemyPage_Instructor();
+
+        qualityDemyPage_instructor.acceptCookies();
+
         qualityDemyPage_instructor.loginLink.click();
 
         qualityDemyPage_instructor.emailBox.sendKeys(ConfigReader.getProperty("validEmailFatihIns2"));
         qualityDemyPage_instructor.passwordBox.sendKeys(ConfigReader.getProperty("validPasswordFatihIns2"));
 
-        ReusableMethods.bekle(2);
-        try {
-            qualityDemyPage_instructor.acceptCookies.click();
-        } catch (Exception e) {
-            ReusableMethods.bekle(1);
-        }
+
+
         qualityDemyPage_instructor.loginButton.click();
 
         // Click to the Instructor link
@@ -109,17 +109,16 @@ public class US_19 {
 
         // With a valid username and password, login to the system
         QualityDemyPage_Instructor qualityDemyPage_instructor = new QualityDemyPage_Instructor();
+
+        qualityDemyPage_instructor.acceptCookies();
+
         qualityDemyPage_instructor.loginLink.click();
 
         qualityDemyPage_instructor.emailBox.sendKeys(ConfigReader.getProperty("validEmailFatihIns2"));
         qualityDemyPage_instructor.passwordBox.sendKeys(ConfigReader.getProperty("validPasswordFatihIns2"));
 
-        ReusableMethods.bekle(2);
-        try {
-            qualityDemyPage_instructor.acceptCookies.click();
-        } catch (Exception e) {
-            ReusableMethods.bekle(1);
-        }
+
+
         qualityDemyPage_instructor.loginButton.click();
 
         // Click to the Instructor link
@@ -134,10 +133,9 @@ public class US_19 {
 
 
         qualityDemyPage_instructor.threeDots2.click();
-        actions.sendKeys(Keys.PAGE_DOWN).sendKeys(Keys.PAGE_DOWN).sendKeys(Keys.PAGE_DOWN).sendKeys(Keys.PAGE_DOWN).
-               sendKeys(Keys.PAGE_DOWN).perform();
 
-         qualityDemyPage_instructor.viewCourseOnFrontend.click();
+
+        qualityDemyPage_instructor.viewCourseOnFrontend.click();
 
         Set<String> windowHandlesSet= Driver.getDriver().getWindowHandles();
 
@@ -170,17 +168,16 @@ public class US_19 {
 
         // With a valid username and password, login to the system
         QualityDemyPage_Instructor qualityDemyPage_instructor = new QualityDemyPage_Instructor();
+
+        qualityDemyPage_instructor.acceptCookies();
+
         qualityDemyPage_instructor.loginLink.click();
 
         qualityDemyPage_instructor.emailBox.sendKeys(ConfigReader.getProperty("validEmailFatihIns2"));
         qualityDemyPage_instructor.passwordBox.sendKeys(ConfigReader.getProperty("validPasswordFatihIns2"));
 
-        ReusableMethods.bekle(2);
-        try {
-            qualityDemyPage_instructor.acceptCookies.click();
-        } catch (Exception e) {
-            ReusableMethods.bekle(1);
-        }
+
+
         qualityDemyPage_instructor.loginButton.click();
 
         // Click to the Instructor link
@@ -227,17 +224,16 @@ public class US_19 {
 
         // With a valid username and password, login to the system
         QualityDemyPage_Instructor qualityDemyPage_instructor = new QualityDemyPage_Instructor();
+
+        qualityDemyPage_instructor.acceptCookies();
+
         qualityDemyPage_instructor.loginLink.click();
 
         qualityDemyPage_instructor.emailBox.sendKeys(ConfigReader.getProperty("validEmailFatihIns2"));
         qualityDemyPage_instructor.passwordBox.sendKeys(ConfigReader.getProperty("validPasswordFatihIns2"));
 
-        ReusableMethods.bekle(2);
-        try {
-            qualityDemyPage_instructor.acceptCookies.click();
-        } catch (Exception e) {
-            ReusableMethods.bekle(1);
-        }
+
+
         qualityDemyPage_instructor.loginButton.click();
 
         // Click to the Instructor link
@@ -267,17 +263,15 @@ public class US_19 {
 
         // With a valid username and password, login to the system
         QualityDemyPage_Instructor qualityDemyPage_instructor = new QualityDemyPage_Instructor();
+
+        qualityDemyPage_instructor.acceptCookies();
+
         qualityDemyPage_instructor.loginLink.click();
 
         qualityDemyPage_instructor.emailBox.sendKeys(ConfigReader.getProperty("validEmailFatihIns2"));
         qualityDemyPage_instructor.passwordBox.sendKeys(ConfigReader.getProperty("validPasswordFatihIns2"));
 
-        ReusableMethods.bekle(2);
-        try {
-            qualityDemyPage_instructor.acceptCookies.click();
-        } catch (Exception e) {
-            ReusableMethods.bekle(1);
-        }
+
         qualityDemyPage_instructor.loginButton.click();
 
         // Click to the Instructor link
@@ -291,8 +285,7 @@ public class US_19 {
         // a confirmation message should come
         // and after approval, the status section of the course should change to draft
         qualityDemyPage_instructor.threeDots4.click();
-        actions.sendKeys(Keys.PAGE_DOWN).sendKeys(Keys.PAGE_DOWN).sendKeys(Keys.PAGE_DOWN).sendKeys(Keys.PAGE_DOWN).
-                sendKeys(Keys.PAGE_DOWN).perform();
+
         qualityDemyPage_instructor.markAsDraft.click();
 
         Assert.assertTrue(qualityDemyPage_instructor.continueButton.isEnabled());
@@ -315,17 +308,16 @@ public class US_19 {
 
         // With a valid username and password, login to the system
         QualityDemyPage_Instructor qualityDemyPage_instructor = new QualityDemyPage_Instructor();
+
+        qualityDemyPage_instructor.acceptCookies();
+
         qualityDemyPage_instructor.loginLink.click();
 
         qualityDemyPage_instructor.emailBox.sendKeys(ConfigReader.getProperty("validEmailFatihIns2"));
         qualityDemyPage_instructor.passwordBox.sendKeys(ConfigReader.getProperty("validPasswordFatihIns2"));
 
-        ReusableMethods.bekle(2);
-        try {
-            qualityDemyPage_instructor.acceptCookies.click();
-        } catch (Exception e) {
-            ReusableMethods.bekle(1);
-        }
+
+
         qualityDemyPage_instructor.loginButton.click();
 
         // Click to the Instructor link
@@ -361,17 +353,16 @@ public class US_19 {
 
         // With a valid username and password, login to the system
         QualityDemyPage_Instructor qualityDemyPage_instructor = new QualityDemyPage_Instructor();
+
+        qualityDemyPage_instructor.acceptCookies();
+
         qualityDemyPage_instructor.loginLink.click();
 
         qualityDemyPage_instructor.emailBox.sendKeys(ConfigReader.getProperty("validEmailFatihIns2"));
         qualityDemyPage_instructor.passwordBox.sendKeys(ConfigReader.getProperty("validPasswordFatihIns2"));
 
-        ReusableMethods.bekle(2);
-        try {
-            qualityDemyPage_instructor.acceptCookies.click();
-        } catch (Exception e) {
-            ReusableMethods.bekle(1);
-        }
+
+
         qualityDemyPage_instructor.loginButton.click();
 
         // Click to the Instructor link
@@ -385,6 +376,7 @@ public class US_19 {
         // a confirmation message should come
         // and the course should be deleted from the list after approval
         qualityDemyPage_instructor.threeDots4.click();
+
         qualityDemyPage_instructor.delete.click();
 
         Assert.assertTrue(qualityDemyPage_instructor.continueButton.isEnabled());
@@ -413,17 +405,17 @@ public class US_19 {
 
         // With a valid username and password, login to the system
         QualityDemyPage_Instructor qualityDemyPage_instructor = new QualityDemyPage_Instructor();
+
+        qualityDemyPage_instructor.acceptCookies();
+
         qualityDemyPage_instructor.loginLink.click();
 
         qualityDemyPage_instructor.emailBox.sendKeys(ConfigReader.getProperty("validEmailFatihIns2"));
         qualityDemyPage_instructor.passwordBox.sendKeys(ConfigReader.getProperty("validPasswordFatihIns2"));
 
-        ReusableMethods.bekle(2);
-        try {
-            qualityDemyPage_instructor.acceptCookies.click();
-        } catch (Exception e) {
-            ReusableMethods.bekle(1);
-        }
+
+
+
         qualityDemyPage_instructor.loginButton.click();
 
         // Click to the Instructor link
@@ -451,17 +443,17 @@ public class US_19 {
 
         // With a valid username and password, login to the system
         QualityDemyPage_Instructor qualityDemyPage_instructor = new QualityDemyPage_Instructor();
+
+        qualityDemyPage_instructor.acceptCookies();
+
         qualityDemyPage_instructor.loginLink.click();
 
         qualityDemyPage_instructor.emailBox.sendKeys(ConfigReader.getProperty("validEmailFatihIns2"));
         qualityDemyPage_instructor.passwordBox.sendKeys(ConfigReader.getProperty("validPasswordFatihIns2"));
 
-        ReusableMethods.bekle(2);
-        try {
-            qualityDemyPage_instructor.acceptCookies.click();
-        } catch (Exception e) {
-            ReusableMethods.bekle(1);
-        }
+
+
+
         qualityDemyPage_instructor.loginButton.click();
 
         // Click to the Instructor link
@@ -479,7 +471,7 @@ public class US_19 {
         qualityDemyPage_instructor.accountFatih.click();
         qualityDemyPage_instructor.logout.click();
 
-        Driver.getDriver().quit();
+       // Driver.getDriver().quit();
 
     }
 

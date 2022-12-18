@@ -26,6 +26,8 @@ public class US_05 extends ReusableMethods {
             bekle(1);
         }
 
+
+
         //- Click ""Log in"" button
         //- Reach login page
         pageUser.loginButtonLev.click();
@@ -255,12 +257,12 @@ public class US_05 extends ReusableMethods {
         String actualLoginPageUrl3=Driver.getDriver().getCurrentUrl();
         Assert.assertTrue(actualLoginPageUrl3.contains(expectedLoginPageUrl));
     }
-/*
+
     @AfterClass
     public void teardown(){
         Driver.closeDriver();
     }
 
 
- */
+
 }
