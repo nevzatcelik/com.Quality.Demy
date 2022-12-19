@@ -13,6 +13,7 @@ public class US_28 {
 
     @Test
     public void finishSectionTest(){
+
         QualityDemyPage_Instructor qualityDemyPage_instructor=new QualityDemyPage_Instructor();
 
         Driver.getDriver().get(ConfigReader.getProperty("myUrl"));
@@ -35,7 +36,7 @@ public class US_28 {
         qualityDemyPage_instructor.submitFinish.click();
 
         Assert.assertTrue(qualityDemyPage_instructor.congratulationsMessage.isDisplayed());
-        ReusableMethods.bekle(3);
+        ReusableMethods.bekle(6);
         qualityDemyPage_instructor.testUser.click();
         qualityDemyPage_instructor.logoutButton.click();
 

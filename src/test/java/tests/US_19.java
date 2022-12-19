@@ -134,9 +134,6 @@ public class US_19 {
 
         qualityDemyPage_instructor.threeDots2.click();
 
-        actions.sendKeys(Keys.PAGE_DOWN).sendKeys(Keys.PAGE_DOWN).sendKeys(Keys.PAGE_DOWN).sendKeys(Keys.PAGE_DOWN).
-               sendKeys(Keys.PAGE_DOWN).perform();
-
 
         qualityDemyPage_instructor.viewCourseOnFrontend.click();
 
@@ -288,8 +285,7 @@ public class US_19 {
         // a confirmation message should come
         // and after approval, the status section of the course should change to draft
         qualityDemyPage_instructor.threeDots4.click();
-        actions.sendKeys(Keys.PAGE_DOWN).sendKeys(Keys.PAGE_DOWN).sendKeys(Keys.PAGE_DOWN).sendKeys(Keys.PAGE_DOWN).
-                sendKeys(Keys.PAGE_DOWN).perform();
+
         qualityDemyPage_instructor.markAsDraft.click();
 
         Assert.assertTrue(qualityDemyPage_instructor.continueButton.isEnabled());
@@ -380,8 +376,7 @@ public class US_19 {
         // a confirmation message should come
         // and the course should be deleted from the list after approval
         qualityDemyPage_instructor.threeDots4.click();
-        actions.sendKeys(Keys.PAGE_DOWN).sendKeys(Keys.PAGE_DOWN).sendKeys(Keys.PAGE_DOWN).sendKeys(Keys.PAGE_DOWN).
-                sendKeys(Keys.PAGE_DOWN).perform();
+
         qualityDemyPage_instructor.delete.click();
 
         Assert.assertTrue(qualityDemyPage_instructor.continueButton.isEnabled());
@@ -476,7 +471,7 @@ public class US_19 {
         qualityDemyPage_instructor.accountFatih.click();
         qualityDemyPage_instructor.logout.click();
 
-        Driver.getDriver().quit();
+       // Driver.getDriver().quit();
 
     }
 
