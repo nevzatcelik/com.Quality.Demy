@@ -262,7 +262,7 @@ public class QualityDemyPage_User {
     public WebElement wordPressTitle;
     @FindBy(linkText = "(//div[text()='Wordpress'])[2]")
     public WebElement wordPress;
-    @FindBy(xpath = "//*[@id=\"4\"]")
+    @FindBy(xpath = "(//*[@id='4'])[1]")
     public WebElement addToCart250;
     @FindBy(xpath = "/html/body/section[3]/div/div/div[2]/div/div/div[3]/button[1]")
     public WebElement addToCart450;
