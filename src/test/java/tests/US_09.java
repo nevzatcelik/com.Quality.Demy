@@ -39,26 +39,25 @@ public class US_09 {
         actions.sendKeys( Keys.PAGE_DOWN ).perform();
 
         ReusableMethods.bekle( 2 );
-        murat.cours250.click();
+        murat.cours450.click();
         ReusableMethods.bekle( 1);
-        actions.moveToElement( murat.addToCart250 ).click(murat.addToCart250).perform();
+        actions.moveToElement( murat.addToCart450 ).click(murat.addToCart450).perform();
         ReusableMethods.bekle( 2 );
         //actions.click(murat.addToCart150).click(murat.addToCart150);
         ReusableMethods.bekle( 1 );
         Driver.getDriver().navigate().back();
-        ReusableMethods.bekle( 3 );
+        ReusableMethods.bekle( 1 );
 
         actions.sendKeys( Keys.PAGE_DOWN )
-        .sendKeys( Keys.PAGE_DOWN )
         .sendKeys( Keys.PAGE_DOWN ).perform();
-        murat.cours450.click();
+        murat.cours250.click();
         ReusableMethods.bekle( 2 );
-        murat.addToCart450.click();
+        murat.addToCart250.click();
         murat.shoppingCart.click();
         ReusableMethods.bekle( 2 );
         murat.removeButton250.click();
         ReusableMethods.bekle( 1 );
-        softAssert.assertFalse(murat.cours450.isDisplayed());
+        softAssert.assertTrue(murat.cours450.isDisplayed());
         softAssert.assertAll();
     }
 
