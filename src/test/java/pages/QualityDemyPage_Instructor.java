@@ -1,19 +1,19 @@
 package pages;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.asserts.SoftAssert;
+import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
 
 public class QualityDemyPage_Instructor {
     public QualityDemyPage_Instructor() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
-
-
-
-
-
 
 
 
@@ -38,155 +38,6 @@ public class QualityDemyPage_Instructor {
     @FindBy(xpath = "//*[@class='dataTables_empty']")
     public WebElement noDataAvailableInTheTable;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
  //-------------------------176==325---------------LEVENT-------------------------------------------------------//
 
     @FindBy(xpath = "//a[text()='Log in']")
@@ -204,438 +55,9 @@ public class QualityDemyPage_Instructor {
     @FindBy(xpath = "//input[@id='login-password']")
     public WebElement passwordBox;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
  //----------------------------326==475------------MURAT-------------------------------------------------------//
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //---------------------------476==625-------------EMINE------------------------------------------------------//
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //-------------------------626==775--------------ZEYNEP------------------------------------------------------//
 //Homepage => Categories
@@ -644,21 +66,39 @@ public WebElement categories;
     //Homepage => categories => Web Design Course
     @FindBy (xpath ="//span[text()='Web Design Course']")
     public WebElement categoriesWebDesign;
+    //Homepage => categories => Web Design Course => Web Desing Course Page
+    @FindBy(xpath="//li[@class='breadcrumb-item active text-light display-6 fw-bold']")
+    public WebElement webDesignPage;
     //Homepage => Categories => English Course
     @FindBy (xpath = "//span[text()='English Course']")
     public WebElement categoriesEnglish;
+    //Homepage => categories => English Course => English Course Page
+    @FindBy(xpath="//li[@class='breadcrumb-item active text-light display-6 fw-bold']")
+    public WebElement englishCoursePage;
     //Homepage => Categories => IT & SoftWare
     @FindBy (xpath="//span[text()='IT & Software']")
     public WebElement categoriesIt;
+    //Homepage => categories => IT Course => IT Course Page
+    @FindBy(xpath="//li[@class='breadcrumb-item active text-light display-6 fw-bold']")
+    public WebElement itCoursePage;
     //Homepage => Categories => Music
     @FindBy (xpath= "//span[text()='Music']")
     public WebElement categoriesMusic;
+    //Homepage => categories => Music Course => Music Course Page
+    @FindBy(xpath="//li[@class='breadcrumb-item active text-light display-6 fw-bold']")
+    public WebElement musicCoursePage;
     //Homepage => categories => Personel Developments
     @FindBy (xpath= "//span[text()='Personal Developments']")
     public WebElement categoriesPersonelDevelopments;
+    //Homepage => Categories => Personel Development Course => Personel Development Course Page
+    @FindBy (xpath = "//li[@class='breadcrumb-item active text-light display-6 fw-bold']")
+    public WebElement personelDevelopmentPage;
     //Homepage => Categories => All courses
     @FindBy (xpath= "//span[text()='All courses']")
     public WebElement categoriesAllCourses;
+    //Homepage => Categories => All Courses => All Courses Page
+    @FindBy(xpath="//li[@class='breadcrumb-item active text-light display-6 fw-bold']")
+    public WebElement allCoursesPage;
     //Homepage => User box icon
     @FindBy (xpath= "//div[@class='user-box menu-icon-box']")
     public WebElement userBoxIcon;
@@ -671,15 +111,22 @@ public WebElement categories;
     //Homepage => User box icon => My messages => Send
     @FindBy (xpath = "(//button[@type='submit'])[2]")
     public WebElement messageSendButton;
+    //Homepage => User box icon => My messages => Send => Toast Message
+    @FindBy(xpath = "//div[text()='Message sent']")
+    public WebElement toastMessage;
     //Homepage => User box icon => My messages => Cancel
-    @FindBy (xpath = "(//button[@type='submit'])[2]")
+    @FindBy (xpath = "//button[text()='Cancel']")
     public WebElement messageCancelButton;
     //Homepage => User box icon => My messages => Compose
     @FindBy (xpath = "//button[@id='NewMessage']")
     public WebElement messageComposeButton;
+    //Homepage => User box icon => My messages => New Message Section
+    @FindBy (xpath = "//span[text()='New message']")
+    public WebElement newMessageSection;
     //Homepage => User box icon => My messages => correspondence
     @FindBy (xpath = "(//div[@class='message-sender-wrap'])[1]")
     public  WebElement correspondence;
+    //Homepage => User box icon => My messages => Corresponded
     @FindBy (xpath="//div[@class='message-content']")
     public WebElement messageContent;
     //===============================US_15=================
@@ -716,6 +163,9 @@ public WebElement categories;
     //Homepage => User box icon => User profile => Profile
     @FindBy (xpath = "//i[@class='far fa-user-circle']")
     public WebElement userProfilProfilButton;
+    //Homepage => User box icon => User profile => Profile Page Title
+    @FindBy (xpath = "//h1[text()='User profile']") //yeni eklendi
+    public WebElement userProfilePageTitle;
     //===========================US_18================================
     //Homepage => Instructor section
     @FindBy (xpath="//a[text()='Instructor']")
@@ -729,6 +179,9 @@ public WebElement categories;
     //Homepage => Instructor section => Number of Enrolment
     @FindBy (xpath = "//p[text()='Number of enrolment']")
     public WebElement numberOfEnrolment;
+    //Homepage=> Instructor section => Sales report Page
+    @FindBy (xpath ="//h4[text()='page-title']")
+    public WebElement salesReportPage;
     //Homepage => Instructor section => Pending Balance
     @FindBy (xpath = "//p[text()='Pending balance']")
     public WebElement pendingBalance;
@@ -737,59 +190,11 @@ public WebElement categories;
     public WebElement payOutReport;
     //Homepage => Instructor section => Requested withdrawal amount
     @FindBy (xpath = "//p[text()='Requested withdrawal amount']")
-    public WebElement requestedWithdrawelAmount;
+    public WebElement requestedWithdrawalAmount;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//---------------------------776==925-------------FATIH------------------------------------------------------//
+    //---------------------------776==925-------------FATIH------------------------------------------------------//
 // Homepage ==> Login Page ==> Instructor Page
-@FindBy (linkText = "Instructor")
+@FindBy (xpath = "//a[text()='Instructor']")
 public WebElement instructorLink;
 
     // Homepage ==> Login Page ==> Instructor Page ==> Dashboard Page
@@ -836,7 +241,7 @@ public WebElement instructorLink;
     @FindBy (xpath = "(//button[@class='btn btn-sm btn-outline-primary btn-rounded btn-icon'])[1]")
     public WebElement threeDots1; // English
 
-    @FindBy (xpath = "//a[@href='https://qualitydemy.com/home/course/web-design-for-developers/53']")
+    @FindBy (xpath = "(//a[text()='View course on frontend'])[2]")
     public WebElement viewCourseOnFrontend;
 
     @FindBy (xpath = "(//*[text()='Go to course playing page'])[3]")
@@ -845,7 +250,7 @@ public WebElement instructorLink;
     @FindBy (xpath = "(//*[text()='Edit this course'])[3]")
     public WebElement editThisCourse; // Bass Guitar
 
-    @FindBy (xpath = "(//*[text()='Mark as drafted'])[4]")
+    @FindBy (xpath = "(//*[text()='Mark as drafted'])[3]")
     public WebElement markAsDraft; // Piano
 
     @FindBy (xpath = "(//*[text()='Continue'])[1]")
@@ -860,7 +265,7 @@ public WebElement instructorLink;
     @FindBy (xpath = "(//span[text()='Pending'])[1]")
     public WebElement pending1;
 
-    @FindBy (xpath = "(//a[text()='Delete'])[2]")
+    @FindBy (xpath = "(//a[text()='Delete'])[4]")
     public WebElement delete;
 
     @FindBy (xpath = "//span[text()='Piano']")
@@ -868,6 +273,12 @@ public WebElement instructorLink;
 
     @FindBy (xpath = "//a[@href='https://qualitydemy.com/user/course_form/add_course']")
     public WebElement addNewCourseButton;
+
+    @FindBy (id = "topbar-userdrop")
+    public WebElement accountFatih;
+
+    @FindBy (xpath = "//a[@href='https://qualitydemy.com/login/logout']")
+    public WebElement logout;
 
     // Homepage ==> Login Page ==> Instructor Page ==> Dashboard Page ==> Course manager (Courses) Page ==> Relevant course Page
     @FindBy (xpath = "//h1[text()='Web Design for Developers']")
@@ -887,57 +298,7 @@ public WebElement instructorLink;
     @FindBy (xpath = "//*[text()='Course adding form']")
     public WebElement courseAddingForm;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//-----------------------926==1075------------------MERYEM------------------------------------------------------//
+    //-----------------------926==1075------------------MERYEM------------------------------------------------------//
 @FindBy(xpath = "//a[text()='Log in']")
 public WebElement loginLinki;
     @FindBy(xpath = "//input[@id='login-email']")
@@ -1029,64 +390,6 @@ public WebElement loginLinki;
     @FindBy(xpath = "//div[@class='js--image-preview']")
     public WebElement uploadCoursePicture;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     //-------------------------1076==1225---------------NESE------------------------------------------------------//
         // ++++++++ US20 Baslangic ++++++++++++
 
@@ -1161,231 +464,111 @@ public WebElement loginLinki;
     @FindBy(xpath = "//label[@for='discount_flag']")
     public WebElement discountCheckBox;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    //----------------------1226==1375------------------YAKUP-----------------------------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//----------------------1226==1375------------------YAKUP------------------------------------------------------//
+@FindBy(xpath = "//a[text()=\"Log in\"]") public WebElement lejonLoginLink;
+    @FindBy(xpath = "//a[@onclick=\"cookieAccept();\"]") public WebElement lejonCookies;
+    @FindBy(xpath = "//div[text()=\"Welcome Test User\"]") public WebElement welcomeMessage;
+    @FindBy(linkText = "Instructor") public WebElement instructorButtonLejon;
+    @FindBy(xpath = "//*[text()=\"Course manager\"]") public WebElement courseManagerLinkLejon;
+    @FindBy(xpath = "(//div[@class=\"dropright dropright\"])[1]") public WebElement threeDotsIcon;
+    @FindBy(xpath = "(//div[@class=\"card-body\"])[1]") public WebElement updateJavaWindow;
+    @FindBy(xpath = "(//a[text()=\"Edit this course\"])[1]") public WebElement editThisCourseLejon;
+    @FindBy(xpath = "(//a[text()=\" Add section\"])[1]") public WebElement addSectionButton;
+    @FindBy(xpath = "(//input[@class=\"form-control\"])[9]") public WebElement addNewSectionBox;
+    @FindBy(xpath = "(//button[text()=\"Submit\"])[2]") public WebElement addNewSectionsubmitButton;
+    @FindBy(xpath = "//*[text()=\"Section has been added successfully\"]") public WebElement sectionHasBeenSuccesMessage;
+    @FindBy(xpath = "(//h5[@class=\"card-title\"])[1]") public WebElement newlyAddedSection;
+    @FindBy(xpath = "//button[text()=\"Close\"]") public WebElement addNewSectoinCloseButton;
+    @FindBy(xpath = "//h5[text()=\"Add new section\"]") public WebElement addNewSectoinWindow;
+    @FindBy(xpath = "(//a[@href=\"javascript:void(0)\"])[2]") public WebElement addLessonButton;
+    @FindBy(xpath = "//input[@id=\"youtube\"]") public WebElement selectLessonTypeYoutube;
+    @FindBy(xpath = "//label[@for=\"vimeo\"]") public WebElement selectLessonTypeVimeo;
+    @FindBy(xpath = "//label[@for=\"video_file\"]") public WebElement selectLessonTypeVideofile;
+    @FindBy(xpath = "//label[@for=\"html5\"]") public WebElement selectLessonTypeVideourl;
+    @FindBy(xpath = "//label[@for=\"google_drive_video\"]") public WebElement selectLessonTypeGoogleVideo;
+    @FindBy(xpath = "//label[@for=\"document\"]") public WebElement selectLessonTypeDocument;
+    @FindBy(xpath = "//label[@for=\"text\"]") public WebElement selectLessonTypeText;
+    @FindBy(xpath = "//label[@for=\"image\"]") public WebElement selectLessonTypeImage;
+    @FindBy(xpath = "//label[@for=\"iframe\"]") public WebElement selectLessonTypeIframe;
+    @FindBy(xpath = "(//span[@aria-hidden=\"true\"])[6]") public WebElement newLessonCloseButton;
+    @FindBy(xpath = "//h5[text()=\"Add new lesson\"]") public WebElement addNewLessonWindow;
+    @FindBy(xpath = "//a[@href=\"javascript::void(0)\"]") public WebElement lessonTypeNextButton;
+    @FindBy(xpath = "//div[@class=\"alert alert-info\"]") public WebElement lessonTypeSelectedText;
+    @FindBy(xpath = "(//input[@class=\"form-control\"])[9]") public WebElement addnewLessonTextBox;
+    @FindBy(xpath = "//input[@placeholder=\"This video will be shown on web application\"]") public WebElement addnewLessonVideoURLBox;
+    @FindBy(xpath = "//label[@id=\"invalid_url\"]") public WebElement addnewInvalidVideoURLText;
+    @FindBy(xpath = "//input[@name=\"duration\"]") public WebElement addnewLessonDurationBox;
+    @FindBy(xpath = "(//div[@class=\"note-editable card-block\"])[2]") public WebElement addnewLessonSummaryBox;
+    @FindBy(xpath = "//input[@name=\"free_lesson\"]") public WebElement markFreeLessonCheckBox;
+    @FindBy(xpath = "(//button[text()=\"Add lesson\"])") public WebElement greenAddLessonButton;
+    @FindBy(xpath = "//div[text()=\"Lesson has been added successfully\"]") public WebElement lessonHasAddedSuccesMessage;
+    @FindBy(xpath = "(//a[@href=\"javascript:void(0)\"])[3]") public WebElement sortSectionButton;
+    @FindBy(xpath = "(//h5[@class=\"mb-1 mt-0\"])[1]") public WebElement sortSectionDrag;
+    @FindBy(xpath = "(//div[@class=\"card mb-0 mt-2 draggable-item\"])[3]") public WebElement sortSectionDrop1;
+    @FindBy(xpath = "(//button[@aria-hidden=\"true\"])[5]") public WebElement sortSectionCloseButton;
+    @FindBy(xpath = "//button[text()=\"Update sorting\"]") public WebElement updateSectionButton;
+    @FindBy(xpath = "/html/body/div[11]/div") public WebElement updateSectionSortedMessage; //*[@id="large-modal"]/div/div/div[2]/script[2]/text()
+    @FindBy(xpath = "(//div[@class=\"card-body\"])[3]") public WebElement cardBodySectionTable1;
+    @FindBy(xpath = "(//button[@class=\"btn btn-outline-secondary btn-rounded btn-sm\"])[1]") public WebElement section1SortLessonButton;
+    @FindBy(xpath = "(//button[@class=\"btn btn-outline-secondary btn-rounded btn-sm ml-1\"])[1]") public WebElement editSection1Button;
+    @FindBy(xpath = "(//button[@class=\"btn btn-outline-secondary btn-rounded btn-sm ml-1\"])[2]") public WebElement deleteSection1Button;
+    @FindBy(xpath = "//h5[@class=\"mt-0\"]") public WebElement sortLessons1Window;
+    @FindBy(xpath = "(//div[@class=\"card mb-0 mt-2 draggable-item\"])[1]") public WebElement sortLessons1ArrayBinaryDrag;
+    @FindBy(xpath = "(//div[@class=\"card mb-0 mt-2 draggable-item\"])[3]") public WebElement sortLessons1OCASoruListsDrop;
+    @FindBy(xpath = "(//button[@class=\"close\"])[5]") public WebElement sortLessonsCloseButton;
+    @FindBy(xpath = "//button[@id=\"lesson-sort-btn\"]") public WebElement sortLessonsUpdateButton;
+    @FindBy(xpath = "/html/body/div[11]/div") public WebElement lessonUpdateSortedMessage;
+    @FindBy(xpath = "(//input[@class=\"form-control\"])[9]") public WebElement updateSectionEditTitleBox;
+    @FindBy(xpath = "(//button[text()=\"Submit\"])[2]") public WebElement updateOchEditSectionSubmitButton;
+    @FindBy(xpath = "//*[text()=\"Section has been updated successfully\"]") public WebElement sectionHasBeenUpdatedSuccesMessage;
+    @FindBy(xpath = "(//h5[@class=\"card-title\"])[1]") public WebElement section1HeadTitle;
+    @FindBy(xpath = "//span[text()=\"Section 3\"]") public WebElement cardBodySectionTable3;
+    @FindBy(xpath = "(//button[@class=\"btn btn-outline-secondary btn-rounded btn-sm ml-1\"])[1]") public WebElement editSection3Button;
+    @FindBy(xpath = "(//button[@class=\"btn btn-secondary\"])[1]") public WebElement editAndUpdateSection3CloseButton;
+    @FindBy(xpath = "(//div[@class=\"modal-content\"])[6]") public WebElement editAndUpdateSection3Window;
+    @FindBy(xpath = "//span[text()=\"Section 6\"]") public WebElement cardBodySectionTable6;
+    @FindBy(xpath = "(//button[@class=\"btn btn-outline-secondary btn-rounded btn-sm ml-1\"])[12]") public WebElement section6TableDeleteButton;
+    @FindBy(xpath = "//a[@id=\"update_link\"]") public WebElement sectionDeleteAlertContinueButton;
+    @FindBy(xpath = "//*[text()=\"Section has been deleted successfully\"]") public WebElement sectionHasBeenDeletedSuccessMessage;
+    @FindBy(xpath = "(//div[@class=\"col-xl-12\"])[5]") public WebElement section2Lesson2ListFrame;
+    @FindBy(xpath = "(//div[@class=\"card text-secondary on-hover-action mb-2\"])[6]") public WebElement section2Lesson2CardFrame;
+    @FindBy(xpath = "(//i[@class=\"mdi mdi-pencil-outline\"])[8]") public WebElement section2Lesson2EditIcon;
+    @FindBy(xpath = "(//i[@class=\"mdi mdi-window-close\"])[8]") public WebElement section2Lesson2DeleteIcon;
+    @FindBy(xpath = "//h5[@class=\"modal-title\"]") public WebElement updateLessonWindowTitle;
+    @FindBy(xpath = "(//span[@aria-hidden=\"true\"])[6]") public WebElement updateLessonCloseButton;
+    @FindBy(xpath = "//span[@id=\"select2-section_id-container\"]") public WebElement section2UpdateLessonSectionSelelect;
+    @FindBy(xpath = "(//div[@class=\"col-md-12\"])[13]") public WebElement section7Lesson1ListFrame;
+    @FindBy(xpath = "(//a[@data-original-title=\"Delete\"])[13]") public WebElement section7Lesson1DeleteIcon;
+    @FindBy(xpath = "(//div[@class=\"text-center\"])[2]") public WebElement lessonDeleteAlertWindow;
+    @FindBy(xpath = "//*[text()=\"Lesson has been deleted successfully\"]") public WebElement lessonBeenDeletedSuccessMessage;
+    public void loginMethodLejon(){
+
+        lejonCookies.click();
+        ReusableMethods.bekle(2);
+        lejonLoginLink.click();
+        emailBox.sendKeys(ConfigReader.getProperty("lejonEmailIns"));
+        passwordBox.sendKeys(ConfigReader.getProperty("lejonPasswordIns"));
+        loginButton.click();
+
+        SoftAssert softAssert = new SoftAssert();
+        softAssert.assertTrue(welcomeMessage.isDisplayed(), "The Welcome Message does not appear on the screen");
+        instructorButtonLejon.click();
+        courseManagerLinkLejon.click();
+
+        JavascriptExecutor javaScript = (JavascriptExecutor) Driver.getDriver();
+        javaScript.executeScript("arguments[0].scrollIntoView();", threeDotsIcon);
+        threeDotsIcon.click();
+        editThisCourseLejon.click();
+    }
+    public void addLessonMethodLejon(){
+        addLessonButton.click();
+        selectLessonTypeVimeo.click();
+
+        Actions actions = new Actions(Driver.getDriver());
+        actions.click(selectLessonTypeYoutube).perform();
+
+        lessonTypeNextButton.click();
+    }
 
 //---------------------1376==1525-------------------TALHA------------------------------------------------------//
 @FindBy (xpath = "//a[text () = 'Instructor']")
@@ -1421,420 +604,201 @@ public WebElement Enable_Drip;
 @FindBy (xpath = "(//label[@class='custom-control-label'] )[1]")
 public WebElement checkbox;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //-------------------------1526==1675---------------BORA------------------------------------------------------//
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    //Home Page
+    @FindBy (xpath = "//img[@src='https://qualitydemy.com/uploads/system/393645bf994114c23be28028a47a77a0.png']")
+    public WebElement homePage;
+    //Home Page > Categories > Web Design Course   //i[@class='fas fa-bars text-16px']
+    @FindBy (xpath = "(//a[@class='py-2 text-wrap d-flex'])[1]")
+    public WebElement categoriWebDesing;
+    //Home Page > Categories > Web Design Course > Web Design for Web Developers
+    @FindBy (xpath = "//*[text()='Web Design for Web Developers']")
+    public WebElement webDevelopers;
+    //Home Page > Categories > Web Design Course > Web Design for Web Developers > Wordpress
+    @FindBy(xpath = "(//div[@class='course-image'])[3]")
+    public WebElement wordpresslink;
+    //Home Page > Categories > Web Design Course > Wordpress > Buy now
+    @FindBy (xpath = "//*[text()='Buy now']")
+    public WebElement wordpressBuyNow;
+    //Home Page > Shopping
+    @FindBy(xpath = "(//a[@href='https://qualitydemy.com/home/shopping_cart'])[1]")
+    public WebElement shoppingButton;
+    //Home Page > Shopping > checkout
+    @FindBy (xpath = "//button[@class='btn red w-100 radius-10 mb-3']")
+    public WebElement checkoutButton;
+    //Home Page > Shopping >  'Wordpress' course > checkout > stripe
+    @FindBy (xpath = "//img[@class='payment-gateway-icon']")
+    public WebElement stripeButoon;
+    //Home Page > Shopping >  'Wordpress' course > checkout > stripe > payWithStripe
+    @FindBy (xpath = "//button[@class='stripe-button payment-button float-end']")
+    public WebElement payWithStripe;
+    //Home Page > Shopping >  'Wordpress' course > checkout > close button
+    @FindBy (xpath = "//i[@class='fa fa-times']")
+    public WebElement closeButton;
+    //Home Page > Shopping Card Page
+    @FindBy (xpath = "//li[@class='breadcrumb-item active text-light display-6 fw-bold']")
+    public WebElement shoppingCardPage;
+    //Home Page > Shopping Card Page > Checkout sprite Page
+    @FindBy (xpath = "(//input[@class='CheckoutInput Input Input--empty'])[1]")
+    public WebElement checkoutEmail;
+    //Home Page > Shopping Card Page > Checkout sprite Page
+    @FindBy (xpath = "//input[@autocomplete='cc-number']")
+    public WebElement cardNummer;
+    //Home Page > Shopping Card Page > Checkout sprite Page
+    @FindBy (xpath = "//input[@autocomplete='cc-exp']")
+    public WebElement expDatum;
+    //Home Page > Shopping Card Page > Checkout sprite Page
+    @FindBy(xpath = "//input[@autocomplete='cc-csc']")
+    public WebElement cardCVC;
+    //Home Page > Shopping Card Page > Checkout sprite Page
+    @FindBy (xpath = "//input[@autocomplete='ccname']")
+    public WebElement nameOnCard;
+    //Home Page > Shopping Card Page > Checkout sprite Page
+    @FindBy (xpath = "//select[@autocomplete='billing country']")
+    public WebElement countryName;
+    //Home Page > Shopping Card Page > Checkout sprite Page
+    @FindBy(xpath = "//*[text()='Sweden']")
+    public WebElement countrySweden;
+
+    // Home Page > MyCourses
+    @FindBy(xpath = "(//*[text()='My courses'])[1]")
+    public WebElement myCourses;
+    // Home Page > MyCourses > Wordpress
+    @FindBy (xpath = "//img[@src='https://qualitydemy.com/uploads/thumbnails/course_thumbnails/optimized/course_thumbnail_default_31666766582.jpg']")
+    public WebElement myCoursePageWordpres;
+    //
+    @FindBy(xpath = "//div[@class='SubmitButton-IconContainer']")
+    public WebElement payButton;
+
+    //=======================================================================
+
+    //Home Page > Categories > Web Design Course > HTML5 and CSS
+    @FindBy (xpath = "(//*[text()='HTML5 and CSS'])[1]")
+    public WebElement HTMLandCSS;
+    //Home Page > Categories > Web Design Course > Web Design for Web Developers > Build Responsive Real-World Websites with HTML and CSS
+    @FindBy(xpath = "//img[@src='https://qualitydemy.com/uploads/thumbnails/course_thumbnails/optimized/course_thumbnail_default_12.jpg']")
+    public WebElement buildResponsiRealWorldHTMLandCSSlink;
+    //Home Page > Categories > Web Design Course > Build Responsive Real-World Websites with HTML and CSS > Buy now
+    @FindBy (xpath = "//*[text()='Buy now']")
+    public WebElement courseBuyNow;
 
 //---------------------1676==1825----------------NEVZAT------------------------------------------------------//
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    @FindBy (xpath = "//div[@class='cookieButton']")
+    public WebElement acceptButton;
+    //Login>>HomePage==Instructor
+
+    //LOGIN>>HOMEPAGE>>INSTRUCTOR>>UNDER_NAVIGATION==CourseManagerButton
+    @FindBy(xpath = "//span[text()='Course manager']")
+    public WebElement courseManagerButton;
+
+    //LOGIN>>HOMEPAGE>>INSTRUCTOR>>UNDER_NAVIGATION_CourseManager>>RightCornerAddnewCourse==Requirements
+    @FindBy(xpath = "//span[text()='Requirements']")
+    public WebElement requirementsButton;
+    //LOGIN>>HOMEPAGE>>INSTRUCTOR>>UNDER_NAVIGATION_CourseManager>>RightCornerAddnewCourse>>Requirements==requirementsGreenPlusButton
+    @FindBy(xpath = "//button[@onclick='appendRequirement()']")
+    public WebElement requirementsGreenPlusButton;
+    //LOGIN>>HOMEPAGE>>INSTRUCTOR>>UNDER_NAVIGATION_CourseManager>>RightCornerAddnewCourse>>Requirements==requirementsRedMinusButton
+    @FindBy(xpath = "(//button[@onclick='removeRequirement(this)'])[2]")
+    public WebElement requirementsRedMinusButton;
+    //LOGIN>>HOMEPAGE>>INSTRUCTOR>>UNDER_NAVIGATION_CourseManager>>RightCornerAddnewCourse==OutComes
+    @FindBy(xpath = "//span[text()='Outcomes']")
+    public WebElement outComesButton;
+    //LOGIN>>HOMEPAGE>>INSTRUCTOR>>UNDER_NAVIGATION_CourseManager>>RightCornerAddnewCourse>>OutComes==outComesGreenPlusButton
+    @FindBy(xpath = "//button[@onclick='appendOutcome()']")
+    public WebElement outComesGreenPlusButton;
+    //LOGIN>>HOMEPAGE>>INSTRUCTOR>>UNDER_NAVIGATION_CourseManager>>RightCornerAddnewCourse>>OutComes==outComesRedMinusButton
+    @FindBy(xpath = "(//i[@class='fa fa-minus'])[3]")
+    public WebElement outComesRedMinusButton;
+    //LOGIN>>HOMEPAGE>>INSTRUCTOR>>UNDER_NAVIGATION_CourseManager>>RightCornerAddnewCourse==Media
+    @FindBy(xpath = "//span[text()='Media']")
+    public WebElement mediaButton;
+    //LOGIN>>HOMEPAGE>>INSTRUCTOR>>UNDER_NAVIGATION_CourseManager>>RightCornerAddnewCourse>>Media==CourseoverviewproviderDropDown
+    @FindBy(xpath = "(//span[@class='select2-selection__arrow'])[4]")
+    public WebElement courseOverviewProviderDropDown;
+    //LOGIN>>HOMEPAGE>>INSTRUCTOR>>UNDER_NAVIGATION_CourseManager>>RightCornerAddnewCourse>>Media=courseOverviewProviderBox
+    @FindBy(xpath = "(//span[@class='select2-selection__rendered'])[4]")
+    public WebElement courseOverviewProviderBox;
+    //LOGIN>>HOMEPAGE>>INSTRUCTOR>>UNDER_NAVIGATION_CourseManager>>RightCornerAddnewCourse>>Media=courseOverviewUrl
+    @FindBy(xpath = "(//input[@type='text'])[10]")
+    public WebElement courseOverviewUrl1;
+    //LOGIN>>HOMEPAGE>>INSTRUCTOR>>UNDER_NAVIGATION_CourseManager>>RightCornerAddnewCourse>>Media=uploadCourseThumbnail;
+    @FindBy(xpath = "//label[@for='course_thumbnail']")
+    public WebElement uploadCourseThumbnail;
+
+    @FindBy(xpath = "//div[@class='box']")
+    public WebElement uploadPhotoSection;
+
+    //LOGIN>>HOMEPAGE>>INSTRUCTOR>>UNDER_NAVIGATION_CourseManager>>RightCornerAddnewCourse==Basic
+    @FindBy(xpath = "(//span[@class='select2-selection__arrow'])[1]")
+    public WebElement categoryDropDown1;
+
+    @FindBy(xpath = "(//*[text()='Web Design for Web Developers'])[2]")
+    public WebElement webDesignLesson;
+
+    //LOGIN>>HOMEPAGE>>INSTRUCTOR>>UNDER_NAVIGATION_CourseManager>>RightCornerAddnewCourse>>Media==CourseThumbnail
+    @FindBy(xpath = "//*[text()=' Course thumbnail ']")
+    public WebElement courseThumbnailPhoto;
+    //LOGIN>>HOMEPAGE>>INSTRUCTOR>>UNDER_NAVIGATION_CourseManager>>RightCornerAddnewCourse==Seo
+    @FindBy(xpath = "//span[text()='Seo']")
+    public WebElement seoButton;
+    //LOGIN>>HOMEPAGE>>INSTRUCTOR>>UNDER_NAVIGATION_CourseManager>>RightCornerAddnewCourse>>Seo==metaKeywordTextbox
+    @FindBy(xpath = "(//input[@placeholder='Write a keyword and then press enter button'])[2]")
+    public WebElement metaKeywordTextbox;
+    //LOGIN>>HOMEPAGE>>INSTRUCTOR>>UNDER_NAVIGATION_CourseManager>>RightCornerAddnewCourse>>Seo=courseOverviewUrlBox
+    @FindBy(xpath = "//input[@name='course_overview_url']")
+    public WebElement courseOverviewUrlBox;
+    //LOGIN>>HOMEPAGE>>INSTRUCTOR>>UNDER_NAVIGATION_CourseManager>>RightCornerAddnewCourse>>Seo=metaKeywordTextCheck
+    @FindBy(xpath = "(//span[@class='tag label label-info'])[1]")
+    public WebElement metaKeywordTextCheck;
+    //LOGIN>>HOMEPAGE>>INSTRUCTOR>>UNDER_NAVIGATION_CourseManager>>RightCornerAddnewCourse>>Seo=metaKeywordTextCheck2
+    @FindBy(xpath = "(//span[@class='tag label label-info'])[2]")
+    public WebElement metaKeywordTextCheck2;
+    //LOGIN>>HOMEPAGE>>INSTRUCTOR>>UNDER_NAVIGATION_CourseManager>>RightCornerAddnewCourse>>Seo=metaDescriptionsCheck
+    @FindBy(xpath = "//*[text()='Hello']")
+    public WebElement metaDescriptionsCheck;
+    //LOGIN>>HOMEPAGE>>INSTRUCTOR>>UNDER_NAVIGATION_CourseManager>>RightCornerAddnewCourse>>FINISH
+    @FindBy(xpath = "//a[@href='#finish']")
+    public WebElement finishSection;
+    //LOGIN>>HOMEPAGE>>INSTRUCTOR>>UNDER_NAVIGATION_CourseManager>>RightCornerAddnewCourse>>FINISH
+    @FindBy(xpath = "//*[text()='Submit']")
+    public WebElement submitFinish;
+    //LOGIN>>HOMEPAGE>>INSTRUCTOR>>UNDER_NAVIGATION_CourseManager>>RightCornerAddnewCourse>>FINISH
+    @FindBy(xpath = "//div[@class='jq-toast-single jq-has-icon jq-icon-success']")
+    public WebElement congratulationsMessage;
+
+    @FindBy(xpath ="//div[@class='js--image-preview']")
+    public WebElement resimYukleme;
+
+    @FindBy(xpath = "//a[@id='topbar-userdrop']")
+    public WebElement testUser;
+
+    @FindBy(xpath = "//*[text()='Logout']")
+    public WebElement logoutButton;
+    @FindBy(xpath = "//a[@onclick='cookieAccept();']")
+    public WebElement buttonCookiesAccept;
+
+    @FindBy(id = "cookieConsentContainer")
+    public WebElement cookiesContainer;
+
+    public void CookiesComp() {
+        PageFactory.initElements(Driver.getDriver(), this);
+    }
+
+    public void acceptCookies() {
+        if (buttonCookiesAccept.isDisplayed()){
+            ReusableMethods.waitForClickablility(buttonCookiesAccept,5);
+            buttonCookiesAccept.click();
+            hideCookies();
+        }
+    }
+
+    public void hideCookies() {
+        JavascriptExecutor driver = (JavascriptExecutor) Driver.getDriver();
+        driver.executeScript("arguments[0].style.visibility='hidden'", cookiesContainer);
+
+    }
 
 
 }

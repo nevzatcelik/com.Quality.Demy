@@ -11,7 +11,7 @@ public class US_32 {
 
         //  Launch browser
         //  Go to url 'https://qualitydemy.com/home'
-        Driver.getDriver().get(ConfigReader.getProperty("myURL"));
+        Driver.getDriver().get(ConfigReader.getProperty("myUrl"));
 
         QualityDemyPage_Instructor qualityDemyPage_instructor=new QualityDemyPage_Instructor();
         // Click "accept cookies" button.
