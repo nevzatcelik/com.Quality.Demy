@@ -621,7 +621,7 @@ public WebElement checkbox;
     //Home Page > Categories > Web Design Course > Wordpress > Buy now
     @FindBy (xpath = "//*[text()='Buy now']")
     public WebElement wordpressBuyNow;
-    //Home Page > Shopping
+    //Home Page > Shoppinggg
     @FindBy(xpath = "(//a[@href='https://qualitydemy.com/home/shopping_cart'])[1]")
     public WebElement shoppingButton;
     //Home Page > Shopping > checkout
